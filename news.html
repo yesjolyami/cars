@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Новости — Твоё Авто Сибирь</title>
+    <meta
+      name="description"
+      content="Новости, выдачи автомобилей и полезные материалы компании «Твоё Авто Сибирь»."
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/pages/news.css" />
+    <link rel="stylesheet" href="css/shared-chrome.css" />
+    <link rel="stylesheet" href="css/contact-widget.css" />
+  </head>
+  <body class="news-page">
+    <header class="site-header">
+      <div class="header-wrap">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Твоё Авто Сибирь — на главную"
+          ><img src="img/logo-figma.png" alt="Твоё Авто Сибирь"
+        /></a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="catalog.html">Автомобили</a
+          ><a href="installment.html">Рассрочка</a
+          ><a href="rent-to-own.html">Аренда с выкупом</a
+          ><a href="trade-in.html">Trade-in</a
+          ><a href="selection.html">Автоподбор</a>
+        </nav>
+        <div class="header-actions">
+          <span class="header-location"
+            >Работаем по Сибири</span
+          ><a class="header-phone" href="tel:+79000000000"
+            ><img src="img/phone.svg" alt="" />+7 (900) 000-00-00</a
+          ><a class="header-cta" href="contact.html">Подобрать авто</a>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <aside class="mobile-panel" aria-label="Мобильное меню">
+      <nav>
+        <a href="catalog.html">Автомобили</a
+        ><a href="installment.html">Рассрочка</a
+        ><a href="rent-to-own.html">Аренда с выкупом</a
+        ><a href="trade-in.html">Trade-in</a
+        ><a href="selection.html">Автоподбор</a>
+      </nav>
+      <div class="mobile-panel__footer">
+        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <p>Работаем по Сибири</p>
+      </div>
+    </aside>
+
+    <main class="news-main">
+      <section class="news-hero" aria-labelledby="news-title">
+        <p class="news-kicker">Жизнь компании</p>
+        <h1 id="news-title">Новости, выдачи и<br />полезные материалы</h1>
+        <p class="news-hero__lead">
+          Рассказываем о свежих автомобилях, работе специалистов и важных
+          нюансах подбора и<br />оформления.
+        </p>
+      </section>
+
+      <section class="news-listing" aria-label="Публикации">
+        <div
+          class="news-filters"
+          role="group"
+          aria-label="Категории публикаций"
+        >
+          <button
+            class="is-active"
+            type="button"
+            data-news-filter="all"
+            aria-pressed="true"
+          >
+            Все
+          </button>
+          <button type="button" data-news-filter="issue" aria-pressed="false">
+            Выдачи
+          </button>
+          <button type="button" data-news-filter="company" aria-pressed="false">
+            Новости компании
+          </button>
+          <button type="button" data-news-filter="work" aria-pressed="false">
+            Рабочие будни
+          </button>
+          <button type="button" data-news-filter="arrival" aria-pressed="false">
+            Новые поступления
+          </button>
+          <button type="button" data-news-filter="useful" aria-pressed="false">
+            Полезные материалы
+          </button>
+        </div>
+
+        <div class="news-cards">
+          <article class="news-card" data-news-category="issue">
+            <a
+              class="news-card__photo"
+              href="article.html"
+              aria-label="Открыть публикацию: Как может выглядеть история выдачи автомобиля"
+              ><img
+                src="img/figma-news/issue.png"
+                alt="Передача ключей от автомобиля клиенту"
+            /></a>
+            <div class="news-card__body">
+              <div class="news-card__meta">
+                <span>Выдачи</span
+                ><time datetime="2026-07-24"
+                  ><img src="img/figma-exact/calendar.svg" alt="" />24 июля 2026
+                  г.</time
+                >
+              </div>
+              <h2>
+                <a href="article.html"
+                  >Как может выглядеть история выдачи автомобиля</a
+                >
+              </h2>
+              <p>
+                Пример подачи материала: задача клиента, этапы подбора, проверка
+                и передача автомобиля без рекламных обещаний.
+              </p>
+              <a class="news-card__link" href="article.html"
+                >Читать материал
+                <img src="img/figma-exact/arrow-dark.svg" alt=""
+              /></a>
+            </div>
+          </article>
+
+          <article class="news-card" data-news-category="useful">
+            <a
+              class="news-card__photo"
+              href="article.html"
+              aria-label="Открыть публикацию: Что можно рассказать о проверке автомобиля"
+              ><img
+                src="img/figma-news/inspection.png"
+                alt="Специалисты проверяют автомобиль перед оформлением"
+            /></a>
+            <div class="news-card__body">
+              <div class="news-card__meta">
+                <span>Полезные материалы</span
+                ><time datetime="2026-07-20"
+                  ><img src="img/figma-exact/calendar.svg" alt="" />20 июля 2026
+                  г.</time
+                >
+              </div>
+              <h2>
+                <a href="article.html"
+                  >Что можно рассказать о проверке автомобиля</a
+                >
+              </h2>
+              <p>
+                Макет полезного материала о документах, истории и техническом
+                состоянии автомобиля перед оформлением.
+              </p>
+              <a class="news-card__link" href="article.html"
+                >Читать материал
+                <img src="img/figma-exact/arrow-dark.svg" alt=""
+              /></a>
+            </div>
+          </article>
+
+          <article class="news-card" data-news-category="arrival">
+            <a
+              class="news-card__photo"
+              href="article.html"
+              aria-label="Открыть публикацию: Как показывать новые поступления в каталоге"
+              ><img
+                src="img/figma-news/arrival.png"
+                alt="Белый автомобиль из нового поступления"
+            /></a>
+            <div class="news-card__body">
+              <div class="news-card__meta">
+                <span>Новые поступления</span
+                ><time datetime="2026-07-16"
+                  ><img src="img/figma-exact/calendar.svg" alt="" />16 июля 2026
+                  г.</time
+                >
+              </div>
+              <h2>
+                <a href="article.html"
+                  >Как показывать новые поступления в каталоге</a
+                >
+              </h2>
+              <p>
+                Пример карточки свежего поступления с фотографией, основными
+                характеристиками и переходом к автомобилю.
+              </p>
+              <a class="news-card__link" href="article.html"
+                >Читать материал
+                <img src="img/figma-exact/arrow-dark.svg" alt=""
+              /></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="news-cta" aria-labelledby="news-cta-title">
+        <div class="news-cta__copy">
+          <p>
+            <img src="img/figma-news/cta-icon.png" alt="" />Нужен автомобиль?
+          </p>
+          <h2 id="news-cta-title">
+            Подберём подходящий вариант под вашу задачу
+          </h2>
+        </div>
+        <a href="contact.html"
+          >Подобрать автомобиль
+          <img src="img/figma-exact/arrow-white.svg" alt=""
+        /></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="frame">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="img/logo-figma.png" alt="Твоё Авто Сибирь" />
+            <p>
+              Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
+              Сибири.
+            </p>
+            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+            <div class="footer-social">
+              <a href="#" aria-label="ВКонтакте"
+                ><img src="img/figma-catalog/vk.svg" alt="" /></a
+              ><a href="#" aria-label="Telegram"
+                ><img src="img/figma-catalog/tg.svg" alt="" /></a
+              ><a href="#" aria-label="MAX"
+                ><img src="img/figma-catalog/max.svg" alt="" /></a
+              ><a href="#" aria-label="WhatsApp"
+                ><img src="img/figma-catalog/wa.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div>
+            <h3>Услуги</h3>
+            <a href="catalog.html">Автомобили</a
+            ><a href="installment.html">Рассрочка</a
+            ><a href="rent-to-own.html">Аренда с выкупом</a
+            ><a href="trade-in.html">Trade-in</a>
+          </div>
+          <div>
+            <h3>Компания</h3>
+            <a href="news.html">Новости и выдачи</a
+            ><a href="selection.html">Автоподбор</a
+            ><a href="reviews.html">Отзывы</a
+            ><a href="faq.html">Вопросы и ответы</a
+            ><a href="contact.html">Контакты</a>
+          </div>
+          <div class="footer-coverage">
+            <h3>География</h3>
+            <p>Работаем по Сибири</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 «Твоё Авто Сибирь»</p>
+          <p>
+            Все расчёты предварительные и не являются публичной офертой.
+            Итоговые условия определяются после индивидуального рассмотрения.
+          </p>
+          <div class="footer-credit">
+            <span>Разработано маркетинговым агентством XO-STUDIO</span>
+            <img src="img/xo.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a class="news-contact" href="contact.html"
+      ><img src="img/figma-catalog/chat.png" alt="" />Связаться</a
+    >
+    <a
+      class="site-yandex-link"
+      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134?si=p19zgr6a0928r23ng2dqvy26w8"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+    </a>
+    <script src="js/news.js"></script>
+    <script src="js/contact-widget.js"></script>
+  </body>
+</html>

@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Каталог автомобилей — Твоё Авто Сибирь</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/pages/catalog.css" />
+    <link rel="stylesheet" href="css/shared-chrome.css" />
+    <link rel="stylesheet" href="css/contact-widget.css" />
+  </head>
+  <body class="catalog-page">
+    <header class="site-header">
+      <div class="header-wrap">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Твоё Авто Сибирь — на главную"
+          ><img src="img/logo-figma.png" alt="Твоё Авто Сибирь"
+        /></a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="catalog.html">Автомобили</a
+          ><a href="installment.html">Рассрочка</a
+          ><a href="rent-to-own.html">Аренда с выкупом</a
+          ><a href="trade-in.html">Trade-in</a
+          ><a href="selection.html">Автоподбор</a>
+        </nav>
+        <div class="header-actions">
+          <span class="header-location"
+            >Работаем по Сибири</span
+          ><a class="header-phone" href="tel:+79000000000"
+            ><img src="img/phone.svg" alt="" />+7 (900) 000-00-00</a
+          ><a class="header-cta" href="contact.html">Подобрать авто</a>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <aside class="mobile-panel" aria-label="Мобильное меню">
+      <nav>
+        <a href="catalog.html">Автомобили</a
+        ><a href="installment.html">Рассрочка</a
+        ><a href="rent-to-own.html">Аренда с выкупом</a
+        ><a href="trade-in.html">Trade-in</a
+        ><a href="selection.html">Автоподбор</a>
+      </nav>
+      <div class="mobile-panel__footer">
+        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <p>Работаем по Сибири</p>
+      </div>
+    </aside>
+
+    <main class="catalog-main">
+      <section class="catalog-hero">
+        <div class="catalog-hero__inner">
+          <span class="catalog-eyebrow">Каталог</span>
+          <h1>Автомобили, доступные<br />для оформления</h1>
+          <p>
+            Выберите вариант или оставьте заявку на подбор аналогичного
+            автомобиля.
+          </p>
+        </div>
+      </section>
+      <section class="catalog-listing" aria-label="Каталог автомобилей">
+        <div class="catalog-layout">
+          <aside class="catalog-filter" aria-label="Фильтры каталога">
+            <div class="catalog-filter__heading">
+              <img src="img/figma-exact/filter.svg" alt="" />
+              <h2>Фильтры</h2>
+            </div>
+            <div class="catalog-filter__group">
+              <button
+                class="catalog-filter__row"
+                type="button"
+                aria-expanded="false"
+              >
+                <span>Марка и модель</span
+                ><img src="img/figma-catalog/chevron.png" alt="" />
+              </button>
+              <div class="catalog-filter__panel">
+                <label class="catalog-filter__option"
+                  ><input type="checkbox" name="model" value="graphite" /><span
+                    >Graphite</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="model" value="white" /><span
+                    >White</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="model" value="navy" /><span
+                    >Navy</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="catalog-filter__group">
+              <button
+                class="catalog-filter__row"
+                type="button"
+                aria-expanded="false"
+              >
+                <span>Год выпуска</span
+                ><img src="img/figma-catalog/chevron.png" alt="" />
+              </button>
+              <div class="catalog-filter__panel">
+                <label class="catalog-filter__option"
+                  ><input type="checkbox" name="year" value="2019" /><span
+                    >2019</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="year" value="2020" /><span
+                    >2020</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="year" value="2021" /><span
+                    >2021</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="year" value="2022" /><span
+                    >2022</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="catalog-filter__group">
+              <button
+                class="catalog-filter__row"
+                type="button"
+                aria-expanded="false"
+              >
+                <span>Тип кузова</span
+                ><img src="img/figma-catalog/chevron.png" alt="" />
+              </button>
+              <div class="catalog-filter__panel">
+                <label class="catalog-filter__option"
+                  ><input type="checkbox" name="body" value="sedan" /><span
+                    >Седан</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="body" value="crossover" /><span
+                    >Кроссовер</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="body" value="suv" /><span
+                    >Внедорожник</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="catalog-filter__group">
+              <button
+                class="catalog-filter__row"
+                type="button"
+                aria-expanded="false"
+              >
+                <span>Коробка передач</span
+                ><img src="img/figma-catalog/chevron.png" alt="" />
+              </button>
+              <div class="catalog-filter__panel">
+                <label class="catalog-filter__option"
+                  ><input type="checkbox" name="transmission" value="at" /><span
+                    >Автоматическая</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input
+                    type="checkbox"
+                    name="transmission"
+                    value="cvt"
+                  /><span>Вариатор</span></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="transmission" value="mt" /><span
+                    >Механическая</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="catalog-filter__group">
+              <button
+                class="catalog-filter__row"
+                type="button"
+                aria-expanded="false"
+              >
+                <span>Город</span
+                ><img src="img/figma-catalog/chevron.png" alt="" />
+              </button>
+              <div class="catalog-filter__panel">
+                <label class="catalog-filter__option"
+                  ><input type="checkbox" name="city" value="barnaul" /><span
+                    >Барнаул</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input
+                    type="checkbox"
+                    name="city"
+                    value="novosibirsk"
+                  /><span>Новосибирск</span></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="city" value="kemerovo" /><span
+                    >Кемерово</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="city" value="biysk" /><span
+                    >Бийск</span
+                  ></label
+                >
+              </div>
+            </div>
+            <button class="catalog-filter__reset" type="button">
+              Сбросить фильтры
+            </button>
+          </aside>
+          <div class="catalog-results">
+            <div class="catalog-toolbar">
+              <p class="catalog-results-count" aria-live="polite">Найдено: 6</p>
+              <label
+                ><span class="sr-only">Сортировка</span
+                ><select aria-label="Сортировка автомобилей">
+                  <option value="newest">Сначала новые</option>
+                  <option value="oldest">Сначала старые</option>
+                  <option value="name">По названию</option>
+                </select></label
+              >
+            </div>
+            <div class="catalog-cards">
+              <article
+                class="catalog-card"
+                data-model="graphite"
+                data-year="2021"
+                data-body="crossover"
+                data-transmission="at"
+                data-city="barnaul"
+              >
+                <a class="catalog-card__photo" href="car.html"
+                  ><img src="img/figma-exact/catalog.png" alt="Graphite Cross"
+                /></a>
+                <div class="catalog-card__body">
+                  <div class="catalog-card__title">
+                    <div>
+                      <h3>Graphite Cross</h3>
+                      <p>2021 · 2.0 · AT · 4WD</p>
+                    </div>
+                  </div>
+                  <div class="catalog-card__terms">
+                    <span>Первый взнос<b>от 438 000 ₽</b></span
+                    ><span>Платёж<b>от 42 900 ₽/мес.</b></span>
+                  </div>
+                  <a class="catalog-card__button" href="car.html"
+                    >Подробнее
+                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                  ><small
+                    >Расчёт предварительный и не является публичной
+                    офертой.</small
+                  >
+                </div>
+              </article>
+              <article
+                class="catalog-card"
+                data-model="white"
+                data-year="2020"
+                data-body="sedan"
+                data-transmission="at"
+                data-city="novosibirsk"
+              >
+                <a class="catalog-card__photo" href="car.html"
+                  ><img src="img/figma-exact/catalog.png" alt="White Sedan"
+                /></a>
+                <div class="catalog-card__body">
+                  <div class="catalog-card__title">
+                    <div>
+                      <h3>White Sedan</h3>
+                      <p>2020 · 1.6 · AT · передний</p>
+                    </div>
+                  </div>
+                  <div class="catalog-card__terms">
+                    <span>Первый взнос<b>от 328 000 ₽</b></span
+                    ><span>Платёж<b>от 32 300 ₽/мес.</b></span>
+                  </div>
+                  <a class="catalog-card__button" href="car.html"
+                    >Подробнее
+                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                  ><small
+                    >Расчёт предварительный и не является публичной
+                    офертой.</small
+                  >
+                </div>
+              </article>
+              <article
+                class="catalog-card"
+                data-model="navy"
+                data-year="2022"
+                data-body="suv"
+                data-transmission="at"
+                data-city="barnaul"
+              >
+                <a class="catalog-card__photo" href="car.html"
+                  ><img src="img/figma-exact/catalog.png" alt="Navy Family SUV"
+                /></a>
+                <div class="catalog-card__body">
+                  <div class="catalog-card__title">
+                    <div>
+                      <h3>Navy Family SUV</h3>
+                      <p>2022 · 2.0 · AT · 4WD</p>
+                    </div>
+                  </div>
+                  <div class="catalog-card__terms">
+                    <span>Первый взнос<b>от 556 000 ₽</b></span
+                    ><span>Платёж<b>от 54 600 ₽/мес.</b></span>
+                  </div>
+                  <a class="catalog-card__button" href="car.html"
+                    >Подробнее
+                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                  ><small
+                    >Расчёт предварительный и не является публичной
+                    офертой.</small
+                  >
+                </div>
+              </article>
+              <article
+                class="catalog-card"
+                data-model="graphite"
+                data-year="2019"
+                data-body="sedan"
+                data-transmission="cvt"
+                data-city="kemerovo"
+              >
+                <a class="catalog-card__photo" href="car.html"
+                  ><img src="img/figma-exact/catalog.png" alt="Graphite City"
+                /></a>
+                <div class="catalog-card__body">
+                  <div class="catalog-card__title">
+                    <div>
+                      <h3>Graphite City</h3>
+                      <p>2019 · 1.8 · CVT · передний</p>
+                    </div>
+                  </div>
+                  <div class="catalog-card__terms">
+                    <span>Первый взнос<b>от 296 000 ₽</b></span
+                    ><span>Платёж<b>от 29 100 ₽/мес.</b></span>
+                  </div>
+                  <a class="catalog-card__button" href="car.html"
+                    >Подробнее
+                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                  ><small
+                    >Расчёт предварительный и не является публичной
+                    офертой.</small
+                  >
+                </div>
+              </article>
+              <article
+                class="catalog-card"
+                data-model="white"
+                data-year="2021"
+                data-body="sedan"
+                data-transmission="at"
+                data-city="biysk"
+              >
+                <a class="catalog-card__photo" href="car.html"
+                  ><img src="img/figma-exact/catalog.png" alt="White Comfort"
+                /></a>
+                <div class="catalog-card__body">
+                  <div class="catalog-card__title">
+                    <div>
+                      <h3>White Comfort</h3>
+                      <p>2021 · 1.6 · AT · передний</p>
+                    </div>
+                  </div>
+                  <div class="catalog-card__terms">
+                    <span>Первый взнос<b>от 364 000 ₽</b></span
+                    ><span>Платёж<b>от 35 800 ₽/мес.</b></span>
+                  </div>
+                  <a class="catalog-card__button" href="car.html"
+                    >Подробнее
+                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                  ><small
+                    >Расчёт предварительный и не является публичной
+                    офертой.</small
+                  >
+                </div>
+              </article>
+              <article
+                class="catalog-card"
+                data-model="navy"
+                data-year="2020"
+                data-body="crossover"
+                data-transmission="at"
+                data-city="novosibirsk"
+              >
+                <a class="catalog-card__photo" href="car.html"
+                  ><img src="img/figma-exact/catalog.png" alt="Navy Tour"
+                /></a>
+                <div class="catalog-card__body">
+                  <div class="catalog-card__title">
+                    <div>
+                      <h3>Navy Tour</h3>
+                      <p>2020 · 2.0 · AT · 4WD</p>
+                    </div>
+                  </div>
+                  <div class="catalog-card__terms">
+                    <span>Первый взнос<b>от 470 000 ₽</b></span
+                    ><span>Платёж<b>от 46 200 ₽/мес.</b></span>
+                  </div>
+                  <a class="catalog-card__button" href="car.html"
+                    >Подробнее
+                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                  ><small
+                    >Расчёт предварительный и не является публичной
+                    офертой.</small
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="catalog-spacer" aria-hidden="true"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="frame">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="img/logo-figma.png" alt="Твоё Авто Сибирь" />
+            <p>
+              Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
+              Сибири.
+            </p>
+            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+            <div class="footer-social">
+              <a href="#" aria-label="ВКонтакте"
+                ><img src="img/figma-catalog/vk.svg" alt="" /></a
+              ><a href="#" aria-label="Telegram"
+                ><img src="img/figma-catalog/tg.svg" alt="" /></a
+              ><a href="#" aria-label="MAX"
+                ><img src="img/figma-catalog/max.svg" alt="" /></a
+              ><a href="#" aria-label="WhatsApp"
+                ><img src="img/figma-catalog/wa.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div>
+            <h3>Услуги</h3>
+            <a href="catalog.html">Автомобили</a
+            ><a href="installment.html">Рассрочка</a
+            ><a href="rent-to-own.html">Аренда с выкупом</a
+            ><a href="trade-in.html">Trade-in</a>
+          </div>
+          <div>
+            <h3>Компания</h3>
+            <a href="news.html">Новости и выдачи</a
+            ><a href="selection.html">Автоподбор</a
+            ><a href="reviews.html">Отзывы</a
+            ><a href="faq.html">Вопросы и ответы</a
+            ><a href="contact.html">Контакты</a>
+          </div>
+          <div class="footer-coverage">
+            <h3>География</h3>
+            <p>Работаем по Сибири</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 «Твоё Авто Сибирь»</p>
+          <p>
+            Все расчёты предварительные и не являются публичной офертой.
+            Итоговые условия определяются после индивидуального рассмотрения.
+          </p>
+          <div class="footer-credit">
+            <span>Разработано маркетинговым агентством XO-STUDIO</span>
+            <img src="img/xo.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a class="catalog-contact" href="contact.html"
+      ><img src="img/figma-catalog/chat.png" alt="" />Связаться</a
+    >
+    <a
+      class="site-yandex-link"
+      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134?si=p19zgr6a0928r23ng2dqvy26w8"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+    </a>
+    <script src="js/menu.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/contact-widget.js"></script>
+  </body>
+</html>

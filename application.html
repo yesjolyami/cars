@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Заявка на подбор автомобиля — Твоё Авто Сибирь</title>
+    <meta
+      name="description"
+      content="Заполните короткую заявку на подбор автомобиля. Укажите бюджет, пожелания и удобный способ связи."
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/shared-chrome.css" />
+    <link rel="stylesheet" href="css/pages/application.css?v=2" />
+  </head>
+  <body class="application-page">
+    <header class="site-header">
+      <div class="header-wrap">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Твоё Авто Сибирь — на главную"
+          ><img src="img/logo-figma.png" alt="Твоё Авто Сибирь"
+        /></a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="catalog.html">Автомобили</a
+          ><a href="installment.html">Рассрочка</a
+          ><a href="rent-to-own.html">Аренда с выкупом</a
+          ><a href="trade-in.html">Trade-in</a
+          ><a href="selection.html">Автоподбор</a>
+        </nav>
+        <div class="header-actions">
+          <span class="header-location"
+            >Работаем по Сибири</span
+          ><a class="header-phone" href="tel:+79000000000"
+            ><img src="img/phone.svg" alt="" />+7 (900) 000-00-00</a
+          ><a class="header-cta" href="#client-application">Заполнить заявку</a>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <aside class="mobile-panel" aria-label="Мобильное меню">
+      <nav>
+        <a href="catalog.html">Автомобили</a
+        ><a href="installment.html">Рассрочка</a
+        ><a href="rent-to-own.html">Аренда с выкупом</a
+        ><a href="trade-in.html">Trade-in</a
+        ><a href="selection.html">Автоподбор</a>
+      </nav>
+      <div class="mobile-panel__footer">
+        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <p>Работаем по Сибири</p>
+      </div>
+    </aside>
+
+    <main>
+      <section class="application-hero" aria-labelledby="application-title">
+        <div class="application-frame application-hero__grid">
+          <div class="application-hero__copy">
+            <a class="application-back" href="index.html"
+              ><span aria-hidden="true">←</span> На основной сайт</a
+            >
+            <p class="application-kicker">Персональный подбор</p>
+            <h1 id="application-title">
+              Расскажите, какой автомобиль вам нужен
+            </h1>
+            <p class="application-hero__lead">
+              Заполните короткую анкету — менеджер заранее изучит запрос и
+              свяжется с вами уже с предметными вариантами.
+            </p>
+            <ul class="application-benefits" aria-label="Преимущества заявки">
+              <li><strong>3–5 минут</strong><span>на заполнение</span></li>
+              <li><strong>Бесплатно</strong><span>без обязательств</span></li>
+              <li><strong>По задаче</strong><span>а не по остаткам</span></li>
+            </ul>
+          </div>
+          <div class="application-hero__visual" aria-hidden="true">
+            <img
+              src="img/hero-car.png"
+              alt=""
+              width="1672"
+              height="941"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="application-content" id="client-application">
+        <div class="application-frame application-content__grid">
+          <aside class="application-aside" aria-label="О заявке">
+            <p class="application-kicker">Заявка на автомобиль</p>
+            <h2>Коротко и по делу</h2>
+            <p>
+              Обязательные поля отмечены звёздочкой. Если по какому-то пункту
+              ещё не определились, оставьте его пустым — обсудим при звонке.
+            </p>
+            <ol>
+              <li><span>01</span>Контакты</li>
+              <li><span>02</span>Автомобиль</li>
+              <li><span>03</span>Условия покупки</li>
+            </ol>
+            <div class="application-aside__privacy">
+              Данные нужны только для обработки вашей заявки и не передаются
+              посторонним.
+            </div>
+          </aside>
+
+          <form
+            class="application-form"
+            action="#"
+            method="post"
+            data-client-application
+          >
+            <section
+              class="application-form__section"
+              aria-labelledby="application-contacts-title"
+            >
+              <div class="application-form__heading">
+                <span>01</span>
+                <span
+                  ><h2 id="application-contacts-title">Контакты</h2
+                  ><small>Как с вами связаться</small></span
+                >
+              </div>
+              <div class="application-fields application-fields--two">
+                <label class="application-field">
+                  <span>Ваше имя *</span>
+                  <input
+                    type="text"
+                    name="name"
+                    autocomplete="name"
+                    minlength="2"
+                    placeholder="Как к вам обращаться?"
+                    required
+                  />
+                </label>
+                <label class="application-field">
+                  <span>Телефон *</span>
+                  <input
+                    type="tel"
+                    name="phone"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    placeholder="+7 (___) ___-__-__"
+                    pattern="[+0-9 ()_-]{10,}"
+                    required
+                  />
+                </label>
+                <label class="application-field">
+                  <span>Город *</span>
+                  <input
+                    type="text"
+                    name="city"
+                    autocomplete="address-level2"
+                    placeholder="Например, Барнаул"
+                    required
+                  />
+                </label>
+                <label class="application-field">
+                  <span>Электронная почта</span>
+                  <input
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="name@example.ru"
+                  />
+                </label>
+              </div>
+              <fieldset class="application-choice-group">
+                <legend>Как удобнее связаться? *</legend>
+                <div class="application-options">
+                  <label
+                    ><input
+                      type="radio"
+                      name="contact-method"
+                      value="Телефон"
+                      required
+                    /><span>Телефон</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="contact-method"
+                      value="Telegram"
+                    /><span>Telegram</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="contact-method"
+                      value="WhatsApp"
+                    /><span>WhatsApp</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="contact-method"
+                      value="MAX"
+                    /><span>MAX</span></label
+                  >
+                </div>
+              </fieldset>
+            </section>
+
+            <section
+              class="application-form__section"
+              aria-labelledby="application-car-title"
+            >
+              <div class="application-form__heading">
+                <span>02</span>
+                <span
+                  ><h2 id="application-car-title">Автомобиль</h2
+                  ><small>Что будем искать</small></span
+                >
+              </div>
+              <div class="application-fields application-fields--two">
+                <label class="application-field">
+                  <span>Марка и модель</span>
+                  <input
+                    type="text"
+                    name="car"
+                    placeholder="Например, Toyota Camry"
+                  />
+                </label>
+                <label class="application-field">
+                  <span>Год выпуска</span>
+                  <select name="year">
+                    <option value="">Пока не определился</option>
+                    <option value="2022 и новее">2022 и новее</option>
+                    <option value="2018–2021">2018–2021</option>
+                    <option value="2014–2017">2014–2017</option>
+                    <option value="До 2014">До 2014</option>
+                  </select>
+                </label>
+                <label class="application-field">
+                  <span>Тип кузова</span>
+                  <select name="body-type">
+                    <option value="">Любой подходящий</option>
+                    <option value="Седан">Седан</option>
+                    <option value="Хэтчбек">Хэтчбек</option>
+                    <option value="Универсал">Универсал</option>
+                    <option value="Кроссовер">Кроссовер</option>
+                    <option value="Внедорожник">Внедорожник</option>
+                    <option value="Минивэн">Минивэн</option>
+                    <option value="Коммерческий">Коммерческий</option>
+                  </select>
+                </label>
+                <label class="application-field">
+                  <span>Коробка передач</span>
+                  <select name="transmission">
+                    <option value="">Не принципиально</option>
+                    <option value="Автомат">Автомат</option>
+                    <option value="Механика">Механика</option>
+                  </select>
+                </label>
+              </div>
+              <label class="application-field application-field--wide">
+                <span>Для каких задач нужен автомобиль?</span>
+                <input
+                  type="text"
+                  name="purpose"
+                  placeholder="Город, семья, работа, дальние поездки…"
+                />
+              </label>
+            </section>
+
+            <section
+              class="application-form__section"
+              aria-labelledby="application-conditions-title"
+            >
+              <div class="application-form__heading">
+                <span>03</span>
+                <span
+                  ><h2 id="application-conditions-title">Условия покупки</h2
+                  ><small>Бюджет и сроки</small></span
+                >
+              </div>
+              <fieldset class="application-choice-group">
+                <legend>Как планируете оформить автомобиль? *</legend>
+                <div class="application-options application-options--purchase">
+                  <label
+                    ><input
+                      type="radio"
+                      name="purchase-type"
+                      value="Полная оплата"
+                      required
+                    /><span>Полная оплата</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="purchase-type"
+                      value="Рассрочка"
+                    /><span>Рассрочка</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="purchase-type"
+                      value="Аренда с выкупом"
+                    /><span>Аренда с выкупом</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="purchase-type"
+                      value="Trade-in"
+                    /><span>Trade-in</span></label
+                  >
+                </div>
+              </fieldset>
+              <div class="application-fields application-fields--two">
+                <label class="application-field">
+                  <span>Бюджет на автомобиль *</span>
+                  <input
+                    type="text"
+                    name="budget"
+                    inputmode="numeric"
+                    placeholder="Например, до 1 500 000 ₽"
+                    required
+                  />
+                </label>
+                <label class="application-field">
+                  <span>Первоначальный взнос</span>
+                  <input
+                    type="text"
+                    name="initial-payment"
+                    inputmode="numeric"
+                    placeholder="Если планируется"
+                  />
+                </label>
+                <label class="application-field">
+                  <span>Желаемый платёж в месяц</span>
+                  <input
+                    type="text"
+                    name="monthly-payment"
+                    inputmode="numeric"
+                    placeholder="Если планируется"
+                  />
+                </label>
+                <label class="application-field">
+                  <span>Когда нужен автомобиль?</span>
+                  <select name="timing">
+                    <option value="">Срок пока не определён</option>
+                    <option value="Как можно скорее">Как можно скорее</option>
+                    <option value="В течение месяца">В течение месяца</option>
+                    <option value="В течение 2–3 месяцев">
+                      В течение 2–3 месяцев
+                    </option>
+                    <option value="Позже">Позже</option>
+                  </select>
+                </label>
+              </div>
+              <label class="application-field application-field--textarea">
+                <span>Что ещё важно учесть?</span>
+                <textarea
+                  name="comment"
+                  rows="5"
+                  placeholder="Цвет, комплектация, пробег, важные опции или другие пожелания"
+                ></textarea>
+              </label>
+            </section>
+
+            <div class="application-submit">
+              <label class="application-consent">
+                <input type="checkbox" name="consent" required />
+                <span
+                  >Я согласен на обработку персональных данных для связи по
+                  заявке.</span
+                >
+              </label>
+              <button type="submit">
+                Отправить заявку <span aria-hidden="true">→</span>
+              </button>
+              <p class="application-form__status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="frame">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="img/logo-figma.png" alt="Твоё Авто Сибирь" />
+            <p>
+              Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
+              Сибири.
+            </p>
+            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+            <div class="footer-social">
+              <a href="#" aria-label="ВКонтакте"
+                ><img src="img/figma-catalog/vk.svg" alt="" /></a
+              ><a href="#" aria-label="Telegram"
+                ><img src="img/figma-catalog/tg.svg" alt="" /></a
+              ><a href="#" aria-label="MAX"
+                ><img src="img/figma-catalog/max.svg" alt="" /></a
+              ><a href="#" aria-label="WhatsApp"
+                ><img src="img/figma-catalog/wa.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div>
+            <h3>Услуги</h3>
+            <a href="catalog.html">Автомобили</a
+            ><a href="installment.html">Рассрочка</a
+            ><a href="rent-to-own.html">Аренда с выкупом</a
+            ><a href="trade-in.html">Trade-in</a>
+          </div>
+          <div>
+            <h3>Компания</h3>
+            <a href="news.html">Новости и выдачи</a
+            ><a href="selection.html">Автоподбор</a
+            ><a href="reviews.html">Отзывы</a
+            ><a href="faq.html">Вопросы и ответы</a
+            ><a href="contact.html">Контакты</a>
+          </div>
+          <div class="footer-coverage">
+            <h3>География</h3>
+            <p>Работаем по Сибири</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 «Твоё Авто Сибирь»</p>
+          <p>
+            Все расчёты предварительные и не являются публичной офертой.
+            Итоговые условия определяются после индивидуального рассмотрения.
+          </p>
+          <div class="footer-credit">
+            <span>Разработано маркетинговым агентством XO-STUDIO</span>
+            <img src="img/xo.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/application.js?v=2"></script>
+  </body>
+</html>

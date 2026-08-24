@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400&family=Manrope:wght@400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap');
+
+:root{--rent-ink:#0e1a2b;--rent-red:#d91f2a;--rent-paper:#f6f3ee;--rent-line:#e3e0da;--rent-muted:#626872;--rent-footer:#09121f}
+*{box-sizing:border-box}
+html{background:#fff;scroll-behavior:smooth}
+.rent-page{min-width:320px;margin:0;background:#fff;color:var(--rent-ink);font-family:Manrope,Arial,sans-serif;font-size:14px;line-height:1.45}
+.rent-page.menu-open{overflow:hidden}
+.rent-page a{color:inherit;text-decoration:none}.rent-page button{font:inherit}
+
+.rent-header{position:relative;z-index:30;height:84px;background:#fff}
+.rent-brand{position:absolute;top:5.5px;left:72px;width:72px;height:72px}.rent-brand img{width:72px;height:72px;object-fit:contain}
+.rent-nav{position:absolute;top:32px;left:542.5px;display:flex;width:441px;gap:34px}.rent-nav a{font-size:14px;font-weight:600;line-height:19px;white-space:nowrap;transition:color .18s}.rent-nav a:hover,.rent-nav a:focus-visible,.rent-nav a.is-active{color:var(--rent-red)}
+.rent-header__actions{position:absolute;top:16.5px;right:72px;display:flex;width:466px;height:50px;align-items:center;gap:20px}.rent-location,.rent-phone{display:flex;align-items:center;gap:8px;white-space:nowrap}.rent-location{width:83px;font-size:14px}.rent-phone{width:176px;font-size:16px}.rent-location img,.rent-phone img{width:19px;height:19px}
+.rent-header__cta{display:flex;width:167px;height:50px;align-items:center;justify-content:center;background:var(--rent-red);color:#fff!important;font-family:Exo,Arial,sans-serif;font-size:13px;letter-spacing:.78px;text-transform:uppercase;transition:background .18s}.rent-header__cta:hover,.rent-header__cta:focus-visible{background:#b91822}.menu-toggle,.mobile-panel{display:none}
+
+.rent-main{height:3504px;overflow:hidden}.rent-kicker{color:var(--rent-red);font-size:12px;font-weight:700;line-height:17px;letter-spacing:.96px;text-transform:uppercase}
+.rent-button{display:flex;height:56px;align-items:center;justify-content:center;gap:12px;font-family:Exo,Arial,sans-serif;font-size:14px;line-height:16px;letter-spacing:1px;text-transform:uppercase;transition:background .18s,border-color .18s}.rent-button img{width:18px;height:24px}.rent-button--red{background:var(--rent-red);color:#fff!important}.rent-button--red:hover,.rent-button--red:focus-visible{background:#b91822}.rent-button--outline{border:1px solid rgba(14,26,43,.22);background:#fff}.rent-button--outline:hover,.rent-button--outline:focus-visible{border-color:var(--rent-ink)}
+
+.rent-hero{position:relative;height:631px;background:var(--rent-paper)}.rent-hero__image{position:absolute;top:0;left:0;width:936px;height:631px;overflow:hidden}.rent-hero__image img{width:100%;height:100%;object-fit:cover}
+.rent-hero__copy{position:absolute;top:28px;left:1001px;width:870px}.rent-hero__copy>.rent-kicker{font-size:18px;line-height:25px;letter-spacing:1px}.rent-hero h1{width:859px;margin-top:23px;font-family:Montserrat,Arial,sans-serif;font-size:64px;font-weight:700;line-height:78px;letter-spacing:0}.rent-hero__copy>p:not(.rent-kicker){width:733px;margin-top:.6px;color:var(--rent-muted);font-size:21px;line-height:40px}.rent-hero__buttons{display:flex;gap:12px;margin-top:130.34px}.rent-hero__buttons .rent-button--red{width:240px}.rent-hero__buttons .rent-button--outline{width:236px}
+
+.rent-route{position:relative;height:607.38px;padding:130px 120px;background:var(--rent-ink);color:#fff}.rent-route__intro{position:absolute;top:134px;left:120px;width:703px}.rent-route__intro .rent-kicker{color:#ff6c75}.rent-route__intro h2{margin-top:22.9px;font-family:Montserrat,Arial,sans-serif;font-size:48px;font-weight:800;line-height:56.82px;letter-spacing:0}.rent-route__intro>p:not(.rent-kicker){width:540px;margin-top:22.9px;color:#aab2bf;font-size:15px;line-height:25.5px}
+.rent-route__list{position:absolute;top:130px;right:120px;display:grid;width:915.84px;height:347.38px;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;margin:0;padding:0;list-style:none}.rent-route__list li{display:flex;flex-direction:column;justify-content:space-between;padding:25px 24px 24px;border-top:1px solid rgba(255,255,255,.14)}.rent-route__list li:nth-child(odd){border-right:1px solid rgba(255,255,255,.14)}.rent-route__list span{color:#ff6c75;font-size:10px;line-height:14px}.rent-route__list strong{font-size:17px;line-height:23px}
+
+.rent-contract{position:relative;height:744.48px;background:#fff}.rent-contract__heading{position:absolute;top:150px;left:76px;display:flex;width:1768px;height:101.98px;align-items:flex-end;justify-content:space-between}.rent-contract__heading h2{margin-top:23.18px;font-family:Montserrat,Arial,sans-serif;font-size:53.6px;font-weight:800;line-height:56.82px;letter-spacing:0}.rent-contract__heading>p{width:541.56px;margin-bottom:0;color:var(--rent-muted);font-size:15px;line-height:25.5px}
+.rent-contract__cards{position:absolute;top:311.98px;left:76px;display:grid;width:1768px;height:282.5px;grid-template-columns:repeat(4,1fr);border:1px solid var(--rent-line)}.rent-contract__cards article{position:relative;min-height:280px;padding:28px;border-right:1px solid var(--rent-line)}.rent-contract__cards article:last-child{border-right:0}.rent-contract__cards article>img{width:30px;height:30px}.rent-contract__cards article>div{position:absolute;right:28px;bottom:39px;left:28px}.rent-contract__cards h3{font-size:17px;line-height:23px}.rent-contract__cards p{margin-top:10px;color:var(--rent-muted);font-size:13px;line-height:25.5px}
+
+.rent-cars{position:relative;height:1197.33px;background:var(--rent-paper)}.rent-cars__heading{position:absolute;top:150px;left:76px;width:1166.44px;height:158.78px}.rent-cars__heading h2{margin-top:23.09px;font-family:Montserrat,Arial,sans-serif;font-size:53.6px;font-weight:800;line-height:56.82px;letter-spacing:0}
+.rent-cars__grid{position:absolute;top:368.78px;left:76px;display:grid;width:1722px;grid-template-columns:repeat(3,530px);gap:66px}.rent-car{height:576.55px;border:1px solid var(--rent-line);background:#fff}.rent-car__photo{display:block;width:528px;height:260px;overflow:hidden}.rent-car__photo img{width:100%;height:100%;object-fit:cover}.rent-car__body{height:314.55px;padding:25px}.rent-car__title{height:69.5px}.rent-car__title h3{font-size:20px;font-weight:400;line-height:30px}.rent-car__title p{margin-top:10.5px;color:var(--rent-muted);font-size:12px;line-height:18px}.rent-car__terms{display:grid;height:73px;grid-template-columns:1fr 1fr;border-top:1px solid var(--rent-line);border-bottom:1px solid var(--rent-line)}.rent-car__terms span{display:flex;flex-direction:column;justify-content:center;color:var(--rent-muted);font-size:10px;line-height:15px}.rent-car__terms b{margin-top:4px;color:var(--rent-ink);font-size:13px;line-height:20px}.rent-car__button{display:flex;height:56px;align-items:center;justify-content:center;gap:14px;margin-top:24.5px;border:1px solid var(--rent-ink);font-family:Exo,Arial,sans-serif;font-size:16px;letter-spacing:.96px;text-transform:uppercase;transition:background .18s,color .18s}.rent-car__button img{width:18px;height:24px}.rent-car__button:hover,.rent-car__button:focus-visible{background:var(--rent-ink);color:#fff}.rent-car__button:hover img,.rent-car__button:focus-visible img{filter:invert(1)}.rent-car small{display:block;margin-top:10px;color:#92969c;font-size:9px;line-height:13px}
+.rent-cars__all{position:absolute;top:986.14px;left:50%;display:flex;height:42px;align-items:center;gap:10px;transform:translateX(-50%);font-family:Exo,Arial,sans-serif;font-size:16px;line-height:24px;text-transform:uppercase}.rent-cars__all img{width:22px;height:32px}
+
+.rent-faq{position:relative;height:324px;background:var(--rent-paper)}.rent-faq__intro{position:absolute;top:0;left:76px;width:524.68px}.rent-faq__intro h2{margin-top:21px;font-family:Montserrat,Arial,sans-serif;font-size:53.6px;font-weight:800;line-height:59.99px;letter-spacing:0}.rent-faq__intro>p:not(.rent-kicker){margin-top:21px;color:var(--rent-muted);font-size:12px;line-height:24px}.rent-faq__intro>a{display:flex;align-items:center;gap:10px;margin-top:21px;font-size:12px;font-weight:700;line-height:25px}.rent-faq__intro>a img{width:24px;height:24px}
+.rent-accordion{position:absolute;top:0;right:76px;width:1089.72px}.accordion-item{border-top:1px solid #d9d6d0}.accordion-item:last-child{border-bottom:1px solid #d9d6d0}.accordion-trigger{position:relative;width:100%;height:76px;padding:0 44px 0 0;border:0;background:transparent;color:var(--rent-ink);font-size:16px;font-weight:800;text-align:left;cursor:pointer}.accordion-trigger span{position:absolute;top:31px;right:5px;width:14px;height:14px}.accordion-trigger span::before,.accordion-trigger span::after{position:absolute;top:6px;left:1px;width:12px;height:1.5px;background:var(--rent-ink);content:"";transition:transform .2s,background .2s}.accordion-trigger span::after{transform:rotate(90deg)}.accordion-trigger[aria-expanded="true"] span::before{background:var(--rent-red)}.accordion-trigger[aria-expanded="true"] span::after{background:var(--rent-red);transform:rotate(0)}.accordion-panel{display:none;max-width:760px;padding:0 50px 26px 0;color:#737981;font-size:12px;line-height:24px}.accordion-panel.is-open{display:block}
+
+.rent-final{display:flex;height:310.8px;align-items:flex-start;justify-content:space-between;padding:105px;background:var(--rent-ink);color:#fff}.rent-final>div{width:1328.88px}.rent-final p{display:flex;height:25px;align-items:center;gap:10px;color:#8d96a3;font-size:18px;line-height:25px;letter-spacing:1px;text-transform:uppercase}.rent-final p img{width:24px;height:24px}.rent-final h2{margin-top:17px;font-family:Montserrat,Arial,sans-serif;font-size:48px;line-height:59px}.rent-final>.rent-button{width:292.55px;margin-top:44px}
+
+.rent-footer{height:631px;padding:65px 76px 0;background:var(--rent-footer);color:#fff}.rent-footer__grid{display:grid;width:1768px;height:363px;grid-template-columns:489.16px repeat(3,376.28px);grid-template-rows:238px 75px;gap:50px;margin:0 auto}.rent-footer__brand>a:first-child{display:block;width:74px;height:72px}.rent-footer__brand>a:first-child img{width:74px;height:72px;object-fit:contain}.rent-footer__brand p{margin-top:20px;color:#7e8997;font-size:12px;line-height:21px}.rent-footer__phone{display:block;margin-top:14px;font-size:17px;font-weight:700}.rent-socials{display:flex;gap:8px;margin-top:20px}.rent-socials a{display:block;width:40px;height:40px;border:1px solid rgba(255,255,255,.15);overflow:hidden;transition:border-color .18s}.rent-socials img{width:40px;height:40px;object-fit:cover}.rent-socials a:hover,.rent-socials a:focus-visible{border-color:#fff}.rent-footer__column{display:flex;flex-direction:column;gap:13px}.rent-footer__column h3{margin:0 0 6px;font-size:12px;line-height:16px;text-transform:uppercase}.rent-footer__column a{color:#7e8997;font-size:12px;line-height:16px;transition:color .18s}.rent-footer__column a:hover,.rent-footer__column a:focus-visible{color:#fff}.rent-footer__bottom{grid-column:1/-1;display:flex;height:75px;align-items:flex-start;justify-content:space-between;padding-top:23px;border-top:1px solid rgba(255,255,255,.09);color:#58616e}.rent-footer__bottom p{font-size:11px;line-height:15px}.rent-footer__bottom p:last-child{width:800px;font-size:15px;line-height:26px}
+
+@media(min-width:1101px) and (max-width:1919px){
+  .rent-brand{left:36px}.rent-header__actions{right:36px}.rent-nav{left:50%;transform:translateX(-50%)}.rent-location{display:none}
+  .rent-hero__image{width:48.75%}.rent-hero__copy{left:52.1%;width:45.4%}.rent-hero h1{width:100%;font-size:clamp(48px,3.33vw,64px);line-height:1.22}.rent-hero__copy>p:not(.rent-kicker){width:88%}
+  .rent-route__intro{left:6.25%;width:36.6%}.rent-route__list{right:6.25%;width:47.7%}
+  .rent-contract__heading,.rent-contract__cards{left:4%;width:92%}.rent-contract__heading>div{max-width:65%}.rent-contract__heading h2{font-size:clamp(42px,2.79vw,53.6px)}
+  .rent-cars__heading{left:4%}.rent-cars__grid{left:4%;width:92%;grid-template-columns:repeat(3,1fr);gap:3.7%}.rent-car{width:100%}.rent-car__photo{width:100%}
+  .rent-faq__intro{left:4%}.rent-accordion{right:4%;width:57%}.rent-final{padding-right:5.5%;padding-left:5.5%}.rent-final h2{font-size:40px}.rent-footer{padding-right:36px;padding-left:36px}.rent-footer__grid{width:100%;grid-template-columns:1.3fr repeat(3,1fr);gap:40px}
+  .rent-final{gap:32px}.rent-final>div{width:auto;min-width:0;flex:1 1 auto}.rent-final>.rent-button{width:292.55px;min-width:292.55px;flex:0 0 292.55px}
+}
+
+@media(min-width:1101px){
+  .rent-main{height:auto;overflow:visible}
+}
+
+@media(max-width:1100px){
+  .rent-header{height:68px}.rent-brand{top:5px;left:18px;width:58px;height:58px}.rent-brand img{width:58px;height:58px}.rent-nav,.rent-header__actions{display:none}.menu-toggle{position:absolute;top:13px;right:18px;display:block;width:42px;height:42px;padding:0;border:0;background:transparent}.menu-toggle span{display:block;width:25px;height:2px;margin:5px auto;background:var(--rent-ink);transition:.2s}.menu-open .menu-toggle span:first-child{transform:translateY(7px) rotate(45deg)}.menu-open .menu-toggle span:nth-child(2){opacity:0}.menu-open .menu-toggle span:last-child{transform:translateY(-7px) rotate(-45deg)}
+  .mobile-panel{position:fixed;top:68px;right:0;bottom:0;left:0;z-index:29;display:block;padding:35px 24px;background:var(--rent-ink);color:#fff;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s}.mobile-panel.is-open{opacity:1;visibility:visible;pointer-events:auto}.mobile-panel nav{display:grid;gap:22px;font-family:Montserrat,Arial,sans-serif;font-size:28px;font-weight:700}.mobile-panel nav [aria-current="page"]{color:var(--rent-red)}.mobile-panel__footer{margin-top:54px;color:#d3d9e0}
+  .rent-main{height:auto;overflow:visible}.rent-hero,.rent-route,.rent-contract,.rent-cars,.rent-faq{height:auto}
+  .rent-hero{display:grid;grid-template-columns:1fr}.rent-hero__image,.rent-hero__copy{position:relative;top:auto;left:auto;width:100%}.rent-hero__image{height:auto;aspect-ratio:1.484}.rent-hero__copy{padding:64px 32px 72px}.rent-hero h1{width:100%;font-size:52px;line-height:1.16}.rent-hero__copy>p:not(.rent-kicker){width:85%;margin-top:20px;font-size:18px;line-height:31px}.rent-hero__buttons{margin-top:50px}
+  .rent-route{display:grid;grid-template-columns:1fr 1.1fr;gap:55px;padding:95px 32px}.rent-route__intro,.rent-route__list{position:static;width:100%;height:auto}.rent-route__intro h2{font-size:43px;line-height:51px}.rent-route__intro>p:not(.rent-kicker){width:100%}.rent-route__list{min-height:360px}
+  .rent-contract{padding:90px 32px}.rent-contract__heading,.rent-contract__cards{position:static;width:100%;height:auto}.rent-contract__heading{display:grid;gap:28px;align-items:start}.rent-contract__heading>p{width:70%}.rent-contract__cards{grid-template-columns:repeat(2,1fr);margin-top:55px}.rent-contract__cards article{min-height:250px;border-bottom:1px solid var(--rent-line)}.rent-contract__cards article:nth-child(2){border-right:0}.rent-contract__cards article:nth-child(n+3){border-bottom:0}
+  .rent-cars{padding:90px 32px}.rent-cars__heading,.rent-cars__grid,.rent-cars__all{position:static;width:100%;height:auto}.rent-cars__heading h2{font-size:48px}.rent-cars__grid{grid-template-columns:repeat(2,1fr);gap:24px;margin-top:55px}.rent-car{width:100%;height:auto}.rent-car__photo{width:100%;height:auto;aspect-ratio:2.03}.rent-car__body{height:auto;min-height:315px}.rent-cars__all{width:max-content;margin:52px auto 0;transform:none}
+  .rent-faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;padding:85px 32px}.rent-faq__intro,.rent-accordion{position:static;width:100%}.rent-faq__intro h2{font-size:45px}.rent-final{padding:85px 32px;gap:35px}.rent-final>div{width:auto}.rent-final h2{font-size:38px;line-height:48px}.rent-final>.rent-button{flex:none;margin-top:32px}
+  .rent-footer{height:auto;min-height:560px;padding:55px 24px 100px}.rent-footer__grid{width:100%;height:auto;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;gap:38px 24px}.rent-footer__brand{grid-column:1/-1}.rent-footer__bottom{grid-column:1/-1;height:auto;gap:25px}.rent-footer__bottom p:last-child{width:auto}
+}
+
+@media(max-width:700px){
+  .rent-page{font-size:13px}
+  .rent-kicker{font-size:10px;line-height:15px;letter-spacing:.35px}
+  .rent-button{width:100%;min-width:0;height:54px;padding:0 18px;font-size:11px;letter-spacing:.6px}
+
+  .mobile-panel{padding:30px 20px}
+  .mobile-panel nav{gap:18px;font-size:24px;line-height:1.2}
+  .mobile-panel__footer{margin-top:40px}
+
+  .rent-hero__image{aspect-ratio:1.35}
+  .rent-hero__copy{padding:44px 20px 60px}
+  .rent-hero__copy>.rent-kicker{font-size:11px;line-height:16px}
+  .rent-hero h1{margin-top:16px;font-size:clamp(32px,9vw,38px);line-height:1.12;letter-spacing:-.6px}
+  .rent-hero h1 br{display:none}
+  .rent-hero__copy>p:not(.rent-kicker){width:100%;margin-top:18px;font-size:15px;line-height:24px}
+  .rent-hero__buttons{flex-direction:column;gap:10px;margin-top:30px}
+  .rent-hero__buttons .rent-button{width:100%}
+
+  .rent-route{grid-template-columns:minmax(0,1fr);padding:68px 20px;gap:40px}
+  .rent-route__intro h2,
+  .rent-contract__heading h2,
+  .rent-cars__heading h2,
+  .rent-faq__intro h2{font-size:clamp(30px,8vw,36px);line-height:1.15;letter-spacing:-.45px}
+  .rent-route__intro h2{margin-top:18px}
+  .rent-route__intro h2 br{display:none}
+  .rent-route__intro>p:not(.rent-kicker){margin-top:18px;font-size:13px;line-height:21px}
+  .rent-route__list{height:auto;min-height:0;grid-template-columns:1fr;grid-template-rows:none}
+  .rent-route__list li{display:grid;min-height:86px;grid-template-columns:38px minmax(0,1fr);align-items:center;padding:18px 0;border-right:0!important}
+  .rent-route__list li:last-child{border-bottom:1px solid rgba(255,255,255,.14)}
+  .rent-route__list strong{font-size:15px;line-height:21px}
+
+  .rent-contract{padding:64px 20px}
+  .rent-contract__heading{gap:22px}
+  .rent-contract__heading h2{margin-top:18px}
+  .rent-contract__heading>p{width:100%;font-size:13px;line-height:21px}
+  .rent-contract__cards{grid-template-columns:1fr;margin-top:34px}
+  .rent-contract__cards article{min-height:190px;padding:24px;border-right:0;border-bottom:1px solid var(--rent-line)!important}
+  .rent-contract__cards article>div{right:24px;bottom:24px;left:24px}
+  .rent-contract__cards p{line-height:21px}
+  .rent-contract__cards article:last-child{border-bottom:0!important}
+
+  .rent-cars{padding:64px 20px}
+  .rent-cars__heading h2{margin-top:18px}
+  .rent-cars__heading h2 br{display:none}
+  .rent-cars__grid{grid-template-columns:minmax(0,1fr);gap:18px;margin-top:34px}
+  .rent-car{min-width:0}
+  .rent-car__photo{aspect-ratio:1.65}
+  .rent-car__body{min-height:0;padding:20px}
+  .rent-car__terms{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .rent-car__terms b{font-size:12px}
+  .rent-car__button{margin-top:20px;font-size:12px}
+  .rent-cars__all{margin-top:38px;font-size:13px}
+
+  .rent-faq{grid-template-columns:minmax(0,1fr);padding:64px 20px;gap:38px}
+  .rent-faq__intro h2{margin-top:18px}
+  .rent-faq__intro>p:not(.rent-kicker){margin-top:16px;line-height:20px}
+  .rent-faq__intro>a{margin-top:20px}
+  .accordion-trigger{height:auto;min-height:72px;padding:16px 36px 16px 0;font-size:14px;line-height:20px}
+  .accordion-trigger span{top:50%;transform:translateY(-50%)}
+  .accordion-panel{padding:0 24px 22px 0;font-size:12px;line-height:20px}
+
+  .rent-final{height:auto;min-height:0;flex-direction:column;padding:62px 20px;gap:30px}
+  .rent-final p{height:auto;align-items:flex-start;font-size:11px;line-height:18px}
+  .rent-final h2{margin-top:14px;font-size:clamp(29px,8vw,34px);line-height:1.18}
+  .rent-final>.rent-button{width:100%;margin-top:0}
+
+  .site-footer{padding-right:20px;padding-left:20px}
+  .site-footer .footer-grid{grid-template-columns:1fr 1fr;gap:34px 18px}
+  .site-footer .footer-brand,
+  .site-footer .footer-bottom{grid-column:1/-1}
+  .site-footer .footer-bottom{grid-template-columns:1fr;gap:14px}
+  .site-footer .footer-bottom p:last-child{font-size:11px;line-height:18px}
+}
+
+@media(max-width:370px){
+  .rent-hero__copy,
+  .rent-route,
+  .rent-contract,
+  .rent-cars,
+  .rent-faq,
+  .rent-final{padding-right:16px;padding-left:16px}
+  .rent-hero h1{font-size:30px}
+  .rent-route__intro h2,
+  .rent-contract__heading h2,
+  .rent-cars__heading h2,
+  .rent-faq__intro h2{font-size:29px}
+  .rent-car__terms{height:auto;grid-template-columns:1fr}
+  .rent-car__terms span{min-height:56px}
+  .rent-car__terms span:first-child{border-bottom:1px solid var(--rent-line)}
+  .site-footer .footer-grid{grid-template-columns:1fr}
+  .site-footer .footer-brand,
+  .site-footer .footer-bottom{grid-column:1}
+}

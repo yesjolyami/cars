@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Вопросы и ответы — Твоё Авто</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/pages/home.css" />
+    <link rel="stylesheet" href="css/pages/content.css?v=6" />
+    <link rel="stylesheet" href="css/shared-chrome.css" />
+    <link rel="stylesheet" href="css/contact-widget.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-wrap">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Твоё Авто Сибирь — на главную"
+          ><img src="img/logo-figma.png" alt="Твоё Авто Сибирь"
+        /></a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="catalog.html">Автомобили</a
+          ><a href="installment.html">Рассрочка</a
+          ><a href="rent-to-own.html">Аренда с выкупом</a
+          ><a href="trade-in.html">Trade-in</a
+          ><a href="selection.html">Автоподбор</a>
+        </nav>
+        <div class="header-actions">
+          <span class="header-location"
+            >Работаем по Сибири</span
+          ><a class="header-phone" href="tel:+79000000000"
+            ><img src="img/phone.svg" alt="" />+7 (900) 000-00-00</a
+          ><a class="header-cta" href="contact.html">Подобрать авто</a>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <aside class="mobile-panel" aria-label="Мобильное меню">
+      <nav>
+        <a href="catalog.html">Автомобили</a
+        ><a href="installment.html">Рассрочка</a
+        ><a href="rent-to-own.html">Аренда с выкупом</a
+        ><a href="trade-in.html">Trade-in</a
+        ><a href="selection.html">Автоподбор</a>
+      </nav>
+      <div class="mobile-panel__footer">
+        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <p>Работаем по Сибири</p>
+      </div>
+    </aside>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="breadcrumbs">
+            <a href="index.html">Главная</a><span>/</span
+            ><span>Вопросы и ответы</span>
+          </div>
+          <span class="eyebrow">Коротко о важном</span>
+          <h1>Частые вопросы</h1>
+          <p class="lead">
+            Собрали ответы о подборе, рассрочке, аренде с выкупом и trade-in.
+            Если не нашли свой вопрос — напишите нам.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="faq-tabs">
+            <button class="is-active">Все вопросы</button
+            ><button>Рассрочка</button><button>Аренда с выкупом</button
+            ><button>Trade-in</button><button>Автоподбор</button>
+          </div>
+          <div class="accordion" style="max-width: 900px">
+            <article class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="true">
+                Это банковский автокредит?
+              </button>
+              <div class="accordion-panel is-open">
+                Нет. Автомобиль оформляется напрямую через компанию. Конкретная
+                схема зависит от выбранного продукта и определяется
+                индивидуально.
+              </div>
+            </article>
+            <article class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                Можно обратиться с плохой кредитной историей?
+              </button>
+              <div class="accordion-panel">
+                Да. Кредитная история и действующие задолженности не являются
+                автоматической причиной для отказа — разберём вашу ситуацию.
+              </div>
+            </article>
+            <article class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                Подбор автомобиля действительно бесплатный?
+              </button>
+              <div class="accordion-panel">
+                Да, мы не берём отдельную оплату за помощь в подборе и первичной
+                проверке вариантов.
+              </div>
+            </article>
+            <article class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                Можно использовать мой автомобиль как первый взнос?
+              </button>
+              <div class="accordion-panel">
+                Да, предварительно оценим его и объясним, как учесть стоимость
+                при оформлении следующего автомобиля.
+              </div>
+            </article>
+            <article class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                В каких городах вы работаете?
+              </button>
+              <div class="accordion-panel">
+                В Барнауле, Бийске, Новосибирске, Кемерово и других городах
+                Сибири. Начать консультацию можно онлайн.
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="cta-band">
+        <div class="container cta-band__inner">
+          <h2>Не нашли нужный ответ?</h2>
+          <a class="btn btn--primary" href="contact.html">Задать вопрос</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="frame">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="img/logo-figma.png" alt="Твоё Авто Сибирь" />
+            <p>
+              Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
+              Сибири.
+            </p>
+            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+            <div class="footer-social">
+              <a href="#" aria-label="ВКонтакте"
+                ><img src="img/figma-catalog/vk.svg" alt="" /></a
+              ><a href="#" aria-label="Telegram"
+                ><img src="img/figma-catalog/tg.svg" alt="" /></a
+              ><a href="#" aria-label="MAX"
+                ><img src="img/figma-catalog/max.svg" alt="" /></a
+              ><a href="#" aria-label="WhatsApp"
+                ><img src="img/figma-catalog/wa.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div>
+            <h3>Услуги</h3>
+            <a href="catalog.html">Автомобили</a
+            ><a href="installment.html">Рассрочка</a
+            ><a href="rent-to-own.html">Аренда с выкупом</a
+            ><a href="trade-in.html">Trade-in</a>
+          </div>
+          <div>
+            <h3>Компания</h3>
+            <a href="news.html">Новости и выдачи</a
+            ><a href="selection.html">Автоподбор</a
+            ><a href="reviews.html">Отзывы</a
+            ><a href="faq.html">Вопросы и ответы</a
+            ><a href="contact.html">Контакты</a>
+          </div>
+          <div class="footer-coverage">
+            <h3>География</h3>
+            <p>Работаем по Сибири</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 «Твоё Авто Сибирь»</p>
+          <p>
+            Все расчёты предварительные и не являются публичной офертой.
+            Итоговые условия определяются после индивидуального рассмотрения.
+          </p>
+          <div class="footer-credit">
+            <span>Разработано маркетинговым агентством XO-STUDIO</span>
+            <img src="img/xo.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a
+      class="site-yandex-link"
+      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134?si=p19zgr6a0928r23ng2dqvy26w8"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+    </a>
+    <script src="js/menu.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/contact-widget.js"></script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+/* Единый раскрытый виджет связи для всех страниц. */
+.global-contact-widget {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2147483646;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.global-contact-widget__channels {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.global-contact-widget:not(.is-open) .global-contact-widget__channels {
+  display: none;
+}
+
+.global-contact-widget__channels a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 11px;
+  border-radius: 50%;
+  background: #d91f2a;
+  box-shadow: 0 16px 19px rgba(14, 26, 43, .28);
+  transition: transform .18s, background .18s;
+}
+
+.global-contact-widget__channels a:hover,
+.global-contact-widget__channels a:focus-visible {
+  background: #b91822;
+  transform: translateY(-2px);
+}
+
+.global-contact-widget__channels img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.global-contact-widget__channels a:first-child img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.global-contact-widget__label {
+  display: flex;
+  width: 150px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 31px;
+  background: #d91f2a;
+  box-shadow: 0 16px 19px rgba(14, 26, 43, .28);
+  color: #fff;
+  font-family: "Exo 2", Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  transition: transform .18s, background .18s;
+}
+
+.global-contact-widget__label:hover,
+.global-contact-widget__label:focus-visible {
+  background: #b91822;
+  transform: translateY(-2px);
+}
+
+.global-contact-widget__label img {
+  width: 24px;
+  height: 24px;
+}
+
+/* The floating CTA must not cover fields or the consent checkbox. */
+body.lead-form-visible .global-contact-widget {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+  visibility: hidden;
+}
+
+/* Старые page-specific кнопки заменены единым виджетом. */
+:is(.hero-contact-dock,.catalog-contact,.detail-contact,.selection-contact,.trade-contact,.installment-contact,.article-contact,.news-contact,.contact-float) {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .global-contact-widget {
+    right: 16px;
+    bottom: calc(16px + 26px + 12px);
+  }
+}
+
+.site-yandex-link {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px 18px;
+  background: #081425;
+  color: #aab2bf;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .18s;
+}
+
+.site-yandex-link:hover,
+.site-yandex-link:focus-visible {
+  color: #fff;
+}

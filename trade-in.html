@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trade-in — Твоё Авто Сибирь</title>
+    <meta
+      name="description"
+      content="Оценим текущий автомобиль и зачтём согласованную стоимость при оформлении следующего."
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/pages/trade-in.css" />
+    <link rel="stylesheet" href="css/shared-chrome.css" />
+    <link rel="stylesheet" href="css/contact-widget.css" />
+  </head>
+  <body class="trade-page">
+    <header class="site-header">
+      <div class="header-wrap">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Твоё Авто Сибирь — на главную"
+          ><img src="img/logo-figma.png" alt="Твоё Авто Сибирь"
+        /></a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="catalog.html">Автомобили</a
+          ><a href="installment.html">Рассрочка</a
+          ><a href="rent-to-own.html">Аренда с выкупом</a
+          ><a href="trade-in.html">Trade-in</a
+          ><a href="selection.html">Автоподбор</a>
+        </nav>
+        <div class="header-actions">
+          <span class="header-location"
+            >Работаем по Сибири</span
+          ><a class="header-phone" href="tel:+79000000000"
+            ><img src="img/phone.svg" alt="" />+7 (900) 000-00-00</a
+          ><a class="header-cta" href="contact.html">Подобрать авто</a>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <aside class="mobile-panel" aria-label="Мобильное меню">
+      <nav>
+        <a href="catalog.html">Автомобили</a
+        ><a href="installment.html">Рассрочка</a
+        ><a href="rent-to-own.html">Аренда с выкупом</a
+        ><a href="trade-in.html">Trade-in</a
+        ><a href="selection.html">Автоподбор</a>
+      </nav>
+      <div class="mobile-panel__footer">
+        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <p>Работаем по Сибири</p>
+      </div>
+    </aside>
+
+    <main class="trade-main">
+      <section class="trade-hero" aria-labelledby="trade-title">
+        <div class="trade-hero__copy">
+          <p class="trade-kicker">Trade-in</p>
+          <h1 id="trade-title">
+            Ваш автомобиль может<br />стать первоначальным<br />взносом
+          </h1>
+          <p class="trade-hero__lead">
+            Оценим текущий автомобиль и полностью или частично зачтём
+            согласованную стоимость при оформлении следующего.
+          </p>
+          <ul>
+            <li>
+              <img src="img/figma-trade/check.png" alt="" />Стоимость можно
+              зачесть полностью или частично
+            </li>
+            <li>
+              <img src="img/figma-trade/check.png" alt="" />При необходимости
+              клиент доплачивает разницу
+            </li>
+          </ul>
+        </div>
+        <form
+          class="trade-form"
+          action="contact.html"
+          method="get"
+          data-lead-form
+        >
+          <div class="trade-form__head">
+            <img src="img/figma-trade/form.png" alt="" />
+            <div>
+              <span>Первый шаг</span><strong>Предварительная оценка</strong>
+            </div>
+          </div>
+          <div class="trade-form__fields">
+            <label for="trade-car"
+              >Марка и модель<input
+                id="trade-car"
+                type="text"
+                name="car"
+                placeholder="Например, Toyota Camry"
+                autocomplete="off"
+                required /></label
+            ><label
+              for="trade-year"
+              >Год выпуска<input
+                id="trade-year"
+                type="number"
+                name="year"
+                min="1950"
+                max="2026"
+                inputmode="numeric"
+                placeholder="Укажите год автомобиля"
+                required /></label
+            ><label class="trade-form__phone" for="trade-phone"
+              >Телефон<input
+                id="trade-phone"
+                type="tel"
+                name="phone"
+                placeholder="Для связи со специалистом"
+                inputmode="tel"
+                autocomplete="tel"
+                maxlength="18"
+                required
+            /></label>
+          </div>
+          <label class="trade-form__consent"
+            ><input type="checkbox" name="consent" required /><span
+              >Я согласен на обработку персональных данных и принимаю политику
+              конфиденциальности.</span
+            ></label
+          >
+          <button class="trade-form__submit" type="submit">
+            Оценить мой автомобиль
+            <img src="img/figma-exact/arrow-white.svg" alt="" />
+          </button>
+          <small
+            >Итоговая стоимость определяется после осмотра автомобиля и
+            документов.</small
+          >
+        </form>
+      </section>
+
+      <section class="trade-bridge" aria-labelledby="trade-bridge-title">
+        <h2 id="trade-bridge-title">Одна оценка связывает две сделки</h2>
+        <div class="trade-bridge__images">
+          <div class="trade-bridge__car">
+            <img
+              src="img/figma-trade/current-car.png"
+              alt="Ваш текущий автомобиль"
+            />
+            <span class="trade-bridge__label">Ваш автомобиль</span>
+          </div>
+          <div class="trade-bridge__assessment">
+            <img src="img/figma-trade/assessment.png" alt="" /><b>Оценка</b
+            ><img src="img/figma-exact/arrow-white.svg" alt="" />
+          </div>
+          <div class="trade-bridge__car trade-bridge__car--next">
+            <img
+              src="img/figma-trade/next-car.png"
+              alt="Следующий автомобиль"
+            />
+            <span class="trade-bridge__label">Следующий автомобиль</span>
+          </div>
+        </div>
+        <p class="trade-kicker">Trade-in без лишнего маршрута</p>
+        <p class="trade-bridge__text">
+          Согласованная стоимость текущего автомобиля учитывается в
+          первоначальном взносе за следующий.
+        </p>
+      </section>
+
+      <section class="trade-criteria" aria-labelledby="criteria-title">
+        <div class="trade-criteria__heading">
+          <div>
+            <p class="trade-kicker">Как формируется оценка</p>
+            <h2 id="criteria-title">
+              Смотрим автомобиль и документы, а не называем цену вслепую
+            </h2>
+          </div>
+          <p>
+            Предварительный ориентир можно обсудить дистанционно. Итоговая сумма
+            появляется только после осмотра.
+          </p>
+        </div>
+        <div class="trade-criteria__cards">
+          <article>
+            <img src="img/figma-trade/criteria1.png" alt="" />
+            <div>
+              <h3>Автомобиль</h3>
+              <p>Марка, модель, год и комплектация</p>
+            </div>
+          </article>
+          <article>
+            <img src="img/figma-trade/criteria2.png" alt="" />
+            <div>
+              <h3>Состояние</h3>
+              <p>Кузов, основные узлы и история эксплуатации</p>
+            </div>
+          </article>
+          <article>
+            <img src="img/figma-trade/criteria3.png" alt="" />
+            <div>
+              <h3>Документы</h3>
+              <p>Собственник, ограничения и комплект документов</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="trade-steps" aria-labelledby="trade-steps-title">
+        <div class="trade-steps__intro">
+          <p class="trade-kicker">Как проходит Trade-in</p>
+          <h2 id="trade-steps-title">
+            От данных об<br />автомобиле до зачёта<br />стоимости
+          </h2>
+          <p>
+            На каждом этапе понятно, что происходит сейчас и какой следующий
+            шаг.
+          </p>
+          <a class="trade-button" href="contact.html"
+            >Получить консультацию
+            <img src="img/figma-exact/arrow-white.svg" alt=""
+          /></a>
+        </div>
+        <ol class="trade-steps__list">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>Получаем данные об автомобиле</h3>
+              <p>Начинаем с основных данных и вашей задачи.</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Проводим осмотр и оценку</h3>
+              <p>Проверяем информацию и обсуждаем возможный сценарий.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>Объясняем предложенную стоимость</h3>
+              <p>Показываем результат и отвечаем на вопросы.</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>Зачитываем её при оформлении</h3>
+              <p>Фиксируем согласованные условия в документах.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="trade-faq" aria-labelledby="trade-faq-title">
+        <div class="trade-faq__intro">
+          <p class="trade-kicker">Коротко о важном</p>
+          <h2 id="trade-faq-title">Вопросы по услуге</h2>
+          <p>
+            Если вашей ситуации нет в списке, начните с короткой консультации.
+          </p>
+          <a href="contact.html"
+            ><img src="img/figma-trade/faq.png" alt="" />Задать свой вопрос</a
+          >
+        </div>
+        <div class="trade-accordion">
+          <article class="accordion-item">
+            <button
+              class="accordion-trigger"
+              type="button"
+              aria-expanded="true"
+            >
+              Как проходит предварительная оценка?<span
+                aria-hidden="true"
+              ></span>
+            </button>
+            <div class="accordion-panel is-open">
+              Сначала специалист получает основные сведения и фотографии.
+              Итоговая стоимость определяется после осмотра автомобиля и
+              документов.
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button
+              class="accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              Можно зачесть только часть стоимости?<span
+                aria-hidden="true"
+              ></span>
+            </button>
+            <div class="accordion-panel">
+              Да, согласованную стоимость можно зачесть полностью или частично.
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button
+              class="accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              Что делать, если новый автомобиль дороже?<span
+                aria-hidden="true"
+              ></span>
+            </button>
+            <div class="accordion-panel">
+              Разницу можно доплатить на согласованных условиях оформления.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="trade-final" aria-labelledby="trade-final-title">
+        <div>
+          <p>
+            <img src="img/figma-installment/message.png" alt="" />Консультация
+            без обязательств
+          </p>
+          <h2 id="trade-final-title">Обсудим оценку вашего автомобиля</h2>
+        </div>
+        <a class="trade-button" href="contact.html">Оставить короткую заявку</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="frame">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="img/logo-figma.png" alt="Твоё Авто Сибирь" />
+            <p>
+              Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
+              Сибири.
+            </p>
+            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+            <div class="footer-social">
+              <a href="#" aria-label="ВКонтакте"
+                ><img src="img/figma-catalog/vk.svg" alt="" /></a
+              ><a href="#" aria-label="Telegram"
+                ><img src="img/figma-catalog/tg.svg" alt="" /></a
+              ><a href="#" aria-label="MAX"
+                ><img src="img/figma-catalog/max.svg" alt="" /></a
+              ><a href="#" aria-label="WhatsApp"
+                ><img src="img/figma-catalog/wa.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div>
+            <h3>Услуги</h3>
+            <a href="catalog.html">Автомобили</a
+            ><a href="installment.html">Рассрочка</a
+            ><a href="rent-to-own.html">Аренда с выкупом</a
+            ><a href="trade-in.html">Trade-in</a>
+          </div>
+          <div>
+            <h3>Компания</h3>
+            <a href="news.html">Новости и выдачи</a
+            ><a href="selection.html">Автоподбор</a
+            ><a href="reviews.html">Отзывы</a
+            ><a href="faq.html">Вопросы и ответы</a
+            ><a href="contact.html">Контакты</a>
+          </div>
+          <div class="footer-coverage">
+            <h3>География</h3>
+            <p>Работаем по Сибири</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 «Твоё Авто Сибирь»</p>
+          <p>
+            Все расчёты предварительные и не являются публичной офертой.
+            Итоговые условия определяются после индивидуального рассмотрения.
+          </p>
+          <div class="footer-credit">
+            <span>Разработано маркетинговым агентством XO-STUDIO</span>
+            <img src="img/xo.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a class="trade-contact" href="contact.html"
+      ><img src="img/figma-catalog/chat.png" alt="" />Связаться</a
+    >
+    <script src="js/menu.js"></script>
+    <a
+      class="site-yandex-link"
+      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134?si=p19zgr6a0928r23ng2dqvy26w8"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+    </a>
+    <script src="js/accordion.js"></script>
+    <script src="js/trade-form.js"></script>
+    <script src="js/contact-widget.js"></script>
+  </body>
+</html>
