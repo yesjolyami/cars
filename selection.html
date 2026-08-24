@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/shared-chrome.css" />
-    <link rel="stylesheet" href="css/pages/selection.css?v=2" />
+    <link rel="stylesheet" href="css/pages/selection.css?v=4" />
     <link rel="stylesheet" href="css/contact-widget.css" />
   </head>
   <body class="selection-page">
@@ -27,14 +27,12 @@
           ><a href="installment.html">Рассрочка</a
           ><a href="rent-to-own.html">Аренда с выкупом</a
           ><a href="trade-in.html">Trade-in</a
-          ><a href="selection.html" aria-current="page">Автоподбор</a>
+          ><a href="selection.html">Автоподбор</a>
         </nav>
         <div class="header-actions">
-          <span class="header-location"
-            >Работаем по Сибири</span
-          ><a class="header-phone" href="tel:+79000000000"
+          <a class="header-phone" href="tel:+79000000000"
             ><img src="img/phone.svg" alt="" />+7 (900) 000-00-00</a
-          ><a class="header-cta" href="contact.html">Подобрать авто</a>
+          ><a class="header-cta" href="index.html#contact">Подобрать авто</a>
         </div>
         <button
           class="menu-toggle"
@@ -52,11 +50,10 @@
         ><a href="installment.html">Рассрочка</a
         ><a href="rent-to-own.html">Аренда с выкупом</a
         ><a href="trade-in.html">Trade-in</a
-        ><a href="selection.html" aria-current="page">Автоподбор</a>
+        ><a href="selection.html">Автоподбор</a>
       </nav>
       <div class="mobile-panel__footer">
         <a href="tel:+79000000000">+7 (900) 000-00-00</a>
-        <p>Работаем по Сибири</p>
       </div>
     </aside>
 
@@ -93,6 +90,21 @@
             src="img/figma-exact/selection.png"
             alt="Автомобиль, подобранный для клиента"
           />
+          <div class="selection-hero-contact-dock" aria-label="Быстрая связь">
+            <a href="tel:+79000000000" aria-label="Позвонить"
+              ><img src="img/phone.svg" alt="" /></a
+            ><a href="#" aria-label="WhatsApp"
+              ><img src="img/figma-catalog/wa.svg" alt="" /></a
+            ><a href="#" aria-label="MAX"
+              ><img src="img/figma-catalog/max.svg" alt="" /></a
+            ><a href="#" aria-label="Telegram"
+              ><img src="img/figma-catalog/tg.svg" alt="" /></a
+            ><a href="#" aria-label="ВКонтакте"
+              ><img src="img/figma-catalog/vk.svg" alt="" /></a
+            ><a class="selection-hero-contact-dock__label" href="contact.html"
+              ><img src="img/figma-catalog/double-chat.svg" alt="" />Связаться</a
+            >
+          </div>
           <div class="selection-hero__badge">
             <img src="img/figma-home/selection-badge.svg" alt="" />Проверяем до
             40 параметров
@@ -109,7 +121,7 @@
             </div>
           </article>
           <article>
-            <img src="img/figma-home/metric-done-base.svg" alt="" />
+            <img src="img/figma-home/metric-done-vector.svg" alt="" />
             <div>
               <strong>Диагностика</strong><span>основных узлов автомобиля</span>
             </div>
@@ -278,6 +290,115 @@
         </div>
       </section>
 
+      <section
+        class="selection-scenarios"
+        id="selection-scenarios"
+        aria-labelledby="selection-scenarios-title"
+      >
+        <div class="selection-frame">
+          <div class="selection-scenarios__intro">
+            <p class="selection-kicker">Не только марка и модель</p>
+            <h2 id="selection-scenarios-title">
+              Начинаем с того,<br />как вы будете ездить
+            </h2>
+            <p>
+              Один и тот же бюджет можно потратить по-разному. Поэтому сначала
+              определяем реальный сценарий, а уже затем — класс, кузов и
+              комплектацию автомобиля.
+            </p>
+          </div>
+          <div class="selection-scenarios__list">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Каждый день по городу</h3>
+                <p>Манёвренность, понятное обслуживание и удобство в пробках.</p>
+              </div>
+              <strong>Город</strong>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Семья и повседневные дела</h3>
+                <p>Пространство в салоне, багажник и комфорт для пассажиров.</p>
+              </div>
+              <strong>Семья</strong>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Работа и частые поездки</h3>
+                <p>Практичность, предсказуемые расходы и запас по ресурсу.</p>
+              </div>
+              <strong>Работа</strong>
+            </article>
+            <article>
+              <span>04</span>
+              <div>
+                <h3>Трасса и дальние маршруты</h3>
+                <p>Уверенное поведение на дороге, комфорт и подходящая динамика.</p>
+              </div>
+              <strong>Поездки</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="selection-result"
+        id="selection-result"
+        aria-labelledby="selection-result-title"
+      >
+        <div class="selection-frame">
+          <div class="selection-result__copy">
+            <p class="selection-kicker">Итог подбора</p>
+            <h2 id="selection-result-title">
+              Не просто ссылка<br />на объявление
+            </h2>
+            <p>
+              Для каждого финального варианта собираем главное в одной понятной
+              карточке. Видно, почему автомобиль подходит и на что обратить
+              внимание перед решением.
+            </p>
+            <a class="selection-button selection-button--red" href="contact.html"
+              >Начать подбор
+              <img src="img/figma-exact/arrow-white.svg" alt=""
+            /></a>
+          </div>
+          <article class="selection-dossier" aria-label="Пример карточки автомобиля">
+            <div class="selection-dossier__head">
+              <div>
+                <span>Финальный вариант</span>
+                <h3>Карточка автомобиля</h3>
+              </div>
+              <b>01</b>
+            </div>
+            <dl>
+              <div>
+                <dt>Задача</dt>
+                <dd>Соответствует вашему сценарию</dd>
+              </div>
+              <div>
+                <dt>История</dt>
+                <dd>Факты собраны и объяснены</dd>
+              </div>
+              <div>
+                <dt>Состояние</dt>
+                <dd>Есть понятный план проверки</dd>
+              </div>
+              <div>
+                <dt>Решение</dt>
+                <dd>Плюсы и нюансы для сравнения</dd>
+              </div>
+            </dl>
+            <div class="selection-dossier__footer">
+              <span>Рекомендация специалиста</span>
+              <strong>Можно рассматривать дальше</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="selection-faq" aria-labelledby="selection-faq-title">
         <div class="selection-frame">
           <div class="selection-faq__intro">
@@ -401,23 +522,23 @@
             ><a href="trade-in.html">Trade-in</a>
           </div>
           <div>
-            <h3>Компания</h3>
+            <h3>Информация</h3>
             <a href="news.html">Новости и выдачи</a
-            ><a href="selection.html" aria-current="page">Автоподбор</a
+            ><a href="selection.html">Автоподбор</a
             ><a href="reviews.html">Отзывы</a
             ><a href="faq.html">Вопросы и ответы</a
             ><a href="contact.html">Контакты</a>
           </div>
           <div class="footer-coverage">
             <h3>География</h3>
-            <p>Работаем по Сибири</p>
           </div>
         </div>
         <div class="footer-bottom">
           <p>© 2026 «Твоё Авто Сибирь»</p>
           <p>
-            Все расчёты предварительные и не являются публичной офертой.
-            Итоговые условия определяются после индивидуального рассмотрения.
+            Все расчёты на сайте являются предварительными и не являются
+            публичной офертой. Итоговые условия определяются после
+            индивидуального рассмотрения заявки.
           </p>
           <div class="footer-credit">
             <span>Разработано маркетинговым агентством XO-STUDIO</span>
@@ -426,9 +547,6 @@
         </div>
       </div>
     </footer>
-    <a class="selection-contact" href="contact.html"
-      ><img src="img/figma-catalog/chat.png" alt="" />Связаться</a
-    >
     <script src="js/menu.js"></script>
     <a
       class="site-yandex-link"

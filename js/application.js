@@ -33,17 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!form) return;
 
   const phone = form.querySelector('input[name="phone"]');
+  const foreignPhone = form.querySelector('input[name="foreign-phone"]');
   const status = form.querySelector('.application-form__status');
 
   if (phone) {
-    phone.addEventListener('input', () => {
-      const digits = phone.value.replace(/\D/g, '').slice(0, 11);
-      const normalized = digits.startsWith('8')
-        ? `7${digits.slice(1)}`
-        : digits.startsWith('7')
-          ? digits
-          : `7${digits}`;
-      const parts = normalized.slice(1);
+    const russianPattern = '\\+7 \\([0-9]{3}\\) [0-9]{3}-[0-9]{2}-[0-9]{2}';
+
+    const formatRussianPhone = () => {
+      const digits = phone.value.replace(/\D/g, '');
+      const parts = (digits.startsWith('7') || digits.startsWith('8')
+        ? digits.slice(1)
+        : digits
+      ).slice(0, 10);
       let value = '+7';
 
       if (parts.length > 0) value += ` (${parts.slice(0, 3)}`;
@@ -52,7 +53,32 @@ document.addEventListener('DOMContentLoaded', () => {
       if (parts.length > 6) value += `-${parts.slice(6, 8)}`;
       if (parts.length > 8) value += `-${parts.slice(8, 10)}`;
       phone.value = value;
+    };
+
+    const updatePhoneMode = () => {
+      const isForeign = Boolean(foreignPhone?.checked);
+
+      phone.placeholder = isForeign
+        ? 'Например, +1 202 555 01 25'
+        : '+7 (___) ___-__-__';
+      phone.pattern = isForeign ? '[+0-9 ()-]{7,24}' : russianPattern;
+      phone.maxLength = isForeign ? 24 : 18;
+      phone.title = isForeign
+        ? 'Введите номер телефона вместе с кодом страны'
+        : 'Введите российский номер полностью: +7 (999) 999-99-99';
+
+      if (isForeign && phone.value === '+7') phone.value = '';
+      if (!isForeign && phone.value) formatRussianPhone();
+    };
+
+    phone.addEventListener('focus', () => {
+      if (!foreignPhone?.checked && !phone.value) phone.value = '+7';
     });
+    phone.addEventListener('input', () => {
+      if (!foreignPhone?.checked) formatRussianPhone();
+    });
+    foreignPhone?.addEventListener('change', updatePhoneMode);
+    updatePhoneMode();
   }
 
   form.addEventListener('submit', (event) => {

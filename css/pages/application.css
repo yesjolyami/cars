@@ -244,12 +244,59 @@ html { background: #fff; }
   gap: 9px;
 }
 .application-field > span,
+.application-field > label:first-child,
 .application-choice-group > legend {
   color: #495361;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .75px;
   text-transform: uppercase;
+}
+.application-phone-toggle {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 9px;
+  color: #626872;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 18px;
+}
+.application-field .application-phone-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.application-phone-toggle span {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  border: 1px solid var(--application-line);
+  background: #fff;
+  transition: border-color .18s, background .18s, box-shadow .18s;
+}
+.application-phone-toggle:hover span { border-color: #aab2bf; }
+.application-phone-toggle input:focus-visible + span {
+  box-shadow: 0 0 0 3px rgba(217, 31, 42, .14);
+}
+.application-phone-toggle input:checked + span {
+  border-color: var(--application-ink);
+  background: var(--application-ink);
+}
+.application-phone-toggle input:checked + span::after {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  content: "";
+  transform: rotate(45deg);
 }
 .application-field input,
 .application-field select,
