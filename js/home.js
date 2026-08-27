@@ -1,11 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const cookieNotice = document.querySelector('.cookie-notice');
-  const cookieButton = document.querySelector('[data-cookie-dismiss]');
-
-  cookieButton?.addEventListener('click', () => {
-    cookieNotice.hidden = true;
-  });
-
   const form = document.querySelector('.contact-form');
   const status = form?.querySelector('.contact-form__status');
 

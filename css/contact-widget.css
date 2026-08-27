@@ -1,106 +1,132 @@
-/* Единый раскрытый виджет связи для всех страниц. */
-.global-contact-widget {
+/* Копия виджета связи с главной страницы для остальных страниц. */
+body > .hero-contact-dock {
   position: fixed;
+  top: auto;
   right: 24px;
   bottom: 24px;
   z-index: 2147483646;
   display: flex;
+  width: 150px;
+  height: auto;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+}
+
+body > .hero-contact-dock > .hero-contact-dock__channels {
+  display: flex;
+  width: 100%;
+  max-height: 232px;
   align-items: flex-end;
   flex-direction: column;
   gap: 8px;
+  opacity: 1;
+  transition:
+    max-height 0.25s ease,
+    opacity 0.18s ease,
+    transform 0.25s ease,
+    visibility 0s linear 0s;
+  visibility: visible;
 }
 
-.global-contact-widget__channels {
+body > .hero-contact-dock.is-collapsed > .hero-contact-dock__channels {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition:
+    max-height 0.25s ease,
+    opacity 0.18s ease,
+    transform 0.25s ease,
+    visibility 0s linear 0.25s;
+  visibility: hidden;
+}
+
+body > .hero-contact-dock > .hero-contact-dock__channels > a {
   display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.global-contact-widget:not(.is-open) .global-contact-widget__channels {
-  display: none;
-}
-
-.global-contact-widget__channels a {
-  display: flex;
+  flex: 0 0 auto;
   width: 40px;
   height: 40px;
   align-items: center;
   justify-content: center;
   margin-right: 11px;
-  border-radius: 50%;
+  border-radius: 50% !important;
   background: #d91f2a;
   box-shadow: 0 16px 19px rgba(14, 26, 43, .28);
-  transition: transform .18s, background .18s;
 }
 
-.global-contact-widget__channels a:hover,
-.global-contact-widget__channels a:focus-visible {
-  background: #b91822;
-  transform: translateY(-2px);
-}
-
-.global-contact-widget__channels img {
+body > .hero-contact-dock > .hero-contact-dock__channels > a > img {
   width: 40px;
   height: 40px;
   object-fit: contain;
-  border-radius: 50%;
+  border-radius: 50% !important;
 }
 
-.global-contact-widget__channels a:first-child img {
+body > .hero-contact-dock > .hero-contact-dock__channels > a:first-child > img {
   width: 22px;
   height: 22px;
   filter: brightness(0) invert(1);
 }
 
-.global-contact-widget__label {
+body > .hero-contact-dock > .hero-contact-dock__label {
   display: flex;
+  flex: 0 0 auto;
   width: 150px;
   height: 40px;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  margin-top: 11px;
   padding: 0;
   border: 0;
-  border-radius: 31px;
+  border-radius: 31px !important;
   background: #d91f2a;
   box-shadow: 0 16px 19px rgba(14, 26, 43, .28);
   color: #fff;
-  font-family: "Exo 2", Arial, sans-serif;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 16px;
   letter-spacing: .8px;
   text-transform: uppercase;
-  transition: transform .18s, background .18s;
+  cursor: pointer;
+  transition:
+    background .18s ease,
+    transform .18s ease;
 }
 
-.global-contact-widget__label:hover,
-.global-contact-widget__label:focus-visible {
-  background: #b91822;
+body > .hero-contact-dock > .hero-contact-dock__label img {
+  width: 24px;
+  height: 24px;
+  border-radius: 0 !important;
+}
+
+body > .hero-contact-dock > .hero-contact-dock__channels > a:hover,
+body > .hero-contact-dock > .hero-contact-dock__channels > a:focus-visible,
+body > .hero-contact-dock > .hero-contact-dock__label:hover,
+body > .hero-contact-dock > .hero-contact-dock__label:focus-visible {
   transform: translateY(-2px);
 }
 
-.global-contact-widget__label img {
-  width: 24px;
-  height: 24px;
+body > .hero-contact-dock > .hero-contact-dock__label:hover,
+body > .hero-contact-dock > .hero-contact-dock__label:focus-visible {
+  background: #b91822;
 }
 
-/* The floating CTA must not cover fields or the consent checkbox. */
-body.lead-form-visible .global-contact-widget {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(14px);
-  visibility: hidden;
+body > .hero-contact-dock > .hero-contact-dock__label:focus-visible,
+body > .hero-contact-dock > .hero-contact-dock__channels > a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
 }
 
 /* Старые page-specific кнопки заменены единым виджетом. */
-:is(.hero-contact-dock,.catalog-contact,.detail-contact,.selection-contact,.trade-contact,.installment-contact,.article-contact,.news-contact,.contact-float) {
+:is(.catalog-contact,.detail-contact,.selection-contact,.trade-contact,.installment-contact,.article-contact,.news-contact,.contact-float) {
   display: none !important;
 }
 
 @media (max-width: 767px) {
-  .global-contact-widget {
+  body > .hero-contact-dock {
     right: 16px;
-    bottom: calc(16px + 26px + 12px);
+    bottom: 16px;
   }
 }
 

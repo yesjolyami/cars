@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400&family=Manrope:wght@400;600;700;800&family=Montserrat:wght@600;700;800&display=swap");
+@import url("../fonts.css");
 
 :root {
   --article-ink: #0e1a2b;
@@ -903,6 +903,10 @@ html {
     justify-content: center;
     padding: 64px 16px;
   }
+  .article-cta__copy {
+    width: 100%;
+    min-width: 0;
+  }
   .article-cta__copy > p {
     font-size: 14px;
   }
@@ -911,7 +915,7 @@ html {
     line-height: 43px;
   }
   .article-cta h2 br {
-    display: none;
+    display: block;
   }
   .article-cta > a {
     width: 100%;

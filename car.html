@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
     <title>Graphite Cross — Твоё Авто Сибирь</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/pages/car.css" />
-    <link rel="stylesheet" href="css/shared-chrome.css" />
+    <link rel="stylesheet" href="css/pages/car.css?v=20260826" />
+    <link rel="stylesheet" href="css/shared-chrome.css?v=20260826" />
     <link rel="stylesheet" href="css/contact-widget.css" />
+    <link rel="stylesheet" href="css/cta.css" />
+    <link rel="stylesheet" href="css/metrika.css" />
   </head>
   <body class="detail-page">
     <header class="site-header">
@@ -26,9 +29,11 @@
           ><a href="selection.html">Автоподбор</a>
         </nav>
         <div class="header-actions">
-          <a class="header-phone" href="tel:+79000000000"
-            ><img src="img/phone.svg" alt="" />+7 (900) 000-00-00</a
-          ><a class="header-cta" href="index.html#contact">Подобрать авто</a>
+          <a class="header-phone" href="tel:+79132431855"
+            ><img src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
+          ><a class="header-cta site-cta site-cta--header" href="contact.html"
+            >Узнать условия</a
+          >
         </div>
         <button
           class="menu-toggle"
@@ -49,7 +54,7 @@
         ><a href="selection.html">Автоподбор</a>
       </nav>
       <div class="mobile-panel__footer">
-        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <a href="tel:+79132431855">+7 (913) 243-18-55</a>
       </div>
     </aside>
 
@@ -57,7 +62,13 @@
       <section class="detail-product">
         <div class="detail-product__grid">
           <div class="detail-gallery">
-            <div class="detail-gallery__main">
+            <div
+              class="detail-gallery__main"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="Открыть фотографию 1 из 3. Используйте стрелки для листания"
+            >
               <img
                 src="img/figma-car/graphite-cross.png"
                 alt="Красный Graphite Cross, вид сбоку"
@@ -71,7 +82,9 @@
                 class="gallery-thumb is-active"
                 type="button"
                 data-image="img/figma-car/graphite-cross.png"
+                data-alt="Красный Graphite Cross, вид сбоку"
                 aria-label="Показать фотографию 1"
+                aria-pressed="true"
               >
                 <img src="img/figma-car/graphite-cross.png" alt="" />
               </button>
@@ -79,7 +92,9 @@
                 class="gallery-thumb"
                 type="button"
                 data-image="img/figma-car/graphite-cross.png"
+                data-alt="Красный Graphite Cross, фотография 2"
                 aria-label="Показать фотографию 2"
+                aria-pressed="false"
               >
                 <img src="img/figma-car/graphite-cross.png" alt="" />
               </button>
@@ -87,7 +102,9 @@
                 class="gallery-thumb"
                 type="button"
                 data-image="img/figma-car/graphite-cross.png"
+                data-alt="Красный Graphite Cross, фотография 3"
                 aria-label="Показать фотографию 3"
+                aria-pressed="false"
               >
                 <img src="img/figma-car/graphite-cross.png" alt="" />
               </button>
@@ -126,7 +143,7 @@
                 <dd>Барнаул</dd>
               </div>
             </dl>
-            <a class="detail-primary" href="contact.html"
+            <a class="detail-primary site-cta" href="contact.html"
               >Узнать условия <img src="img/figma-exact/arrow-white.svg" alt=""
             /></a>
             <small
@@ -137,46 +154,15 @@
         </div>
       </section>
 
-      <section class="detail-check">
-        <div class="detail-check__grid">
-          <div class="detail-check__intro">
-            <h2>Проверен<br />специалистом</h2>
-            <p>
-              История, документы, кузов и основные технические узлы проверены до
-              публикации.
-            </p>
-          </div>
-          <div class="detail-check__item">
-            <img src="img/figma-home/reason-check.svg" alt="" /><span
-              >Юридическая чистота</span
-            >
-          </div>
-          <div class="detail-check__item">
-            <img src="img/figma-home/reason-check.svg" alt="" /><span
-              >Диагностика двигателя</span
-            >
-          </div>
-          <div class="detail-check__item">
-            <img src="img/figma-home/reason-check.svg" alt="" /><span
-              >Проверка кузова</span
-            >
-          </div>
-          <div class="detail-check__item">
-            <img src="img/figma-home/reason-check.svg" alt="" /><span>Тест-драйв</span>
-          </div>
-        </div>
-      </section>
-
       <section class="detail-cta">
         <div>
           <p>
-            <img src="img/red-chat.svg" alt="" />Консультация без
-            обязательств
+            <img src="img/red-chat.svg" alt="" />Консультация без обязательств
           </p>
           <h2>Нужен такой или аналогичный автомобиль?</h2>
         </div>
-        <a href="contact.html"
-          >Оставить короткую заявку
+        <a class="site-cta" href="contact.html"
+          >Узнать условия по автомобилю
           <img src="img/figma-exact/arrow-white.svg" alt=""
         /></a>
       </section>
@@ -191,13 +177,13 @@
               Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
               Сибири.
             </p>
-            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+            <a href="tel:+79132431855">+7 (913) 243-18-55</a>
             <div class="footer-social">
-              <a href="#" aria-label="ВКонтакте"
+              <a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"
                 ><img src="img/figma-catalog/vk.svg" alt="" /></a
-              ><a href="#" aria-label="Telegram"
+              ><a href="https://t.me/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
                 ><img src="img/figma-catalog/tg.svg" alt="" /></a
-              ><a href="#" aria-label="MAX"
+              ><a href="https://max.ru/join/EWPVYaIlt0f9tMCa6J70Ku7pZ2C29zFgSnmHaHLv4g0" target="_blank" rel="noopener noreferrer" aria-label="MAX"
                 ><img src="img/figma-catalog/max.svg" alt="" /></a
               ><a href="#" aria-label="WhatsApp"
                 ><img src="img/figma-catalog/wa.svg" alt=""
@@ -217,7 +203,11 @@
             ><a href="selection.html">Автоподбор</a
             ><a href="reviews.html">Отзывы</a
             ><a href="faq.html">Вопросы и ответы</a
-            ><a href="contact.html">Контакты</a>
+            ><a href="contact.html">Контакты</a
+            ><a href="privacy.html">Политика обработки персональных данных</a
+            ><a href="personal-data-consent.html"
+              >Согласие на обработку персональных данных</a
+            ><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a>
           </div>
           <div class="footer-coverage">
             <h3>География</h3>
@@ -231,7 +221,7 @@
             индивидуального рассмотрения заявки.
           </p>
           <div class="footer-credit">
-            <span>Разработано маркетинговым агентством XO-STUDIO</span>
+            <span><a href="https://xo-webstudio.ru/" target="_blank" rel="noopener noreferrer">Разработано маркетинговым агентством XO-STUDIO</a></span>
             <img src="img/xo.svg" alt="" />
           </div>
         </div>
@@ -242,13 +232,14 @@
     >
     <a
       class="site-yandex-link"
-      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134?si=p19zgr6a0928r23ng2dqvy26w8"
+      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134"
       target="_blank"
       rel="noopener noreferrer"
     >
     </a>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.js?v=2"></script>
     <script src="js/gallery.js"></script>
     <script src="js/contact-widget.js"></script>
+    <script src="js/metrika.js?v=20260826-6"></script>
   </body>
 </html>

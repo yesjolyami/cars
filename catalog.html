@@ -3,11 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
     <title>Каталог автомобилей — Твоё Авто Сибирь</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/pages/catalog.css" />
-    <link rel="stylesheet" href="css/shared-chrome.css" />
+    <link rel="stylesheet" href="css/shared-chrome.css?v=20260826" />
     <link rel="stylesheet" href="css/contact-widget.css" />
+    <link rel="stylesheet" href="css/cta.css" />
+    <link rel="stylesheet" href="css/filter-states.css" />
+    <link rel="stylesheet" href="css/metrika.css" />
   </head>
   <body class="catalog-page">
     <header class="site-header">
@@ -26,9 +30,11 @@
           ><a href="selection.html">Автоподбор</a>
         </nav>
         <div class="header-actions">
-          <a class="header-phone" href="tel:+79000000000"
-            ><img src="img/phone.svg" alt="" />+7 (900) 000-00-00</a
-          ><a class="header-cta" href="index.html#contact">Подобрать авто</a>
+          <a class="header-phone" href="tel:+79132431855"
+            ><img src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
+          ><a class="header-cta site-cta site-cta--header" href="contact.html"
+            >Подобрать авто</a
+          >
         </div>
         <button
           class="menu-toggle"
@@ -49,7 +55,7 @@
         ><a href="selection.html">Автоподбор</a>
       </nav>
       <div class="mobile-panel__footer">
-        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <a href="tel:+79132431855">+7 (913) 243-18-55</a>
       </div>
     </aside>
 
@@ -247,7 +253,9 @@
                     <span>Первый взнос<b>от 438 000 ₽</b></span
                     ><span>Платёж<b>от 42 900 ₽/мес.</b></span>
                   </div>
-                  <a class="catalog-card__button" href="car.html"
+                  <a
+                    class="catalog-card__button site-cta site-cta--secondary"
+                    href="car.html"
                     >Подробнее
                     <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
@@ -278,7 +286,9 @@
                     <span>Первый взнос<b>от 328 000 ₽</b></span
                     ><span>Платёж<b>от 32 300 ₽/мес.</b></span>
                   </div>
-                  <a class="catalog-card__button" href="car.html"
+                  <a
+                    class="catalog-card__button site-cta site-cta--secondary"
+                    href="car.html"
                     >Подробнее
                     <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
@@ -309,7 +319,9 @@
                     <span>Первый взнос<b>от 556 000 ₽</b></span
                     ><span>Платёж<b>от 54 600 ₽/мес.</b></span>
                   </div>
-                  <a class="catalog-card__button" href="car.html"
+                  <a
+                    class="catalog-card__button site-cta site-cta--secondary"
+                    href="car.html"
                     >Подробнее
                     <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
@@ -340,7 +352,9 @@
                     <span>Первый взнос<b>от 296 000 ₽</b></span
                     ><span>Платёж<b>от 29 100 ₽/мес.</b></span>
                   </div>
-                  <a class="catalog-card__button" href="car.html"
+                  <a
+                    class="catalog-card__button site-cta site-cta--secondary"
+                    href="car.html"
                     >Подробнее
                     <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
@@ -371,7 +385,9 @@
                     <span>Первый взнос<b>от 364 000 ₽</b></span
                     ><span>Платёж<b>от 35 800 ₽/мес.</b></span>
                   </div>
-                  <a class="catalog-card__button" href="car.html"
+                  <a
+                    class="catalog-card__button site-cta site-cta--secondary"
+                    href="car.html"
                     >Подробнее
                     <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
@@ -402,7 +418,9 @@
                     <span>Первый взнос<b>от 470 000 ₽</b></span
                     ><span>Платёж<b>от 46 200 ₽/мес.</b></span>
                   </div>
-                  <a class="catalog-card__button" href="car.html"
+                  <a
+                    class="catalog-card__button site-cta site-cta--secondary"
+                    href="car.html"
                     >Подробнее
                     <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
@@ -411,6 +429,10 @@
                   >
                 </div>
               </article>
+            </div>
+            <div class="catalog-empty" role="status" hidden>
+              <strong>Автомобили не найдены</strong>
+              <span>Измените параметры или нажмите «Сбросить фильтры» слева.</span>
             </div>
           </div>
         </div>
@@ -427,13 +449,13 @@
               Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
               Сибири.
             </p>
-            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+            <a href="tel:+79132431855">+7 (913) 243-18-55</a>
             <div class="footer-social">
-              <a href="#" aria-label="ВКонтакте"
+              <a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"
                 ><img src="img/figma-catalog/vk.svg" alt="" /></a
-              ><a href="#" aria-label="Telegram"
+              ><a href="https://t.me/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
                 ><img src="img/figma-catalog/tg.svg" alt="" /></a
-              ><a href="#" aria-label="MAX"
+              ><a href="https://max.ru/join/EWPVYaIlt0f9tMCa6J70Ku7pZ2C29zFgSnmHaHLv4g0" target="_blank" rel="noopener noreferrer" aria-label="MAX"
                 ><img src="img/figma-catalog/max.svg" alt="" /></a
               ><a href="#" aria-label="WhatsApp"
                 ><img src="img/figma-catalog/wa.svg" alt=""
@@ -453,7 +475,11 @@
             ><a href="selection.html">Автоподбор</a
             ><a href="reviews.html">Отзывы</a
             ><a href="faq.html">Вопросы и ответы</a
-            ><a href="contact.html">Контакты</a>
+            ><a href="contact.html">Контакты</a
+            ><a href="privacy.html">Политика обработки персональных данных</a
+            ><a href="personal-data-consent.html"
+              >Согласие на обработку персональных данных</a
+            ><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a>
           </div>
           <div class="footer-coverage">
             <h3>География</h3>
@@ -467,7 +493,7 @@
             индивидуального рассмотрения заявки.
           </p>
           <div class="footer-credit">
-            <span>Разработано маркетинговым агентством XO-STUDIO</span>
+            <span><a href="https://xo-webstudio.ru/" target="_blank" rel="noopener noreferrer">Разработано маркетинговым агентством XO-STUDIO</a></span>
             <img src="img/xo.svg" alt="" />
           </div>
         </div>
@@ -478,13 +504,14 @@
     >
     <a
       class="site-yandex-link"
-      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134?si=p19zgr6a0928r23ng2dqvy26w8"
+      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134"
       target="_blank"
       rel="noopener noreferrer"
     >
     </a>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.js?v=2"></script>
     <script src="js/catalog.js"></script>
     <script src="js/contact-widget.js"></script>
+    <script src="js/metrika.js?v=20260826-6"></script>
   </body>
 </html>

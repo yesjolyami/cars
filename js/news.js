@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   const filters=[...document.querySelectorAll('[data-news-filter]')];
   const cards=[...document.querySelectorAll('[data-news-category]')];
+  const emptyState=document.querySelector('[data-news-empty]');
   if(!filters.length||!cards.length)return;
 
   filters.forEach(button=>button.addEventListener('click',()=>{
@@ -28,6 +29,16 @@ document.addEventListener('DOMContentLoaded',()=>{
       item.classList.toggle('is-active',active);
       item.setAttribute('aria-pressed',String(active));
     });
-    cards.forEach(card=>{card.hidden=category!=='all'&&card.dataset.newsCategory!==category});
+    const visibleCards=cards.filter(card=>category==='all'||card.dataset.newsCategory===category);
+    cards.forEach(card=>{card.hidden=!visibleCards.includes(card)});
+    if(emptyState)emptyState.hidden=visibleCards.length!==0;
+    const url=new URL(location.href);
+    if(category==='all')url.searchParams.delete('category');
+    else url.searchParams.set('category',category);
+    history.replaceState(null,'',`${url.pathname}${url.search}${url.hash}`);
+    window.trackGoal?.('news_filter',{category,result_count:visibleCards.length});
   }));
+
+  const initialCategory=new URLSearchParams(location.search).get('category');
+  filters.find(button=>button.dataset.newsFilter===initialCategory)?.click();
 });

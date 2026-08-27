@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
     <title>Рассрочка без банка — Твоё Авто Сибирь</title>
     <meta
       name="description"
@@ -10,8 +11,10 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/pages/installment.css?v=5" />
-    <link rel="stylesheet" href="css/shared-chrome.css" />
+    <link rel="stylesheet" href="css/shared-chrome.css?v=20260826" />
     <link rel="stylesheet" href="css/contact-widget.css" />
+    <link rel="stylesheet" href="css/cta.css" />
+    <link rel="stylesheet" href="css/metrika.css" />
   </head>
   <body class="installment-page">
     <header class="site-header">
@@ -30,9 +33,11 @@
           ><a href="selection.html">Автоподбор</a>
         </nav>
         <div class="header-actions">
-          <a class="header-phone" href="tel:+79000000000"
-            ><img src="img/phone.svg" alt="" />+7 (900) 000-00-00</a
-          ><a class="header-cta" href="index.html#contact">Подобрать авто</a>
+          <a class="header-phone" href="tel:+79132431855"
+            ><img src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
+          ><a class="header-cta site-cta site-cta--header" href="contact.html"
+            >Рассчитать рассрочку</a
+          >
         </div>
         <button
           class="menu-toggle"
@@ -53,7 +58,7 @@
         ><a href="selection.html">Автоподбор</a>
       </nav>
       <div class="mobile-panel__footer">
-        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <a href="tel:+79132431855">+7 (913) 243-18-55</a>
       </div>
     </aside>
 
@@ -71,12 +76,12 @@
           </p>
           <div class="installment-hero__actions">
             <a
-              class="installment-button installment-button--red"
+              class="installment-button installment-button--red site-cta"
               href="contact.html"
               >Рассчитать рассрочку
               <img src="img/figma-exact/arrow-white.svg" alt="" /></a
             ><a
-              class="installment-button installment-button--outline"
+              class="installment-button installment-button--outline site-cta site-cta--secondary"
               href="catalog.html"
               >Наши автомобили</a
             >
@@ -198,7 +203,7 @@
           <span>Ориентировочный платёж</span
           ><strong data-calc-result aria-live="polite"></strong
           ><a
-            class="installment-button installment-button--red"
+            class="installment-button installment-button--red site-cta"
             href="contact.html"
             >Получить точный расчёт
             <img src="img/figma-exact/arrow-white.svg" alt="" /></a
@@ -221,7 +226,7 @@
             шаг.
           </p>
           <a
-            class="installment-button installment-button--red"
+            class="installment-button installment-button--red site-cta"
             href="contact.html"
             >Получить консультацию
             <img src="img/figma-exact/arrow-white.svg" alt=""
@@ -327,9 +332,9 @@
           <h2 id="final-title">Рассчитаем подходящий сценарий оформления</h2>
         </div>
         <a
-          class="installment-button installment-button--red"
+          class="installment-button installment-button--red site-cta"
           href="contact.html"
-          >Оставить короткую заявку</a
+          >Рассчитать рассрочку</a
         >
       </section>
     </main>
@@ -343,13 +348,13 @@
               Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
               Сибири.
             </p>
-            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+            <a href="tel:+79132431855">+7 (913) 243-18-55</a>
             <div class="footer-social">
-              <a href="#" aria-label="ВКонтакте"
+              <a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"
                 ><img src="img/figma-catalog/vk.svg" alt="" /></a
-              ><a href="#" aria-label="Telegram"
+              ><a href="https://t.me/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
                 ><img src="img/figma-catalog/tg.svg" alt="" /></a
-              ><a href="#" aria-label="MAX"
+              ><a href="https://max.ru/join/EWPVYaIlt0f9tMCa6J70Ku7pZ2C29zFgSnmHaHLv4g0" target="_blank" rel="noopener noreferrer" aria-label="MAX"
                 ><img src="img/figma-catalog/max.svg" alt="" /></a
               ><a href="#" aria-label="WhatsApp"
                 ><img src="img/figma-catalog/wa.svg" alt=""
@@ -369,7 +374,11 @@
             ><a href="selection.html">Автоподбор</a
             ><a href="reviews.html">Отзывы</a
             ><a href="faq.html">Вопросы и ответы</a
-            ><a href="contact.html">Контакты</a>
+            ><a href="contact.html">Контакты</a
+            ><a href="privacy.html">Политика обработки персональных данных</a
+            ><a href="personal-data-consent.html"
+              >Согласие на обработку персональных данных</a
+            ><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a>
           </div>
           <div class="footer-coverage">
             <h3>География</h3>
@@ -383,22 +392,23 @@
             индивидуального рассмотрения заявки.
           </p>
           <div class="footer-credit">
-            <span>Разработано маркетинговым агентством XO-STUDIO</span>
+            <span><a href="https://xo-webstudio.ru/" target="_blank" rel="noopener noreferrer">Разработано маркетинговым агентством XO-STUDIO</a></span>
             <img src="img/xo.svg" alt="" />
           </div>
         </div>
       </div>
     </footer>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.js?v=2"></script>
     <script src="js/accordion.js"></script>
     <a
       class="site-yandex-link"
-      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134?si=p19zgr6a0928r23ng2dqvy26w8"
+      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134"
       target="_blank"
       rel="noopener noreferrer"
     >
     </a>
     <script src="js/calculator.js?v=2"></script>
     <script src="js/contact-widget.js"></script>
+    <script src="js/metrika.js?v=20260826-6"></script>
   </body>
 </html>

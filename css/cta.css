@@ -1,0 +1,96 @@
+/* Единая система основных и вторичных CTA на всех страницах. */
+.site-cta {
+  display: inline-flex;
+  box-sizing: border-box;
+  height: 56px !important;
+  min-height: 56px !important;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 28px;
+  border: 1px solid transparent;
+  border-radius: 0 !important;
+  background: #d91f2a !important;
+  color: #fff !important;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: .78px !important;
+  text-align: center;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background .18s ease,
+    border-color .18s ease,
+    color .18s ease,
+    transform .18s ease,
+    box-shadow .18s ease;
+}
+
+.site-cta:hover {
+  background: #b91822 !important;
+  box-shadow: 0 10px 24px rgba(185, 24, 34, .2);
+  transform: translateY(-2px);
+}
+
+.site-cta:focus-visible {
+  background: #b91822 !important;
+  outline: 3px solid rgba(217, 31, 42, .28);
+  outline-offset: 3px;
+}
+
+.site-cta:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.site-cta--secondary {
+  border-color: rgba(14, 26, 43, .28);
+  background: transparent !important;
+  color: #0e1a2b !important;
+}
+
+.site-cta--secondary:hover,
+.site-cta--secondary:focus-visible {
+  border-color: #0e1a2b;
+  background: #0e1a2b !important;
+  color: #fff !important;
+}
+
+.site-cta--header {
+  width: 213px;
+  height: 50px !important;
+  min-height: 50px !important;
+  flex: none;
+  padding: 0 20px;
+  font-size: 12px !important;
+  letter-spacing: .72px !important;
+}
+
+.site-cta > img {
+  flex: none;
+  object-fit: contain;
+}
+
+.selection-page .site-cta {
+  border-radius: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .site-cta:not(.site-cta--header) {
+    height: 52px !important;
+    min-height: 52px !important;
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size: 11px !important;
+    letter-spacing: .6px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-cta {
+    transition: none;
+  }
+}

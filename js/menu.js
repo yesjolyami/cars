@@ -1,7 +1,27 @@
-document.addEventListener('DOMContentLoaded',()=>{
+const initMenu = () => {
   const button=document.querySelector('.menu-toggle');
   const panel=document.querySelector('.mobile-panel');
   if(button&&panel){
+    const menuNav=panel.querySelector('nav');
+    const menuFooter=panel.querySelector('.mobile-panel__footer');
+    if(menuNav) menuNav.innerHTML=`
+      <a href="catalog.html">Автомобили</a>
+      <a href="installment.html">Рассрочка</a>
+      <a href="selection.html">Автоподбор</a>
+      <a href="trade-in.html">Trade-in</a>
+      <a href="rent-to-own.html">Аренда с выкупом</a>
+      <a href="contact.html">Связаться</a>
+      <a href="faq.html">Частые вопросы</a>
+      <a href="news.html">Блог</a>`;
+    if(menuFooter) menuFooter.innerHTML=`
+      <p class="mobile-panel__social-copy">АВТОМОБИЛИ, ОБЗОРЫ, УСЛОВИЯ В<br>НАШИХ СОЦ СЕТЯХ — ПОДПИСЫВАЙТЕСЬ</p>
+      <div class="mobile-panel__socials" aria-label="Социальные сети">
+        <a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"><img src="img/figma-catalog/vk.svg" alt=""></a>
+        <a href="https://t.me/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><img src="img/figma-catalog/tg.svg" alt=""></a>
+        <a href="https://max.ru/join/EWPVYaIlt0f9tMCa6J70Ku7pZ2C29zFgSnmHaHLv4g0" target="_blank" rel="noopener noreferrer" aria-label="MAX"><img src="img/figma-catalog/max.svg" alt=""></a>
+        <a href="#" aria-label="WhatsApp"><img src="img/figma-catalog/wa.svg" alt=""></a>
+        <a href="#" aria-label="Авито"><img src="img/figma-reviews/avito.png" alt=""></a>
+      </div>`;
     const close=()=>{document.body.classList.remove('menu-open');panel.classList.remove('is-open');button.setAttribute('aria-expanded','false')};
     button.addEventListener('click',()=>{const open=!panel.classList.contains('is-open');document.body.classList.toggle('menu-open',open);panel.classList.toggle('is-open',open);button.setAttribute('aria-expanded',String(open))});
     panel.querySelectorAll('a').forEach(link=>link.addEventListener('click',close));
@@ -10,7 +30,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   document.querySelectorAll('.site-footer').forEach(footer=>{
     if(footer.querySelector('.footer-grid'))return;
-    footer.insertAdjacentHTML('afterbegin','<div class="container"><div class="footer-grid"><div class="footer-brand"><a class="logo" href="index.html"><span class="logo__mark">Т</span>Твоё<br>Авто</a><p>Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по Сибири.</p><a class="footer-phone" href="tel:+79000000000">+7 (900) 000-00-00</a><div class="socials"><a href="#" aria-label="ВКонтакте">VK</a><a href="#" aria-label="Telegram">TG</a><a href="#" aria-label="Avito">A</a><a href="#" aria-label="WhatsApp">WA</a></div></div><div class="footer-col"><h3>Услуги</h3><a href="catalog.html">Автомобили</a><a href="installment.html">Рассрочка</a><a href="rent-to-own.html">Аренда с выкупом</a><a href="trade-in.html">Trade-in</a></div><div class="footer-col"><h3>Компания</h3><a href="news.html">Новости</a><a href="reviews.html">Отзывы</a><a href="faq.html">Вопросы и ответы</a><a href="contact.html">Контакты</a></div><div class="footer-col"><h3>Города</h3><a href="#">Барнаул</a><a href="#">Новосибирск</a><a href="#">Кемерово</a><a href="#">Бийск</a></div></div></div>');
+    footer.insertAdjacentHTML('afterbegin','<div class="container"><div class="footer-grid"><div class="footer-brand"><a class="logo" href="index.html"><span class="logo__mark">Т</span>Твоё<br>Авто</a><p>Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по Сибири.</p><a class="footer-phone" href="tel:+79132431855">+7 (913) 243-18-55</a><div class="socials"><a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">VK</a><a href="https://t.me/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="Telegram">TG</a><a href="#" aria-label="Avito">A</a><a href="#" aria-label="WhatsApp">WA</a></div></div><div class="footer-col"><h3>Услуги</h3><a href="catalog.html">Автомобили</a><a href="installment.html">Рассрочка</a><a href="rent-to-own.html">Аренда с выкупом</a><a href="trade-in.html">Trade-in</a></div><div class="footer-col"><h3>Компания</h3><a href="news.html">Новости</a><a href="reviews.html">Отзывы</a><a href="faq.html">Вопросы и ответы</a><a href="contact.html">Контакты</a><a href="privacy.html">Политика обработки персональных данных</a><a href="personal-data-consent.html">Согласие на обработку персональных данных</a><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a></div><div class="footer-col"><h3>Города</h3><a href="#">Барнаул</a><a href="#">Новосибирск</a><a href="#">Кемерово</a><a href="#">Бийск</a></div></div></div>');
   });
 
   const page=location.pathname.split('/').pop()||'index.html';
@@ -35,4 +55,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(title)title.textContent=copy.title;
     if(lead)lead.textContent=copy.lead;
   }
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMenu, { once: true });
+} else {
+  initMenu();
+}

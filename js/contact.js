@@ -16,4 +16,19 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
   panel.querySelectorAll('a').forEach(link=>link.addEventListener('click',close));
   document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
+
+  const form = document.querySelector('form[data-personal-data-form]');
+  const status = form?.querySelector('.contact-form__status');
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      if (status) status.textContent = 'Заполните обязательные поля.';
+      return;
+    }
+    if (status) {
+      status.textContent =
+        'Данные заполнены. Безопасный серверный обработчик заявок нужно подключить отдельно.';
+    }
+  });
 });

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400&family=Manrope:wght@400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap');
+@import url("../fonts.css");
 
 :root{--installment-ink:#0e1a2b;--installment-red:#e31e2b;--installment-paper:#f6f3ee;--installment-line:#dfddd8;--installment-muted:#626872;--installment-footer:#09121f}
 *{box-sizing:border-box}
@@ -18,13 +18,13 @@ html{background:#fff;scroll-behavior:smooth}
 .installment-location,.installment-phone{display:flex;align-items:center;gap:8px;white-space:nowrap}
 .installment-location{width:83px;font-size:14px}.installment-phone{width:176px;font-size:16px}
 .installment-location img,.installment-phone img{width:19px;height:19px}
-.installment-header__cta{display:flex;width:167px;height:50px;align-items:center;justify-content:center;background:var(--installment-red);color:#fff!important;font-family:Exo,Arial,sans-serif;font-size:13px;letter-spacing:.78px;text-transform:uppercase;transition:background .18s}
+.installment-header__cta{display:flex;width:167px;height:50px;align-items:center;justify-content:center;background:var(--installment-red);color:#fff!important;font-family:Montserrat,Arial,sans-serif;font-size:13px;letter-spacing:.78px;text-transform:uppercase;transition:background .18s}
 .installment-header__cta:hover,.installment-header__cta:focus-visible{background:#bd1721}
 .menu-toggle,.mobile-panel{display:none}
 
 .installment-main{position:relative;height:3568px;overflow:hidden}
 .installment-kicker{color:var(--installment-red);font-size:13px;font-weight:700;line-height:18px;letter-spacing:.15px;text-transform:uppercase}
-.installment-button{display:flex;height:56px;align-items:center;justify-content:center;gap:12px;font-family:Exo,Arial,sans-serif;font-size:13px;line-height:18px;letter-spacing:.72px;text-transform:uppercase;transition:background .18s,color .18s,border-color .18s}
+.installment-button{display:flex;height:56px;align-items:center;justify-content:center;gap:12px;font-family:Montserrat,Arial,sans-serif;font-size:13px;line-height:18px;letter-spacing:.72px;text-transform:uppercase;transition:background .18s,color .18s,border-color .18s}
 .installment-button img{width:18px;height:24px;object-fit:contain}
 .installment-button--red{background:var(--installment-red);color:#fff!important}
 .installment-button--red:hover,.installment-button--red:focus-visible{background:#bd1721}
@@ -238,4 +238,3 @@ html{background:#fff;scroll-behavior:smooth}
   .site-footer .footer-brand,
   .site-footer .footer-bottom{grid-column:1}
 }
-
