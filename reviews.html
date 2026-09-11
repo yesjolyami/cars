@@ -4,17 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="img/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <title>Отзывы клиентов — Твоё Авто Сибирь</title>
     <meta
       name="description"
       content="Истории клиентов и ссылки на страницы компании на внешних площадках."
     />
+    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-cyrillic-400-800.woff2" crossorigin />
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/pages/reviews.css?v=4" />
+    <link rel="stylesheet" href="css/pages/reviews.css?v=5" />
     <link rel="stylesheet" href="css/shared-chrome.css?v=20260826" />
     <link rel="stylesheet" href="css/contact-widget.css" />
     <link rel="stylesheet" href="css/cta.css" />
-    <link rel="stylesheet" href="css/metrika.css" />
+    <link rel="stylesheet" href="css/metrika.css?v=20260911" />
   </head>
   <body class="reviews-page">
     <header class="site-header">
@@ -23,7 +28,7 @@
           class="brand"
           href="index.html"
           aria-label="Твоё Авто Сибирь — на главную"
-          ><img src="img/logo-figma.png" alt="Твоё Авто Сибирь"
+          ><img decoding="async" src="img/logo-figma.webp" alt="Твоё Авто Сибирь"
         /></a>
         <nav class="main-nav" aria-label="Основная навигация">
           <a href="catalog.html">Автомобили</a
@@ -34,7 +39,7 @@
         </nav>
         <div class="header-actions">
           <a class="header-phone" href="tel:+79132431855"
-            ><img src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
+            ><img decoding="async" src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
           ><a class="header-cta site-cta site-cta--header" href="contact.html"
             >Подобрать авто</a
           >
@@ -76,15 +81,19 @@
           <div class="reviews-hero__actions">
             <a class="site-cta" href="https://yandex.ru/maps/-/CTDnqE6V" target="_blank" rel="noopener noreferrer"
               >Смотреть отзывы
-              <img src="img/figma-exact/arrow-white.svg" alt="" /></a
-            ><a class="site-cta site-cta--secondary" href="#"
-              >Открыть Avito <img src="img/link.svg" alt=""
+              <img decoding="async" src="img/figma-exact/arrow-white.svg" alt="" /></a
+            ><a
+              class="site-cta site-cta--secondary"
+              href="https://www.avito.ru/brands/1d0065807efc4629ea24bed5d9eb4f52"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Открыть Avito <img decoding="async" src="img/link.svg" alt=""
             /></a>
           </div>
         </div>
         <div class="reviews-hero__image">
-          <img
-            src="img/figma-reviews/hero.png"
+          <img fetchpriority="high" decoding="async"
+            src="img/figma-reviews/hero.webp"
             alt="Клиент с ключами рядом с автомобилем"
           />
         </div>
@@ -98,7 +107,7 @@
         <div class="reviews-platforms__grid">
           <article>
             <div class="reviews-platforms__name">
-              <img src="img/figma-reviews/avito.png" alt="Avito" />
+              <img loading="lazy" decoding="async" src="img/figma-reviews/avito.png" alt="Avito" />
               <h3>Отзывы на Avito</h3>
             </div>
             <div class="reviews-platforms__avito-review">
@@ -116,26 +125,39 @@
               href="https://www.avito.ru/brands/1d0065807efc4629ea24bed5d9eb4f52"
               target="_blank"
               rel="noopener noreferrer"
-              >Читать все отзывы <img src="img/red-link.svg" alt=""
+              >Читать все отзывы <img loading="lazy" decoding="async" src="img/red-link.svg" alt=""
             /></a>
           </article>
           <article>
             <div class="reviews-platforms__name">
-              <img
+              <img loading="lazy" decoding="async"
                 class="reviews-platforms__gis"
                 src="img/figma-reviews/gis.png"
                 alt="2ГИС"
               />
               <h3>Отзывы в 2ГИС</h3>
             </div>
-            <p class="reviews-platforms__empty">
-              Мы только начинаем собирать отзывы в 2ГИС —
-              скоро здесь появятся первые.
-            </p>
+            <div class="reviews-platforms__gis-review">
+              <div class="reviews-platforms__gis-review-head">
+                <strong>Александр М.</strong>
+                <span aria-label="5 звёзд из 5">★★★★★</span>
+              </div>
+              <blockquote>
+                «Максим с Зауром подобрали машину быстро и качественно. Машиной
+                доволен. Рекомендую.»
+              </blockquote>
+              <small>2ГИС · отзыв клиента</small>
+            </div>
+            <a
+              href="https://2gis.ru/barnaul/firm/70000001117123270/tab/reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Открыть 2ГИС <img loading="lazy" decoding="async" src="img/red-link.svg" alt=""
+            /></a>
           </article>
           <article>
             <div class="reviews-platforms__name">
-              <img src="img/figma-reviews/yandex.png" alt="Яндекс Карты" />
+              <img loading="lazy" decoding="async" src="img/figma-reviews/yandex.png" alt="Яндекс Карты" />
               <h3>Отзывы в Яндекс Картах</h3>
             </div>
             <div class="reviews-platforms__yandex-review">
@@ -153,7 +175,7 @@
               href="https://yandex.ru/maps/org/96736411134/reviews"
               target="_blank"
               rel="noopener noreferrer"
-              >Читать все отзывы <img src="img/red-link.svg" alt=""
+              >Читать все отзывы <img loading="lazy" decoding="async" src="img/red-link.svg" alt=""
             /></a>
           </article>
         </div>
@@ -166,9 +188,9 @@
       >
         <h2 class="reviews-stories__title">Истории наших клиентов</h2>
         <article class="reviews-story">
-          <img
+          <img loading="lazy" decoding="async"
             class="reviews-story__photo"
-            src="img/figma-reviews/story.png"
+            src="img/figma-reviews/story.webp"
             alt="Автомобиль клиента"
           />
           <div class="reviews-story__body">
@@ -180,16 +202,16 @@
             <footer>
               <strong>Алексей К.</strong
               ><span
-                ><img src="img/verified.svg" alt="" />Отзыв клиента с
+                ><img loading="lazy" decoding="async" src="img/verified.svg" alt="" />Отзыв клиента с
                 сайта</span
               >
             </footer>
           </div>
         </article>
         <article class="reviews-story">
-          <img
+          <img loading="lazy" decoding="async"
             class="reviews-story__photo"
-            src="img/figma-reviews/story.png"
+            src="img/figma-reviews/story.webp"
             alt="Автомобиль клиента"
           />
           <div class="reviews-story__body">
@@ -202,16 +224,16 @@
             <footer>
               <strong>Марина С.</strong
               ><span
-                ><img src="img/verified.svg" alt="" />Отзыв
+                ><img loading="lazy" decoding="async" src="img/verified.svg" alt="" />Отзыв
                 клиента с сайта</span
               >
             </footer>
           </div>
         </article>
         <article class="reviews-story">
-          <img
+          <img loading="lazy" decoding="async"
             class="reviews-story__photo"
-            src="img/figma-reviews/story.png"
+            src="img/figma-reviews/story.webp"
             alt="Автомобиль клиента"
           />
           <div class="reviews-story__body">
@@ -224,7 +246,7 @@
             <footer>
               <strong>Игорь П.</strong
               ><span
-                ><img src="img/verified.svg" alt="" />Отзыв
+                ><img loading="lazy" decoding="async" src="img/verified.svg" alt="" />Отзыв
                 клиента с сайта</span
               >
             </footer>
@@ -235,14 +257,14 @@
       <section class="reviews-cta" aria-labelledby="reviews-cta-title">
         <div>
           <p>
-            <img src="img/red-chat.svg" alt="" />Консультация без
+            <img loading="lazy" decoding="async" src="img/red-chat.svg" alt="" />Консультация без
             обязательств
           </p>
           <h2 id="reviews-cta-title">Расскажите о вашей задаче</h2>
         </div>
         <a class="site-cta" href="contact.html"
           >Обсудить подбор автомобиля
-          <img src="img/figma-exact/arrow-white.svg" alt=""
+          <img loading="lazy" decoding="async" src="img/figma-exact/arrow-white.svg" alt=""
         /></a>
       </section>
 
@@ -252,7 +274,7 @@
       <div class="frame">
         <div class="footer-grid">
           <div class="footer-brand">
-            <img src="img/logo-figma.png" alt="Твоё Авто Сибирь" />
+            <img loading="lazy" decoding="async" src="img/logo-figma.webp" alt="Твоё Авто Сибирь" />
             <p>
               Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
               Сибири.
@@ -260,13 +282,12 @@
             <a href="tel:+79132431855">+7 (913) 243-18-55</a>
             <div class="footer-social">
               <a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"
-                ><img src="img/figma-catalog/vk.svg" alt="" /></a
-              ><a href="https://t.me/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
-                ><img src="img/figma-catalog/tg.svg" alt="" /></a
-              ><a href="https://max.ru/join/EWPVYaIlt0f9tMCa6J70Ku7pZ2C29zFgSnmHaHLv4g0" target="_blank" rel="noopener noreferrer" aria-label="MAX"
-                ><img src="img/figma-catalog/max.svg" alt="" /></a
-              ><a href="#" aria-label="WhatsApp"
-                ><img src="img/figma-catalog/wa.svg" alt=""
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/vk.svg" alt="" /></a
+              ><a href="https://t.me/zaurguliev" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/tg.svg" alt="" /></a
+              ><a href="https://max.ru/u/f9LHodD0cOIUivXn20beSQhbKedn7hrTKBBsMGf1t2Tjr3zL1KJ-W_a5pi0" target="_blank" rel="noopener noreferrer" aria-label="MAX"
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/max.svg" alt="" /></a
+              ><a href="https://wa.me/79132431855" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img loading="lazy" decoding="async" src="img/figma-catalog/wa.svg" alt=""
               /></a>
             </div>
           </div>
@@ -283,14 +304,14 @@
             ><a href="selection.html">Автоподбор</a
             ><a href="reviews.html">Отзывы</a
             ><a href="faq.html">Вопросы и ответы</a
-            ><a href="contact.html">Контакты</a
-            ><a href="privacy.html">Политика обработки персональных данных</a
+            ><a href="contact.html">Контакты</a>
+          </div>
+          <div class="footer-coverage footer-legal">
+            <h3>Документы</h3>
+            <a href="privacy.html">Политика обработки персональных данных</a
             ><a href="personal-data-consent.html"
               >Согласие на обработку персональных данных</a
             ><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a>
-          </div>
-          <div class="footer-coverage">
-            <h3>География</h3>
           </div>
         </div>
         <div class="footer-bottom">
@@ -302,7 +323,7 @@
           </p>
           <div class="footer-credit">
             <span><a href="https://xo-webstudio.ru/" target="_blank" rel="noopener noreferrer">Разработано маркетинговым агентством XO-STUDIO</a></span>
-            <img src="img/xo.svg" alt="" />
+            <img loading="lazy" decoding="async" src="img/xo.svg" alt="" />
           </div>
         </div>
       </div>
@@ -315,7 +336,7 @@
     >
     </a>
     <script src="js/reviews.js"></script>
-    <script src="js/contact-widget.js"></script>
-    <script src="js/metrika.js?v=20260826-6"></script>
+    <script src="js/contact-widget.js?v=2"></script>
+    <script src="js/metrika.js?v=20260911"></script>
   </body>
 </html>

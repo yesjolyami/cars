@@ -4,17 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="img/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <title>Аренда с правом выкупа — Твоё Авто Сибирь</title>
     <meta
       name="description"
       content="Пользуйтесь автомобилем сейчас и выкупайте постепенно на условиях, заранее закреплённых в договоре."
     />
+    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-cyrillic-400-800.woff2" crossorigin />
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/pages/rent-to-own.css?v=2" />
     <link rel="stylesheet" href="css/shared-chrome.css?v=20260826" />
     <link rel="stylesheet" href="css/contact-widget.css" />
     <link rel="stylesheet" href="css/cta.css" />
-    <link rel="stylesheet" href="css/metrika.css" />
+    <link rel="stylesheet" href="css/metrika.css?v=20260911" />
   </head>
   <body class="rent-page">
     <header class="site-header">
@@ -23,7 +28,7 @@
           class="brand"
           href="index.html"
           aria-label="Твоё Авто Сибирь — на главную"
-          ><img src="img/logo-figma.png" alt="Твоё Авто Сибирь"
+          ><img decoding="async" src="img/logo-figma.webp" alt="Твоё Авто Сибирь"
         /></a>
         <nav class="main-nav" aria-label="Основная навигация">
           <a href="catalog.html">Автомобили</a
@@ -34,7 +39,7 @@
         </nav>
         <div class="header-actions">
           <a class="header-phone" href="tel:+79132431855"
-            ><img src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
+            ><img decoding="async" src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
           ><a class="header-cta site-cta site-cta--header" href="contact.html"
             >Рассчитать аренду</a
           >
@@ -65,8 +70,8 @@
     <main class="rent-main">
       <section class="rent-hero" aria-labelledby="rent-title">
         <div class="rent-hero__image">
-          <img
-            src="img/figma-rent/hero.png"
+          <img fetchpriority="high" decoding="async"
+            src="img/figma-rent/hero.webp"
             alt="Синий автомобиль Toyota у каменной арки"
           />
         </div>
@@ -83,7 +88,7 @@
           <div class="rent-hero__buttons">
             <a class="rent-button rent-button--red site-cta" href="contact.html"
               >Рассчитать аренду
-              <img src="img/figma-exact/arrow-white.svg" alt="" /></a
+              <img decoding="async" src="img/figma-exact/arrow-white.svg" alt="" /></a
             ><a
               class="rent-button rent-button--outline site-cta site-cta--secondary"
               href="catalog.html"
@@ -135,28 +140,28 @@
         </div>
         <div class="rent-contract__cards">
           <article>
-            <img src="img/figma-home/metric-time.svg" alt="" />
+            <img loading="lazy" decoding="async" src="img/figma-home/metric-time.svg" alt="" />
             <div>
               <h3>Срок и график</h3>
               <p>Когда и в каком порядке вносятся согласованные платежи.</p>
             </div>
           </article>
           <article>
-            <img src="img/figma-home/service-rent.svg" alt="" />
+            <img loading="lazy" decoding="async" src="img/figma-home/service-rent.svg" alt="" />
             <div>
               <h3>Порядок пользования</h3>
               <p>На каких условиях клиент пользуется выбранным автомобилем.</p>
             </div>
           </article>
           <article>
-            <img src="img/doc-ver.svg" alt="" />
+            <img loading="lazy" decoding="async" src="img/doc-ver.svg" alt="" />
             <div>
               <h3>Условия выкупа</h3>
               <p>Когда и как автомобиль переходит в собственность клиента.</p>
             </div>
           </article>
           <article>
-            <img src="img/red-chat.svg" alt="" />
+            <img loading="lazy" decoding="async" src="img/red-chat.svg" alt="" />
             <div>
               <h3>Сопровождение</h3>
               <p>К кому обратиться, если по ходу договора возникнут вопросы.</p>
@@ -174,10 +179,11 @@
           </h2>
         </div>
         <div class="rent-cars__grid">
-          <article class="rent-car">
+          <p class="rent-cars__empty">Актуальные автомобили для аренды с выкупом уточнит менеджер.</p>
+          <article class="rent-car" data-demo hidden>
             <a class="rent-car__photo" href="car.html"
-              ><img
-                src="img/figma-exact/catalog.png"
+              ><img loading="lazy" decoding="async"
+                src="img/figma-exact/catalog.webp"
                 alt="Белый Graphite Cross"
             /></a>
             <div class="rent-car__body">
@@ -193,16 +199,16 @@
                 class="rent-car__button site-cta site-cta--secondary"
                 href="car.html"
                 >Узнать условия
-                <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                <img loading="lazy" decoding="async" src="img/figma-exact/arrow-dark.svg" alt="" /></a
               ><small
                 >Расчёт предварительный и не является публичной офертой.</small
               >
             </div>
           </article>
-          <article class="rent-car">
+          <article class="rent-car" data-demo hidden>
             <a class="rent-car__photo" href="car.html"
-              ><img
-                src="img/figma-exact/catalog.png"
+              ><img loading="lazy" decoding="async"
+                src="img/figma-exact/catalog.webp"
                 alt="Белый Graphite Cross"
             /></a>
             <div class="rent-car__body">
@@ -218,16 +224,16 @@
                 class="rent-car__button site-cta site-cta--secondary"
                 href="car.html"
                 >Узнать условия
-                <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                <img loading="lazy" decoding="async" src="img/figma-exact/arrow-dark.svg" alt="" /></a
               ><small
                 >Расчёт предварительный и не является публичной офертой.</small
               >
             </div>
           </article>
-          <article class="rent-car">
+          <article class="rent-car" data-demo hidden>
             <a class="rent-car__photo" href="car.html"
-              ><img
-                src="img/figma-exact/catalog.png"
+              ><img loading="lazy" decoding="async"
+                src="img/figma-exact/catalog.webp"
                 alt="Белый Graphite Cross"
             /></a>
             <div class="rent-car__body">
@@ -243,7 +249,7 @@
                 class="rent-car__button site-cta site-cta--secondary"
                 href="car.html"
                 >Узнать условия
-                <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                <img loading="lazy" decoding="async" src="img/figma-exact/arrow-dark.svg" alt="" /></a
               ><small
                 >Расчёт предварительный и не является публичной офертой.</small
               >
@@ -251,7 +257,7 @@
           </article>
         </div>
         <a class="rent-cars__all" href="catalog.html"
-          >Весь каталог <img src="img/figma-exact/arrow-dark.svg" alt=""
+          >Весь каталог <img loading="lazy" decoding="async" src="img/figma-exact/arrow-dark.svg" alt=""
         /></a>
       </section>
 
@@ -263,7 +269,7 @@
             Если вашей ситуации нет в списке, начните с короткой консультации.
           </p>
           <a href="contact.html"
-            ><img src="img/black-chat.svg" alt="" />Задать свой вопрос</a
+            ><img loading="lazy" decoding="async" src="img/black-chat.svg" alt="" />Задать свой вопрос</a
           >
         </div>
         <div class="rent-accordion">
@@ -316,7 +322,7 @@
     <section class="rent-final" aria-labelledby="rent-final-title">
       <div>
         <p>
-          <img src="img/red-chat.svg" alt="" />Консультация без
+          <img loading="lazy" decoding="async" src="img/red-chat.svg" alt="" />Консультация без
           обязательств
         </p>
         <h2 id="rent-final-title">Рассчитаем подходящий сценарий оформления</h2>
@@ -330,7 +336,7 @@
       <div class="frame">
         <div class="footer-grid">
           <div class="footer-brand">
-            <img src="img/logo-figma.png" alt="Твоё Авто Сибирь" />
+            <img loading="lazy" decoding="async" src="img/logo-figma.webp" alt="Твоё Авто Сибирь" />
             <p>
               Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
               Сибири.
@@ -338,13 +344,12 @@
             <a href="tel:+79132431855">+7 (913) 243-18-55</a>
             <div class="footer-social">
               <a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"
-                ><img src="img/figma-catalog/vk.svg" alt="" /></a
-              ><a href="https://t.me/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
-                ><img src="img/figma-catalog/tg.svg" alt="" /></a
-              ><a href="https://max.ru/join/EWPVYaIlt0f9tMCa6J70Ku7pZ2C29zFgSnmHaHLv4g0" target="_blank" rel="noopener noreferrer" aria-label="MAX"
-                ><img src="img/figma-catalog/max.svg" alt="" /></a
-              ><a href="#" aria-label="WhatsApp"
-                ><img src="img/figma-catalog/wa.svg" alt=""
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/vk.svg" alt="" /></a
+              ><a href="https://t.me/zaurguliev" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/tg.svg" alt="" /></a
+              ><a href="https://max.ru/u/f9LHodD0cOIUivXn20beSQhbKedn7hrTKBBsMGf1t2Tjr3zL1KJ-W_a5pi0" target="_blank" rel="noopener noreferrer" aria-label="MAX"
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/max.svg" alt="" /></a
+              ><a href="https://wa.me/79132431855" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img loading="lazy" decoding="async" src="img/figma-catalog/wa.svg" alt=""
               /></a>
             </div>
           </div>
@@ -361,14 +366,14 @@
             ><a href="selection.html">Автоподбор</a
             ><a href="reviews.html">Отзывы</a
             ><a href="faq.html">Вопросы и ответы</a
-            ><a href="contact.html">Контакты</a
-            ><a href="privacy.html">Политика обработки персональных данных</a
+            ><a href="contact.html">Контакты</a>
+          </div>
+          <div class="footer-coverage footer-legal">
+            <h3>Документы</h3>
+            <a href="privacy.html">Политика обработки персональных данных</a
             ><a href="personal-data-consent.html"
               >Согласие на обработку персональных данных</a
             ><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a>
-          </div>
-          <div class="footer-coverage">
-            <h3>География</h3>
           </div>
         </div>
         <div class="footer-bottom">
@@ -380,12 +385,12 @@
           </p>
           <div class="footer-credit">
             <span><a href="https://xo-webstudio.ru/" target="_blank" rel="noopener noreferrer">Разработано маркетинговым агентством XO-STUDIO</a></span>
-            <img src="img/xo.svg" alt="" />
+            <img loading="lazy" decoding="async" src="img/xo.svg" alt="" />
           </div>
         </div>
       </div>
     </footer>
-    <script src="js/menu.js?v=2"></script>
+    <script src="js/menu.js?v=3"></script>
     <a
       class="site-yandex-link"
       href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134"
@@ -394,7 +399,7 @@
     >
     </a>
     <script src="js/accordion.js"></script>
-    <script src="js/contact-widget.js"></script>
-    <script src="js/metrika.js?v=20260826-6"></script>
+    <script src="js/contact-widget.js?v=2"></script>
+    <script src="js/metrika.js?v=20260911"></script>
   </body>
 </html>

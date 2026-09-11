@@ -4,14 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="img/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <title>Каталог автомобилей — Твоё Авто Сибирь</title>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-cyrillic-400-800.woff2" crossorigin />
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/pages/catalog.css" />
+    <link rel="stylesheet" href="css/pages/catalog.css?v=20260908-1" />
     <link rel="stylesheet" href="css/shared-chrome.css?v=20260826" />
     <link rel="stylesheet" href="css/contact-widget.css" />
     <link rel="stylesheet" href="css/cta.css" />
     <link rel="stylesheet" href="css/filter-states.css" />
-    <link rel="stylesheet" href="css/metrika.css" />
+    <link rel="stylesheet" href="css/metrika.css?v=20260911" />
   </head>
   <body class="catalog-page">
     <header class="site-header">
@@ -20,7 +25,7 @@
           class="brand"
           href="index.html"
           aria-label="Твоё Авто Сибирь — на главную"
-          ><img src="img/logo-figma.png" alt="Твоё Авто Сибирь"
+          ><img decoding="async" src="img/logo-figma.webp" alt="Твоё Авто Сибирь"
         /></a>
         <nav class="main-nav" aria-label="Основная навигация">
           <a href="catalog.html">Автомобили</a
@@ -31,7 +36,7 @@
         </nav>
         <div class="header-actions">
           <a class="header-phone" href="tel:+79132431855"
-            ><img src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
+            ><img decoding="async" src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
           ><a class="header-cta site-cta site-cta--header" href="contact.html"
             >Подобрать авто</a
           >
@@ -74,7 +79,7 @@
         <div class="catalog-layout">
           <aside class="catalog-filter" aria-label="Фильтры каталога">
             <div class="catalog-filter__heading">
-              <img src="img/figma-exact/filter.svg" alt="" />
+              <img loading="lazy" decoding="async" src="img/figma-exact/filter.svg" alt="" />
               <h2>Фильтры</h2>
             </div>
             <div class="catalog-filter__group">
@@ -84,22 +89,33 @@
                 aria-expanded="false"
               >
                 <span>Марка и модель</span
-                ><img src="img/figma-catalog/chevron.png" alt="" />
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/chevron.png" alt="" />
               </button>
               <div class="catalog-filter__panel">
                 <label class="catalog-filter__option"
-                  ><input type="checkbox" name="model" value="graphite" /><span
-                    >Graphite</span
+                  ><input type="checkbox" name="model" value="toyota" /><span
+                    >Toyota</span
                   ></label
                 ><label class="catalog-filter__option"
-                  ><input type="checkbox" name="model" value="white" /><span
-                    >White</span
+                  ><input type="checkbox" name="model" value="kia" /><span
+                    >Kia</span
                   ></label
                 ><label class="catalog-filter__option"
-                  ><input type="checkbox" name="model" value="navy" /><span
-                    >Navy</span
+                  ><input type="checkbox" name="model" value="hyundai" /><span
+                    >Hyundai</span
                   ></label
-                >
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="model" value="nissan" /><span
+                    >Nissan</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="model" value="volkswagen" /><span
+                    >Volkswagen</span
+                  ></label
+                ><label class="catalog-filter__option"
+                  ><input type="checkbox" name="model" value="renault" /><span
+                    >Renault</span
+                  ></label>
               </div>
             </div>
             <div class="catalog-filter__group">
@@ -109,7 +125,7 @@
                 aria-expanded="false"
               >
                 <span>Год выпуска</span
-                ><img src="img/figma-catalog/chevron.png" alt="" />
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/chevron.png" alt="" />
               </button>
               <div class="catalog-filter__panel">
                 <label class="catalog-filter__option"
@@ -138,7 +154,7 @@
                 aria-expanded="false"
               >
                 <span>Тип кузова</span
-                ><img src="img/figma-catalog/chevron.png" alt="" />
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/chevron.png" alt="" />
               </button>
               <div class="catalog-filter__panel">
                 <label class="catalog-filter__option"
@@ -163,7 +179,7 @@
                 aria-expanded="false"
               >
                 <span>Коробка передач</span
-                ><img src="img/figma-catalog/chevron.png" alt="" />
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/chevron.png" alt="" />
               </button>
               <div class="catalog-filter__panel">
                 <label class="catalog-filter__option"
@@ -190,7 +206,7 @@
                 aria-expanded="false"
               >
                 <span>Город</span
-                ><img src="img/figma-catalog/chevron.png" alt="" />
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/chevron.png" alt="" />
               </button>
               <div class="catalog-filter__panel">
                 <label class="catalog-filter__option"
@@ -220,7 +236,7 @@
           </aside>
           <div class="catalog-results">
             <div class="catalog-toolbar">
-              <p class="catalog-results-count" aria-live="polite">Найдено: 6</p>
+              <p class="catalog-results-count" aria-live="polite">Найдено: 0</p>
               <label
                 ><span class="sr-only">Сортировка</span
                 ><select aria-label="Сортировка автомобилей">
@@ -233,19 +249,19 @@
             <div class="catalog-cards">
               <article
                 class="catalog-card"
-                data-model="graphite"
+                data-model="toyota"
                 data-year="2021"
                 data-body="crossover"
                 data-transmission="at"
                 data-city="barnaul"
               >
                 <a class="catalog-card__photo" href="car.html"
-                  ><img src="img/figma-exact/catalog.png" alt="Graphite Cross"
+                  ><img loading="lazy" decoding="async" src="img/catalog-toyota-rav4.webp" alt="Toyota RAV4"
                 /></a>
                 <div class="catalog-card__body">
                   <div class="catalog-card__title">
                     <div>
-                      <h3>Graphite Cross</h3>
+                      <h3>Toyota RAV4</h3>
                       <p>2021 · 2.0 · AT · 4WD</p>
                     </div>
                   </div>
@@ -257,7 +273,7 @@
                     class="catalog-card__button site-cta site-cta--secondary"
                     href="car.html"
                     >Подробнее
-                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                    <img loading="lazy" decoding="async" src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
                     >Расчёт предварительный и не является публичной
                     офертой.</small
@@ -266,20 +282,20 @@
               </article>
               <article
                 class="catalog-card"
-                data-model="white"
+                data-model="kia"
                 data-year="2020"
                 data-body="sedan"
                 data-transmission="at"
                 data-city="novosibirsk"
               >
                 <a class="catalog-card__photo" href="car.html"
-                  ><img src="img/figma-exact/catalog.png" alt="White Sedan"
+                  ><img loading="lazy" decoding="async" src="img/figma-exact/catalog.webp" alt="Kia K5"
                 /></a>
                 <div class="catalog-card__body">
                   <div class="catalog-card__title">
                     <div>
-                      <h3>White Sedan</h3>
-                      <p>2020 · 1.6 · AT · передний</p>
+                      <h3>Kia K5</h3>
+                      <p>2020 · 2.5 · AT · передний</p>
                     </div>
                   </div>
                   <div class="catalog-card__terms">
@@ -290,7 +306,7 @@
                     class="catalog-card__button site-cta site-cta--secondary"
                     href="car.html"
                     >Подробнее
-                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                    <img loading="lazy" decoding="async" src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
                     >Расчёт предварительный и не является публичной
                     офертой.</small
@@ -299,20 +315,20 @@
               </article>
               <article
                 class="catalog-card"
-                data-model="navy"
+                data-model="hyundai"
                 data-year="2022"
                 data-body="suv"
                 data-transmission="at"
                 data-city="barnaul"
               >
                 <a class="catalog-card__photo" href="car.html"
-                  ><img src="img/figma-exact/catalog.png" alt="Navy Family SUV"
+                  ><img loading="lazy" decoding="async" src="img/figma-exact/catalog.webp" alt="Hyundai Santa Fe"
                 /></a>
                 <div class="catalog-card__body">
                   <div class="catalog-card__title">
                     <div>
-                      <h3>Navy Family SUV</h3>
-                      <p>2022 · 2.0 · AT · 4WD</p>
+                      <h3>Hyundai Santa Fe</h3>
+                      <p>2022 · 2.5 · AT · 4WD</p>
                     </div>
                   </div>
                   <div class="catalog-card__terms">
@@ -323,7 +339,7 @@
                     class="catalog-card__button site-cta site-cta--secondary"
                     href="car.html"
                     >Подробнее
-                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                    <img loading="lazy" decoding="async" src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
                     >Расчёт предварительный и не является публичной
                     офертой.</small
@@ -332,20 +348,20 @@
               </article>
               <article
                 class="catalog-card"
-                data-model="graphite"
+                data-model="nissan"
                 data-year="2019"
                 data-body="sedan"
                 data-transmission="cvt"
                 data-city="kemerovo"
               >
                 <a class="catalog-card__photo" href="car.html"
-                  ><img src="img/figma-exact/catalog.png" alt="Graphite City"
+                  ><img loading="lazy" decoding="async" src="img/figma-exact/catalog.webp" alt="Nissan Qashqai"
                 /></a>
                 <div class="catalog-card__body">
                   <div class="catalog-card__title">
                     <div>
-                      <h3>Graphite City</h3>
-                      <p>2019 · 1.8 · CVT · передний</p>
+                      <h3>Nissan Qashqai</h3>
+                      <p>2019 · 2.0 · CVT · передний</p>
                     </div>
                   </div>
                   <div class="catalog-card__terms">
@@ -356,7 +372,7 @@
                     class="catalog-card__button site-cta site-cta--secondary"
                     href="car.html"
                     >Подробнее
-                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                    <img loading="lazy" decoding="async" src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
                     >Расчёт предварительный и не является публичной
                     офертой.</small
@@ -365,19 +381,19 @@
               </article>
               <article
                 class="catalog-card"
-                data-model="white"
+                data-model="volkswagen"
                 data-year="2021"
                 data-body="sedan"
                 data-transmission="at"
                 data-city="biysk"
               >
                 <a class="catalog-card__photo" href="car.html"
-                  ><img src="img/figma-exact/catalog.png" alt="White Comfort"
+                  ><img loading="lazy" decoding="async" src="img/figma-exact/catalog.webp" alt="Volkswagen Polo"
                 /></a>
                 <div class="catalog-card__body">
                   <div class="catalog-card__title">
                     <div>
-                      <h3>White Comfort</h3>
+                      <h3>Volkswagen Polo</h3>
                       <p>2021 · 1.6 · AT · передний</p>
                     </div>
                   </div>
@@ -389,7 +405,7 @@
                     class="catalog-card__button site-cta site-cta--secondary"
                     href="car.html"
                     >Подробнее
-                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                    <img loading="lazy" decoding="async" src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
                     >Расчёт предварительный и не является публичной
                     офертой.</small
@@ -398,20 +414,20 @@
               </article>
               <article
                 class="catalog-card"
-                data-model="navy"
+                data-model="renault"
                 data-year="2020"
                 data-body="crossover"
-                data-transmission="at"
+                data-transmission="mt"
                 data-city="novosibirsk"
               >
                 <a class="catalog-card__photo" href="car.html"
-                  ><img src="img/figma-exact/catalog.png" alt="Navy Tour"
+                  ><img loading="lazy" decoding="async" src="img/figma-exact/catalog.webp" alt="Renault Duster"
                 /></a>
                 <div class="catalog-card__body">
                   <div class="catalog-card__title">
                     <div>
-                      <h3>Navy Tour</h3>
-                      <p>2020 · 2.0 · AT · 4WD</p>
+                      <h3>Renault Duster</h3>
+                      <p>2020 · 2.0 · MT · 4WD</p>
                     </div>
                   </div>
                   <div class="catalog-card__terms">
@@ -422,7 +438,7 @@
                     class="catalog-card__button site-cta site-cta--secondary"
                     href="car.html"
                     >Подробнее
-                    <img src="img/figma-exact/arrow-dark.svg" alt="" /></a
+                    <img loading="lazy" decoding="async" src="img/figma-exact/arrow-dark.svg" alt="" /></a
                   ><small
                     >Расчёт предварительный и не является публичной
                     офертой.</small
@@ -432,7 +448,7 @@
             </div>
             <div class="catalog-empty" role="status" hidden>
               <strong>Автомобили не найдены</strong>
-              <span>Измените параметры или нажмите «Сбросить фильтры» слева.</span>
+              <span>Измените параметры или сбросьте фильтры.</span>
             </div>
           </div>
         </div>
@@ -444,7 +460,7 @@
       <div class="frame">
         <div class="footer-grid">
           <div class="footer-brand">
-            <img src="img/logo-figma.png" alt="Твоё Авто Сибирь" />
+            <img loading="lazy" decoding="async" src="img/logo-figma.webp" alt="Твоё Авто Сибирь" />
             <p>
               Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
               Сибири.
@@ -452,13 +468,12 @@
             <a href="tel:+79132431855">+7 (913) 243-18-55</a>
             <div class="footer-social">
               <a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"
-                ><img src="img/figma-catalog/vk.svg" alt="" /></a
-              ><a href="https://t.me/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
-                ><img src="img/figma-catalog/tg.svg" alt="" /></a
-              ><a href="https://max.ru/join/EWPVYaIlt0f9tMCa6J70Ku7pZ2C29zFgSnmHaHLv4g0" target="_blank" rel="noopener noreferrer" aria-label="MAX"
-                ><img src="img/figma-catalog/max.svg" alt="" /></a
-              ><a href="#" aria-label="WhatsApp"
-                ><img src="img/figma-catalog/wa.svg" alt=""
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/vk.svg" alt="" /></a
+              ><a href="https://t.me/zaurguliev" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/tg.svg" alt="" /></a
+              ><a href="https://max.ru/u/f9LHodD0cOIUivXn20beSQhbKedn7hrTKBBsMGf1t2Tjr3zL1KJ-W_a5pi0" target="_blank" rel="noopener noreferrer" aria-label="MAX"
+                ><img loading="lazy" decoding="async" src="img/figma-catalog/max.svg" alt="" /></a
+              ><a href="https://wa.me/79132431855" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img loading="lazy" decoding="async" src="img/figma-catalog/wa.svg" alt=""
               /></a>
             </div>
           </div>
@@ -475,14 +490,14 @@
             ><a href="selection.html">Автоподбор</a
             ><a href="reviews.html">Отзывы</a
             ><a href="faq.html">Вопросы и ответы</a
-            ><a href="contact.html">Контакты</a
-            ><a href="privacy.html">Политика обработки персональных данных</a
+            ><a href="contact.html">Контакты</a>
+          </div>
+          <div class="footer-coverage footer-legal">
+            <h3>Документы</h3>
+            <a href="privacy.html">Политика обработки персональных данных</a
             ><a href="personal-data-consent.html"
               >Согласие на обработку персональных данных</a
             ><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a>
-          </div>
-          <div class="footer-coverage">
-            <h3>География</h3>
           </div>
         </div>
         <div class="footer-bottom">
@@ -494,13 +509,13 @@
           </p>
           <div class="footer-credit">
             <span><a href="https://xo-webstudio.ru/" target="_blank" rel="noopener noreferrer">Разработано маркетинговым агентством XO-STUDIO</a></span>
-            <img src="img/xo.svg" alt="" />
+            <img loading="lazy" decoding="async" src="img/xo.svg" alt="" />
           </div>
         </div>
       </div>
     </footer>
     <a class="catalog-contact" href="contact.html"
-      ><img src="img/figma-catalog/double-chat.svg" alt="" />Связаться</a
+      ><img loading="lazy" decoding="async" src="img/figma-catalog/double-chat.svg" alt="" />Связаться</a
     >
     <a
       class="site-yandex-link"
@@ -509,9 +524,9 @@
       rel="noopener noreferrer"
     >
     </a>
-    <script src="js/menu.js?v=2"></script>
-    <script src="js/catalog.js"></script>
-    <script src="js/contact-widget.js"></script>
-    <script src="js/metrika.js?v=20260826-6"></script>
+    <script src="js/menu.js?v=3"></script>
+    <script src="js/catalog.js?v=2"></script>
+    <script src="js/contact-widget.js?v=2"></script>
+    <script src="js/metrika.js?v=20260911"></script>
   </body>
 </html>

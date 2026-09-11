@@ -1,0 +1,398 @@
+<?php
+/**
+ * Template Name: Рассрочка
+ * Template Post Type: page
+ */
+get_header( null, array(
+    'body_class' => 'installment-page',
+    'page_key'   => 'installment',
+) );
+?>
+<header class="site-header">
+      <div class="header-wrap">
+        <a
+          class="brand"
+          href="<?php echo esc_url( tvoe_auto_page_url( 'home' ) . '' ); ?>"
+          aria-label="Твоё Авто Сибирь — на главную"
+          ><img decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/logo-figma.webp' ) ); ?>" alt="Твоё Авто Сибирь"
+        /></a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="<?php echo esc_url( tvoe_auto_page_url( 'catalog' ) . '' ); ?>">Автомобили</a
+          ><a href="<?php echo esc_url( tvoe_auto_page_url( 'installment' ) . '' ); ?>">Рассрочка</a
+          ><a href="<?php echo esc_url( tvoe_auto_page_url( 'rent-to-own' ) . '' ); ?>">Аренда с выкупом</a
+          ><a href="<?php echo esc_url( tvoe_auto_page_url( 'trade-in' ) . '' ); ?>">Trade-in</a
+          ><a href="<?php echo esc_url( tvoe_auto_page_url( 'selection' ) . '' ); ?>">Автоподбор</a>
+        </nav>
+        <div class="header-actions">
+          <a class="header-phone" href="tel:+79132431855"
+            ><img decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/phone.svg' ) ); ?>" alt="" />+7 (913) 243-18-55</a
+          ><a class="header-cta site-cta site-cta--header" href="<?php echo esc_url( tvoe_auto_page_url( 'contact' ) . '' ); ?>"
+            >Рассчитать рассрочку</a
+          >
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <aside class="mobile-panel" aria-label="Мобильное меню">
+      <nav>
+        <a href="<?php echo esc_url( tvoe_auto_page_url( 'catalog' ) . '' ); ?>">Автомобили</a
+        ><a href="<?php echo esc_url( tvoe_auto_page_url( 'installment' ) . '' ); ?>">Рассрочка</a
+        ><a href="<?php echo esc_url( tvoe_auto_page_url( 'rent-to-own' ) . '' ); ?>">Аренда с выкупом</a
+        ><a href="<?php echo esc_url( tvoe_auto_page_url( 'trade-in' ) . '' ); ?>">Trade-in</a
+        ><a href="<?php echo esc_url( tvoe_auto_page_url( 'selection' ) . '' ); ?>">Автоподбор</a>
+      </nav>
+      <div class="mobile-panel__footer">
+        <a href="tel:+79132431855">+7 (913) 243-18-55</a>
+      </div>
+    </aside>
+
+    <main class="installment-main">
+      <section class="installment-hero" aria-labelledby="installment-title">
+        <div class="installment-hero__copy">
+          <p class="installment-kicker">Рассрочка без банка</p>
+          <h1 id="installment-title">
+            Автомобиль в рассрочку<br />
+            напрямую через компанию
+          </h1>
+          <p class="installment-hero__lead">
+            Подберём автомобиль и предложим индивидуальный сценарий оформления
+            без банковского автокредита.
+          </p>
+          <div class="installment-hero__actions">
+            <a
+              class="installment-button installment-button--red site-cta"
+              href="<?php echo esc_url( tvoe_auto_page_url( 'contact' ) . '' ); ?>"
+              >Рассчитать рассрочку
+              <img decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-exact/arrow-white.svg' ) ); ?>" alt="" /></a
+            ><a
+              class="installment-button installment-button--outline site-cta site-cta--secondary"
+              href="<?php echo esc_url( tvoe_auto_page_url( 'catalog' ) . '' ); ?>"
+              >Наши автомобили</a
+            >
+          </div>
+        </div>
+        <div class="installment-hero__visual" aria-hidden="true">
+          <img fetchpriority="high" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-installment/hero.webp' ) ); ?>" alt="Автомобиль в рассрочку без банка — Твоё Авто Сибирь" />
+        </div>
+        <article class="installment-hero__note">
+          <img decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-home/service-installment.svg' ) ); ?>" alt="" />
+          <div>
+            <span>Без банка</span><strong>Договор напрямую с компанией</strong>
+          </div>
+          <small
+            >Решение и параметры оформления определяются индивидуально.</small
+          >
+        </article>
+        <a class="installment-contact" href="<?php echo esc_url( tvoe_auto_page_url( 'contact' ) . '' ); ?>"
+          ><img decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-catalog/double-chat.svg' ) ); ?>" alt="" />Связаться</a
+        >
+      </section>
+
+      <section class="installment-meaning" aria-labelledby="meaning-title">
+        <div class="installment-meaning__heading">
+          <div>
+            <p class="installment-kicker">Что это значит</p>
+            <h2 id="meaning-title">
+              Другой способ оформления, а не обещание одобрения
+            </h2>
+          </div>
+          <p>
+            На старте обсуждаем задачу клиента, затем рассчитываем возможный
+            сценарий и только после рассмотрения фиксируем условия.
+          </p>
+        </div>
+        <div class="installment-meaning__cards">
+          <article class="installment-meaning__card">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-home/service-installment.svg' ) ); ?>" alt="" /><span
+              >01</span
+            >
+            <div>
+              <h3>Без банковского автокредита</h3>
+              <p>Оформление проходит напрямую через компанию по договору.</p>
+            </div>
+          </article>
+          <article class="installment-meaning__card">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/red-chat.svg' ) ); ?>" alt="" /><span
+              >02</span
+            >
+            <div>
+              <h3>Короткий первый контакт</h3>
+              <p>Сначала нужны имя, телефон, город и понимание задачи.</p>
+            </div>
+          </article>
+          <article class="installment-meaning__card">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/doc-ver.svg' ) ); ?>" alt="" /><span
+              >03</span
+            >
+            <div>
+              <h3>Индивидуальные условия</h3>
+              <p>Итоговое решение зависит от автомобиля и ситуации клиента.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="installment-calculation"
+        aria-labelledby="calculation-title"
+      >
+        <div class="installment-calculation__intro">
+          <p class="installment-kicker">Предварительный расчёт</p>
+          <h2 id="calculation-title">
+            Соберите<br />
+            исходные<br />
+            параметры
+          </h2>
+          <p>
+            Это не анкета и не заявка на банковский кредит. Специалист
+            использует данные, чтобы обсудить ориентир по оформлению.
+          </p>
+        </div>
+        <div class="installment-calculation__fields">
+          <label
+            >Стоимость автомобиля <strong data-calc-price-value></strong
+            ><input
+              type="range"
+              data-calc-price
+              min="500000"
+              max="6000000"
+              value="2000000"
+              step="100000"
+              aria-label="Стоимость автомобиля"
+          /></label>
+          <label
+            >Первоначальный взнос <strong data-calc-down-value></strong
+            ><input
+              type="range"
+              data-calc-down
+              min="0"
+              max="2000000"
+              value="400000"
+              step="50000"
+              aria-label="Первоначальный взнос"
+          /></label>
+          <label
+            >Срок <strong data-calc-term-value></strong
+            ><input
+              type="range"
+              data-calc-term
+              min="12"
+              max="84"
+              value="48"
+              step="6"
+              aria-label="Срок рассрочки в месяцах"
+          /></label>
+        </div>
+        <article class="installment-calculation__result calculator__result">
+          <span>Ориентировочный платёж</span
+          ><strong data-calc-result aria-live="polite"></strong
+          ><a
+            class="installment-button installment-button--red site-cta"
+            href="<?php echo esc_url( tvoe_auto_page_url( 'contact' ) . '' ); ?>"
+            >Получить точный расчёт
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-exact/arrow-white.svg' ) ); ?>" alt="" /></a
+          ><small
+            >Все расчёты являются предварительными и не являются публичной
+            офертой.</small
+          >
+        </article>
+      </section>
+
+      <section class="installment-steps" aria-labelledby="steps-title">
+        <div class="installment-steps__intro">
+          <p class="installment-kicker">Как проходит оформление</p>
+          <h2 id="steps-title">
+            От короткой заявки до<br />
+            передачи автомобиля
+          </h2>
+          <p>
+            На каждом этапе понятно, что происходит сейчас и какой следующий
+            шаг.
+          </p>
+          <a
+            class="installment-button installment-button--red site-cta"
+            href="<?php echo esc_url( tvoe_auto_page_url( 'contact' ) . '' ); ?>"
+            >Получить консультацию
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-exact/arrow-white.svg' ) ); ?>" alt=""
+          /></a>
+        </div>
+        <ol class="installment-steps__list">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>Обсуждаем бюджет и автомобиль</h3>
+              <p>Начинаем с основных данных и вашей задачи.</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Готовим предварительный расчёт</h3>
+              <p>Проверяем информацию и обсуждаем возможный сценарий.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>Подбираем и проверяем вариант</h3>
+              <p>Показываем результат и отвечаем на вопросы.</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>Фиксируем условия в договоре</h3>
+              <p>Фиксируем согласованные условия в документах.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="installment-faq" aria-labelledby="faq-title">
+        <div class="installment-faq__intro">
+          <p class="installment-kicker">Коротко о важном</p>
+          <h2 id="faq-title">Вопросы<br />по услуге</h2>
+          <p>
+            Если вашей ситуации нет в списке, начните с короткой консультации.
+          </p>
+          <a href="<?php echo esc_url( tvoe_auto_page_url( 'contact' ) . '' ); ?>"
+            ><img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/black-chat.svg' ) ); ?>" alt="" />Задать свой
+            вопрос</a
+          >
+        </div>
+        <div class="installment-accordion">
+          <article class="accordion-item">
+            <button
+              class="accordion-trigger"
+              type="button"
+              aria-expanded="true"
+            >
+              Что означает «без банка»?<span aria-hidden="true"></span>
+            </button>
+            <div class="accordion-panel is-open">
+              Оформление проходит напрямую через компанию без банковского
+              автокредита. Финальные условия определяются индивидуально.
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button
+              class="accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              Можно оставить заявку с плохой кредитной историей?<span
+                aria-hidden="true"
+              ></span>
+            </button>
+            <div class="accordion-panel">
+              Да, заявку можно оставить. Решение принимается индивидуально после
+              рассмотрения вашей ситуации.
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button
+              class="accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              Когда будут известны точные условия?<span
+                aria-hidden="true"
+              ></span>
+            </button>
+            <div class="accordion-panel">
+              После выбора автомобиля, проверки исходных данных и обсуждения
+              подходящего сценария оформления.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="installment-final" aria-labelledby="final-title">
+        <div>
+          <p>
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/red-chat.svg' ) ); ?>" alt="" />Консультация
+            без обязательств
+          </p>
+          <h2 id="final-title">Рассчитаем подходящий сценарий оформления</h2>
+        </div>
+        <a
+          class="installment-button installment-button--red site-cta"
+          href="<?php echo esc_url( tvoe_auto_page_url( 'contact' ) . '' ); ?>"
+          >Рассчитать рассрочку</a
+        >
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="frame">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/logo-figma.webp' ) ); ?>" alt="Твоё Авто Сибирь" />
+            <p>
+              Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
+              Сибири.
+            </p>
+            <a href="tel:+79132431855">+7 (913) 243-18-55</a>
+            <div class="footer-social">
+              <a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"
+                ><img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-catalog/vk.svg' ) ); ?>" alt="" /></a
+              ><a href="https://t.me/zaurguliev" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
+                ><img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-catalog/tg.svg' ) ); ?>" alt="" /></a
+              ><a href="https://max.ru/u/f9LHodD0cOIUivXn20beSQhbKedn7hrTKBBsMGf1t2Tjr3zL1KJ-W_a5pi0" target="_blank" rel="noopener noreferrer" aria-label="MAX"
+                ><img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-catalog/max.svg' ) ); ?>" alt="" /></a
+              ><a href="https://wa.me/79132431855" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/figma-catalog/wa.svg' ) ); ?>" alt=""
+              /></a>
+            </div>
+          </div>
+          <div>
+            <h3>Услуги</h3>
+            <a href="<?php echo esc_url( tvoe_auto_page_url( 'catalog' ) . '' ); ?>">Автомобили</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'installment' ) . '' ); ?>">Рассрочка</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'rent-to-own' ) . '' ); ?>">Аренда с выкупом</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'trade-in' ) . '' ); ?>">Trade-in</a>
+          </div>
+          <div>
+            <h3>Информация</h3>
+            <a href="<?php echo esc_url( tvoe_auto_page_url( 'news' ) . '' ); ?>">Новости и выдачи</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'selection' ) . '' ); ?>">Автоподбор</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'reviews' ) . '' ); ?>">Отзывы</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'faq' ) . '' ); ?>">Вопросы и ответы</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'contact' ) . '' ); ?>">Контакты</a>
+          </div>
+          <div class="footer-coverage footer-legal">
+            <h3>Документы</h3>
+            <a href="<?php echo esc_url( tvoe_auto_page_url( 'privacy' ) . '' ); ?>">Политика обработки персональных данных</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'personal-data-consent' ) . '' ); ?>"
+              >Согласие на обработку персональных данных</a
+            ><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 «Твоё Авто Сибирь»</p>
+          <p>
+            Все расчёты на сайте являются предварительными и не являются
+            публичной офертой. Итоговые условия определяются после
+            индивидуального рассмотрения заявки.
+          </p>
+          <div class="footer-credit">
+            <span><a href="https://xo-webstudio.ru/" target="_blank" rel="noopener noreferrer">Разработано маркетинговым агентством XO-STUDIO</a></span>
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/xo.svg' ) ); ?>" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a
+      class="site-yandex-link"
+      href="https://yandex.ru/navi/org/tvoyo_avto_sibir/96736411134"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+    </a>
+<?php get_footer(); ?>

@@ -1,0 +1,401 @@
+<?php
+/**
+ * Template Name: Политика обработки персональных данных
+ * Template Post Type: page
+ */
+$production_options  = tvoe_auto_production_options();
+$hosting_name        = trim( (string) $production_options['hosting_name'] );
+$hosting_location    = trim( (string) $production_options['hosting_location'] );
+$processors          = trim( (string) $production_options['processors'] );
+$approved_at         = trim( (string) $production_options['legal_approved_at'] );
+$approved_at_display = $approved_at ? wp_date( 'd.m.Y', strtotime( $approved_at ) ) : '';
+$hosting_details     = trim( $hosting_name . ( $hosting_name && $hosting_location ? ', ' : '' ) . $hosting_location );
+
+get_header( null, array(
+    'body_class' => '',
+    'page_key'   => 'privacy',
+) );
+?>
+<header class="site-header">
+      <div class="header-wrap">
+        <a
+          class="brand"
+          href="<?php echo esc_url( tvoe_auto_page_url( 'home' ) . '' ); ?>"
+          aria-label="Твоё Авто Сибирь — на главную"
+          ><img decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/logo-figma.webp' ) ); ?>" alt="Твоё Авто Сибирь"
+        /></a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="<?php echo esc_url( tvoe_auto_page_url( 'catalog' ) . '' ); ?>">Автомобили</a
+          ><a href="<?php echo esc_url( tvoe_auto_page_url( 'installment' ) . '' ); ?>">Рассрочка</a
+          ><a href="<?php echo esc_url( tvoe_auto_page_url( 'rent-to-own' ) . '' ); ?>">Аренда с выкупом</a
+          ><a href="<?php echo esc_url( tvoe_auto_page_url( 'trade-in' ) . '' ); ?>">Trade-in</a
+          ><a href="<?php echo esc_url( tvoe_auto_page_url( 'selection' ) . '' ); ?>">Автоподбор</a>
+        </nav>
+        <div class="header-actions">
+          <a class="header-phone" href="tel:+79132431855"
+            ><img decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/phone.svg' ) ); ?>" alt="" />+7 (913) 243-18-55</a
+          ><a class="header-cta" href="<?php echo esc_url( tvoe_auto_page_url( 'contact' ) . '' ); ?>">Подобрать авто</a>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <aside class="mobile-panel" aria-label="Мобильное меню">
+      <nav>
+        <a href="<?php echo esc_url( tvoe_auto_page_url( 'catalog' ) . '' ); ?>">Автомобили</a
+        ><a href="<?php echo esc_url( tvoe_auto_page_url( 'installment' ) . '' ); ?>">Рассрочка</a
+        ><a href="<?php echo esc_url( tvoe_auto_page_url( 'rent-to-own' ) . '' ); ?>">Аренда с выкупом</a
+        ><a href="<?php echo esc_url( tvoe_auto_page_url( 'trade-in' ) . '' ); ?>">Trade-in</a
+        ><a href="<?php echo esc_url( tvoe_auto_page_url( 'selection' ) . '' ); ?>">Автоподбор</a>
+      </nav>
+      <div class="mobile-panel__footer">
+        <a href="tel:+79132431855">+7 (913) 243-18-55</a>
+        <p>Работаем по Сибири</p>
+      </div>
+    </aside>
+
+    <main class="legal-page">
+      <div class="legal-page__inner">
+        <p class="legal-page__eyebrow">Юридическая информация</p>
+        <h1>Политика обработки персональных данных</h1>
+        <p class="legal-page__lead">
+          Документ описывает, какие данные могут обрабатываться на сайте,
+          зачем они нужны и как пользователь может реализовать свои права.
+        </p>
+        <div class="legal-page__notice" role="note">
+          <strong>Как обрабатывается заявка</strong>
+          Отправленные формы сохраняются как закрытые заявки в административной
+          части WordPress. Доступ к ним имеют только администраторы. Для каждой
+          заявки сохраняются версия согласия и время его получения.
+        </div>
+
+        <div class="legal-page__content">
+          <section class="legal-page__section">
+            <h2>1. Общие положения</h2>
+            <p>
+              Настоящая Политика составлена с учётом Федерального закона от
+              27.07.2006 № 152-ФЗ «О персональных данных» и применяется к
+              информации, получаемой через сайт «Твоё Авто Сибирь».
+            </p>
+            <p>
+              Оператор обрабатывает персональные данные только для заранее
+              определённых целей, в объёме, необходимом для этих целей, и не
+              должен использовать их несовместимым образом.
+            </p>
+          </section>
+
+          <section class="legal-page__section">
+            <h2>2. Сведения об операторе</h2>
+            <article class="organization-card" aria-labelledby="organization-card-title">
+              <p class="organization-card__eyebrow">Реквизиты оператора</p>
+              <h3 id="organization-card-title">Карточка организации</h3>
+
+              <dl class="organization-card__list">
+                <div class="organization-card__item organization-card__item--wide">
+                  <dt>Индивидуальный предприниматель</dt>
+                  <dd>Гулиев Заур Зульфигарович</dd>
+                </div>
+                <div class="organization-card__item">
+                  <dt>Адрес регистрации</dt>
+                  <dd>656006, Россия, Алтайский край, г. Барнаул, ул. Взлётная, д. 13, кв. 77</dd>
+                </div>
+                <div class="organization-card__item">
+                  <dt>Почтовый адрес</dt>
+                  <dd>656006, Россия, Алтайский край, г. Барнаул, ул. Взлётная, д. 13, кв. 77</dd>
+                </div>
+                <div class="organization-card__item">
+                  <dt>ИНН</dt>
+                  <dd>222208551746</dd>
+                </div>
+                <div class="organization-card__item">
+                  <dt>ОГРНИП</dt>
+                  <dd>319222500013820</dd>
+                </div>
+              </dl>
+
+              <section class="organization-card__section" aria-labelledby="bank-details-title">
+                <h4 id="bank-details-title">Банковские реквизиты</h4>
+                <dl class="organization-card__list organization-card__list--compact">
+                  <div class="organization-card__item">
+                    <dt>Банк</dt>
+                    <dd>ООО «Банк Точка»</dd>
+                  </div>
+                  <div class="organization-card__item">
+                    <dt>Расчётный счёт</dt>
+                    <dd>40802810302500044464</dd>
+                  </div>
+                  <div class="organization-card__item">
+                    <dt>Корреспондентский счёт</dt>
+                    <dd>30101810745374525104</dd>
+                  </div>
+                  <div class="organization-card__item">
+                    <dt>БИК</dt>
+                    <dd>044525104</dd>
+                  </div>
+                </dl>
+              </section>
+
+              <section class="organization-card__section" aria-labelledby="organization-contacts-title">
+                <h4 id="organization-contacts-title">Контактные данные</h4>
+                <div class="organization-card__links">
+                  <a href="mailto:Zaur.guliew@yandex.ru">Zaur.guliew@yandex.ru</a>
+                  <a href="tel:+79132431855">+7 (913) 243-18-55</a>
+                </div>
+              </section>
+
+              <section class="organization-card__section" aria-labelledby="organization-socials-title">
+                <h4 id="organization-socials-title">Социальные сети и каналы</h4>
+                <div class="organization-card__links organization-card__links--social">
+                  <a href="https://t.me/zaurguliev" target="_blank" rel="noopener noreferrer">Telegram — Заур</a>
+                  <a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer">ВКонтакте — «Твоё Авто Сибирь»</a>
+                  <a href="https://max.ru/u/f9LHodD0cOIUivXn20beSQhbKedn7hrTKBBsMGf1t2Tjr3zL1KJ-W_a5pi0" target="_blank" rel="noopener noreferrer">MAX — Заур</a>
+                </div>
+              </section>
+            </article>
+          </section>
+
+          <section class="legal-page__section">
+            <h2>3. Цели и состав обрабатываемых данных</h2>
+            <table class="legal-table">
+              <thead>
+                <tr>
+                  <th>Цель</th>
+                  <th>Данные</th>
+                  <th>Источник и основание</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ответ на обращение и организация консультации</td>
+                  <td>
+                    Имя, телефон, город, интересующая услуга и выбранный способ
+                    связи
+                  </td>
+                  <td>Формы на главной странице и странице контактов; согласие пользователя</td>
+                </tr>
+                <tr>
+                  <td>Предварительная оценка Trade-in</td>
+                  <td>Марка и модель автомобиля, год выпуска, телефон</td>
+                  <td>Форма Trade-in; согласие пользователя</td>
+                </tr>
+                <tr>
+                  <td>Подготовка предложения по подбору автомобиля</td>
+                  <td>
+                    Имя, телефон, город, способ связи, параметры автомобиля,
+                    бюджет, планируемый способ покупки, сроки и пожелания
+                  </td>
+                  <td>Форма заявки; согласие пользователя</td>
+                </tr>
+                <tr>
+                  <td>Работа и безопасность сайта</td>
+                  <td>
+                    IP-адрес, User-Agent, дата и время запроса, запрошенный URL,
+                    технические журналы сервера
+                  </td>
+                  <td>Работа Сайта, защита от злоупотреблений и подтверждение согласия</td>
+                </tr>
+                <tr>
+                  <td>Необязательная веб-аналитика</td>
+                  <td>
+                    Сведения о посещениях, устройстве и действиях на сайте без
+                    передачи значений полей форм
+                  </td>
+                  <td>
+                    Яндекс Метрика — только после отдельного разрешения на
+                    необязательные технологии
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              Сайт не предназначен для сбора паспортных, платёжных, медицинских,
+              биометрических и иных специальных или чувствительных данных.
+              Пользователю не следует указывать их в свободных полях.
+            </p>
+          </section>
+
+          <section class="legal-page__section">
+            <h2>4. Порядок и сроки обработки</h2>
+            <p>
+              Обработка может включать сбор, запись, систематизацию, накопление,
+              хранение, уточнение, извлечение, использование, предоставление
+              уполномоченным обработчикам, блокирование, удаление и уничтожение
+              данных с использованием средств автоматизации или без них.
+            </p>
+            <p>
+              Срок хранения заявок — 180 календарных дней. По достижении цели,
+              истечении установленного срока или при
+              отзыве согласия данные удаляются, если закон или действующий
+              договор не требует дальнейшего хранения.
+            </p>
+            <p>
+              Формы передаются по HTTPS в WordPress REST API, сохраняются в
+              закрытом разделе «Заявки» и не публикуются на сайте. О новой
+              заявке WordPress может отправить служебное email-уведомление и
+              уведомление в Telegram через Telegram Bot API.
+            </p>
+          </section>
+
+          <section class="legal-page__section">
+            <h2>5. Хранение в Российской Федерации и обработчики</h2>
+            <p>
+              Первичная запись, систематизация, накопление, хранение, уточнение
+              и извлечение персональных данных граждан РФ должны выполняться с
+              использованием баз данных, находящихся в Российской Федерации.
+            </p>
+            <ul>
+              <li>
+                Хостинг сайта и место первичного размещения базы:
+                <?php echo esc_html( $hosting_details ? $hosting_details : 'сведения будут опубликованы до включения форм и рекламного трафика.' ); ?>
+              </li>
+              <li>
+                Backend и основная база заявок:
+                WordPress и его база данных на хостинге Сайта.
+              </li>
+              <li>
+                Обработчики и получатели:
+                <?php echo esc_html( $processors ); ?>
+              </li>
+            </ul>
+            <p>
+              Передача уведомлений в Telegram может затрагивать обработку данных
+              за пределами Российской Федерации. Оператор осуществляет такую
+              передачу при соблюдении требований законодательства, включая
+              необходимые уведомительные и иные обязанности.
+            </p>
+          </section>
+
+          <section class="legal-page__section" id="cookies">
+            <h2>6. Cookie, локальное хранилище и внешние ресурсы</h2>
+            <h3>Необходимая настройка</h3>
+            <p>
+              В localStorage хранится только выбор пользователя по категориям
+              «Аналитика» и «Карты» под ключом <code>tvoe-auto-privacy-consent-v1</code>.
+              Значения форм и контактные данные там не сохраняются.
+            </p>
+            <p>
+              Изменить выбор можно в любой момент по ссылке «Настройки cookie»
+              в подвале сайта.
+            </p>
+            <h3>Яндекс Метрика</h3>
+            <p>
+              Счётчик не загружается, пока пользователь не включит категорию «Аналитика». В исходном
+              проекте ID счётчика не заполнен, Вебвизор и сбор содержимого форм
+              отключены. Перед активацией оператор должен указать фактическую
+              цель, срок, обработчика и настройки счётчика.
+            </p>
+            <h3>Яндекс Карты</h3>
+            <p>
+              Виджет карты загружается только после включения категории «Карты»
+              в настройках cookie или нажатия кнопки «Показать карту». При загрузке
+              Яндекс может получить IP-адрес, User-Agent и технические сведения
+              о запросе. Прямая ссылка на карту открывается только по действию
+              пользователя.
+            </p>
+            <h3>Шрифты и внешние ссылки</h3>
+            <p>
+              Шрифты хранятся на сервере сайта и не требуют обращения к Google.
+              Переходы на Яндекс, Avito, ВКонтакте, Telegram и MAX происходят
+              только после нажатия пользователем; для внешних переходов
+              отключена передача HTTP Referer. Ссылки на сторонние площадки не
+              означают, что оператор управляет их дальнейшей обработкой данных.
+            </p>
+            <a class="legal-cookie-settings" href="#privacy-settings" data-privacy-settings>
+              Изменить настройки cookie
+            </a>
+          </section>
+
+          <section class="legal-page__section">
+            <h2>7. Права пользователя</h2>
+            <p>Пользователь вправе:</p>
+            <ul>
+              <li>получить сведения об обработке своих персональных данных;</li>
+              <li>потребовать уточнения, блокирования или удаления данных;</li>
+              <li>отозвать согласие и потребовать прекращения обработки;</li>
+              <li>
+                обжаловать действия оператора в Роскомнадзоре или в судебном
+                порядке.
+              </li>
+            </ul>
+            <p>
+              Обращение направляется по адресу:
+              <a href="mailto:Zaur.guliew@yandex.ru">Zaur.guliew@yandex.ru</a>
+              или письмом по адресу: 656006, Россия, Алтайский край, г. Барнаул,
+              ул. Взлётная, д. 13, кв. 77. Оператор вправе запросить сведения, необходимые для проверки
+              личности заявителя и связи обращения с конкретными данными.
+            </p>
+          </section>
+
+          <section class="legal-page__section">
+            <h2>8. Меры защиты и актуализация Политики</h2>
+            <p>
+              Оператор определяет и документирует необходимые правовые,
+              организационные и технические меры защиты с учётом фактической
+              информационной системы и угроз. Одного наличия HTTPS, чекбокса и
+              этой страницы недостаточно для выполнения всех обязанностей
+              оператора.
+            </p>
+            <p>
+              <?php if ( $approved_at_display ) : ?>Дата утверждения: <?php echo esc_html( $approved_at_display ); ?>.<?php else : ?>Документ не утверждён: до указания фактической даты нельзя включать сбор заявок или рекламный трафик.<?php endif; ?> Актуальная
+              версия Политики размещается на всех страницах сбора данных.
+            </p>
+          </section>
+        </div>
+        <a class="legal-back" href="<?php echo esc_url( tvoe_auto_page_url( 'home' ) . '' ); ?>">← Вернуться на главную</a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="frame">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/logo-figma.webp' ) ); ?>" alt="Твоё Авто Сибирь" />
+            <p>
+              Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
+              Сибири.
+            </p>
+            <a href="tel:+79132431855">+7 (913) 243-18-55</a>
+          </div>
+          <div>
+            <h3>Услуги</h3>
+            <a href="<?php echo esc_url( tvoe_auto_page_url( 'catalog' ) . '' ); ?>">Автомобили</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'installment' ) . '' ); ?>">Рассрочка</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'rent-to-own' ) . '' ); ?>">Аренда с выкупом</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'trade-in' ) . '' ); ?>">Trade-in</a>
+          </div>
+          <div>
+            <h3>Информация</h3>
+            <a href="<?php echo esc_url( tvoe_auto_page_url( 'news' ) . '' ); ?>">Новости и выдачи</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'reviews' ) . '' ); ?>">Отзывы</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'faq' ) . '' ); ?>">Вопросы и ответы</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'contact' ) . '' ); ?>">Контакты</a>
+          </div>
+          <div class="footer-coverage footer-legal">
+            <h3>Документы</h3>
+            <a href="<?php echo esc_url( tvoe_auto_page_url( 'privacy' ) . '' ); ?>" aria-current="page"
+              >Политика обработки персональных данных</a
+            ><a href="<?php echo esc_url( tvoe_auto_page_url( 'personal-data-consent' ) . '' ); ?>"
+              >Согласие на обработку персональных данных</a
+            ><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 «Твоё Авто Сибирь»</p>
+          <p>
+            Все расчёты на сайте являются предварительными и не являются
+            публичной офертой.
+          </p>
+          <div class="footer-credit">
+            <span><a href="https://xo-webstudio.ru/" target="_blank" rel="noopener noreferrer">Разработано маркетинговым агентством XO-STUDIO</a></span>
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( tvoe_auto_asset_url( 'img/xo.svg' ) ); ?>" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+<?php get_footer(); ?>

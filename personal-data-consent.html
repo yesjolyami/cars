@@ -8,8 +8,13 @@
       name="description"
       content="Согласие на обработку персональных данных пользователей сайта «Твоё Авто Сибирь»."
     />
+    <link rel="icon" href="img/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <title>Согласие на обработку персональных данных — Твоё Авто</title>
-    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-cyrillic-400-800.woff2" crossorigin />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/variables.css?v=20260909" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/header.css" />
@@ -17,7 +22,7 @@
     <link rel="stylesheet" href="css/shared-chrome.css?v=20260826" />
     <link rel="stylesheet" href="css/pages/legal.css" />
     <link rel="stylesheet" href="css/contact-widget.css" />
-    <link rel="stylesheet" href="css/metrika.css" />
+    <link rel="stylesheet" href="css/metrika.css?v=20260911" />
   </head>
   <body>
     <header class="site-header">
@@ -26,7 +31,7 @@
           class="brand"
           href="index.html"
           aria-label="Твоё Авто Сибирь — на главную"
-          ><img src="img/logo-figma.png" alt="Твоё Авто Сибирь"
+          ><img decoding="async" src="img/logo-figma.webp" alt="Твоё Авто Сибирь"
         /></a>
         <nav class="main-nav" aria-label="Основная навигация">
           <a href="catalog.html">Автомобили</a
@@ -37,7 +42,7 @@
         </nav>
         <div class="header-actions">
           <a class="header-phone" href="tel:+79132431855"
-            ><img src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
+            ><img decoding="async" src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
           ><a class="header-cta" href="contact.html">Подобрать авто</a>
         </div>
         <button
@@ -73,11 +78,10 @@
           вводит в выбранную форму для получения ответа или предложения.
         </p>
         <div class="legal-page__notice" role="note">
-          <strong>До подключения форм требуется дополнить документ</strong>
-          Реквизиты оператора внесены по данным владельца. Утвердите срок
-          обработки и укажите реальных обработчиков. Backend также должен
-          сохранять доказательство согласия: версию текста, дату и время,
-          идентификатор формы и факт отметки чекбокса.
+          <strong>Как фиксируется согласие</strong>
+          После отправки формы WordPress сохраняет версию согласия, дату и
+          время его получения, тип формы и источник обращения. Заявка доступна
+          только в закрытом разделе «Заявки».
         </div>
 
         <div class="legal-page__content">
@@ -153,21 +157,19 @@
               средств автоматизации и без их использования.
             </p>
             <p>
-              Получатели и обработчики:
-              <span class="legal-placeholder"
-                >[TODO: перечислить фактический хостинг, backend/CRM, телефонию,
-                почту и иных лиц с реквизитами и ролью]</span
-              >.
+              Заявка сохраняется в WordPress. Для оперативной обработки
+              Оператор может направлять служебные уведомления на электронную
+              почту и в Telegram через Telegram Bot API. В Telegram передаются
+              только данные, необходимые для конкретной заявки.
             </p>
           </section>
 
           <section class="legal-page__section">
             <h2>7. Срок действия и отзыв</h2>
             <p>
-              Согласие действует
-              <span class="legal-placeholder"
-                >[TODO: установить конкретный срок или условие прекращения]</span
-              >, но в любом случае не дольше, чем это необходимо для указанной
+              Согласие действует до достижения цели обращения или отзыва, но не
+              более 180 календарных дней, и в любом случае не дольше, чем это
+              необходимо для указанной
               цели, если иное не предусмотрено законом или договором.
             </p>
             <p>
@@ -185,15 +187,17 @@
             <h2>8. Локализация и безопасность</h2>
             <p>
               Первичная запись и хранение данных граждан РФ должны выполняться в
-              базе данных на территории Российской Федерации. До подключения
-              реальной отправки оператор обязан подтвердить местонахождение базы,
-              настроить HTTPS, разграничение доступа, журналирование, резервное
-              копирование и порядок удаления.
+              базе данных на территории Российской Федерации. Оператор
+              обеспечивает разграничение доступа, журналирование, резервное
+              копирование и порядок удаления данных.
             </p>
             <p>
-              Текущая версия исходного проекта не подключена к backend или CRM и
-              не отправляет содержимое форм. Дата технической редакции согласия:
-              26 августа 2026 года.
+              Содержимое форм сохраняется в закрытом разделе WordPress
+              «Заявки». Передача уведомлений в Telegram может затрагивать
+              обработку данных за пределами Российской Федерации и производится
+              Оператором при соблюдении требований законодательства. Согласие
+              не утверждено: до указания фактической даты утверждения его нельзя
+              использовать для приёма заявок.
             </p>
           </section>
         </div>
@@ -207,7 +211,7 @@
       <div class="frame">
         <div class="footer-grid">
           <div class="footer-brand">
-            <img src="img/logo-figma.png" alt="Твоё Авто Сибирь" />
+            <img loading="lazy" decoding="async" src="img/logo-figma.webp" alt="Твоё Авто Сибирь" />
             <p>
               Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
               Сибири.
@@ -226,15 +230,14 @@
             <a href="news.html">Новости и выдачи</a
             ><a href="reviews.html">Отзывы</a
             ><a href="faq.html">Вопросы и ответы</a
-            ><a href="contact.html">Контакты</a
-            ><a href="privacy.html">Политика обработки персональных данных</a
+            ><a href="contact.html">Контакты</a>
+          </div>
+          <div class="footer-coverage footer-legal">
+            <h3>Документы</h3>
+            <a href="privacy.html">Политика обработки персональных данных</a
             ><a href="personal-data-consent.html" aria-current="page"
               >Согласие на обработку персональных данных</a
             ><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a>
-          </div>
-          <div class="footer-coverage">
-            <h3>География</h3>
-            <p>Работаем по Сибири</p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -245,13 +248,13 @@
           </p>
           <div class="footer-credit">
             <span><a href="https://xo-webstudio.ru/" target="_blank" rel="noopener noreferrer">Разработано маркетинговым агентством XO-STUDIO</a></span>
-            <img src="img/xo.svg" alt="" />
+            <img loading="lazy" decoding="async" src="img/xo.svg" alt="" />
           </div>
         </div>
       </div>
     </footer>
-    <script src="js/menu.js"></script>
-    <script src="js/contact-widget.js"></script>
-    <script src="js/metrika.js?v=20260826-6"></script>
+    <script src="js/menu.js?v=3"></script>
+    <script src="js/contact-widget.js?v=2"></script>
+    <script src="js/metrika.js?v=20260911"></script>
   </body>
 </html>

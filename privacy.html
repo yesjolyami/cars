@@ -8,8 +8,13 @@
       name="description"
       content="Политика обработки персональных данных сайта «Твоё Авто Сибирь»."
     />
+    <link rel="icon" href="img/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <title>Политика обработки персональных данных — Твоё Авто</title>
-    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-cyrillic-400-800.woff2" crossorigin />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/variables.css?v=20260909" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/header.css" />
@@ -17,7 +22,7 @@
     <link rel="stylesheet" href="css/shared-chrome.css?v=20260826" />
     <link rel="stylesheet" href="css/pages/legal.css" />
     <link rel="stylesheet" href="css/contact-widget.css" />
-    <link rel="stylesheet" href="css/metrika.css" />
+    <link rel="stylesheet" href="css/metrika.css?v=20260911" />
   </head>
   <body>
     <header class="site-header">
@@ -26,7 +31,7 @@
           class="brand"
           href="index.html"
           aria-label="Твоё Авто Сибирь — на главную"
-          ><img src="img/logo-figma.png" alt="Твоё Авто Сибирь"
+          ><img decoding="async" src="img/logo-figma.webp" alt="Твоё Авто Сибирь"
         /></a>
         <nav class="main-nav" aria-label="Основная навигация">
           <a href="catalog.html">Автомобили</a
@@ -37,7 +42,7 @@
         </nav>
         <div class="header-actions">
           <a class="header-phone" href="tel:+79132431855"
-            ><img src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
+            ><img decoding="async" src="img/phone.svg" alt="" />+7 (913) 243-18-55</a
           ><a class="header-cta" href="contact.html">Подобрать авто</a>
         </div>
         <button
@@ -73,12 +78,10 @@
           зачем они нужны и как пользователь может реализовать свои права.
         </p>
         <div class="legal-page__notice" role="note">
-          <strong>Оператор указан, инфраструктуру ещё нужно подтвердить</strong>
-          Реквизиты оператора внесены по данным владельца сайта. До подключения
-          реальной отправки форм заполните оставшиеся жёлтые TODO-поля:
-          фактический хостинг и базу данных, обработчиков, состав журналов и
-          сроки хранения. Эта страница не заменяет юридическую проверку и
-          организационные меры оператора.
+          <strong>Как обрабатывается заявка</strong>
+          Отправленные формы сохраняются как закрытые заявки в административной
+          части WordPress. Доступ к ним имеют только администраторы. Для каждой
+          заявки сохраняются версия согласия и время его получения.
         </div>
 
         <div class="legal-page__content">
@@ -159,10 +162,8 @@
                 <h4 id="organization-socials-title">Социальные сети и каналы</h4>
                 <div class="organization-card__links organization-card__links--social">
                   <a href="https://t.me/zaurguliev" target="_blank" rel="noopener noreferrer">Telegram — Заур</a>
-                  <a href="https://t.me/tvoeavtosibir" target="_blank" rel="noopener noreferrer">Telegram — «АВТО В РАССРОЧКУ | БЕЗ БАНКА»</a>
                   <a href="https://vk.ru/tvoeavtosibir" target="_blank" rel="noopener noreferrer">ВКонтакте — «Твоё Авто Сибирь»</a>
                   <a href="https://max.ru/u/f9LHodD0cOIUivXn20beSQhbKedn7hrTKBBsMGf1t2Tjr3zL1KJ-W_a5pi0" target="_blank" rel="noopener noreferrer">MAX — Заур</a>
-                  <a href="https://max.ru/join/EWPVYaIlt0f9tMCa6J70Ku7pZ2C29zFgSnmHaHLv4g0" target="_blank" rel="noopener noreferrer">MAX — «АВТО В РАССРОЧКУ | БЕЗ БАНКА»</a>
                 </div>
               </section>
             </article>
@@ -206,12 +207,7 @@
                     IP-адрес, User-Agent, дата и время запроса, запрошенный URL,
                     технические журналы сервера
                   </td>
-                  <td>
-                    Автоматически на стороне хостинга;
-                    <span class="legal-placeholder"
-                      >[TODO: определить основание и фактический состав логов]</span
-                    >
-                  </td>
+                  <td>Работа Сайта, защита от злоупотреблений и подтверждение согласия</td>
                 </tr>
                 <tr>
                   <td>Необязательная веб-аналитика</td>
@@ -242,18 +238,16 @@
               данных с использованием средств автоматизации или без них.
             </p>
             <p>
-              Срок хранения заявок:
-              <span class="legal-placeholder"
-                >[TODO: установить обоснованный срок отдельно для каждой цели]</span
-              >. По достижении цели, истечении установленного срока или при
+              Срок хранения заявок — 180 календарных дней. По достижении цели,
+              истечении установленного срока или при
               отзыве согласия данные удаляются, если закон или действующий
               договор не требует дальнейшего хранения.
             </p>
             <p>
-              В предоставленной версии сайта серверный обработчик заявок и CRM
-              не подключены: формы проверяются в браузере, но данные никуда не
-              отправляются. До подключения реальной отправки оператор обязан
-              актуализировать эту Политику и перечень обработчиков.
+              Формы передаются по HTTPS в WordPress REST API, сохраняются в
+              закрытом разделе «Заявки» и не публикуются на сайте. О новой
+              заявке WordPress может отправить служебное email-уведомление и
+              уведомление в Telegram через Telegram Bot API.
             </p>
           </section>
 
@@ -266,31 +260,23 @@
             </p>
             <ul>
               <li>
-                Хостинг сайта:
-                <span class="legal-placeholder"
-                  >[TODO: провайдер, страна и адрес дата-центра]</span
-                >.
+                Хостинг сайта и место первичного размещения базы:
+                сведения должны быть внесены владельцем до включения форм и рекламного трафика.
               </li>
               <li>
                 Backend и основная база заявок:
-                <span class="legal-placeholder"
-                  >[TODO: российский сервер/облако и регион размещения]</span
-                >.
+                WordPress и его база данных на хостинге Сайта.
               </li>
               <li>
                 CRM, телефония, почта и мессенджеры:
-                <span class="legal-placeholder"
-                  >[TODO: полный перечень получателей, роли и договорные
-                  основания]</span
-                >.
+                служебные уведомления по электронной почте и в Telegram.
               </li>
             </ul>
             <p>
-              До проверки локализации и договорных условий запрещено подключать
-              формы напрямую к иностранным форм-бэкендам, таблицам, CRM или
-              сервисам рассылок. Возможная трансграничная передача требует
-              отдельной оценки и предусмотренного законом уведомления до её
-              начала.
+              Передача уведомлений в Telegram может затрагивать обработку данных
+              за пределами Российской Федерации. Оператор осуществляет такую
+              передачу при соблюдении требований законодательства, включая
+              необходимые уведомительные и иные обязанности.
             </p>
           </section>
 
@@ -298,21 +284,25 @@
             <h2>6. Cookie, локальное хранилище и внешние ресурсы</h2>
             <h3>Необходимая настройка</h3>
             <p>
-              В localStorage хранится только выбор пользователя по необязательным
-              технологиям под ключом <code>tvoe-auto-privacy-consent-v1</code>.
+              В localStorage хранится только выбор пользователя по категориям
+              «Аналитика» и «Карты» под ключом <code>tvoe-auto-privacy-consent-v1</code>.
               Значения форм и контактные данные там не сохраняются.
+            </p>
+            <p>
+              Изменить выбор можно в любой момент по ссылке «Настройки cookie»
+              в подвале сайта.
             </p>
             <h3>Яндекс Метрика</h3>
             <p>
-              Счётчик не загружается до разрешения пользователя. В исходном
+              Счётчик не загружается, пока пользователь не включит категорию «Аналитика». В исходном
               проекте ID счётчика не заполнен, Вебвизор и сбор содержимого форм
               отключены. Перед активацией оператор должен указать фактическую
               цель, срок, обработчика и настройки счётчика.
             </p>
             <h3>Яндекс Карты</h3>
             <p>
-              Виджет карты загружается только после разрешения необязательных
-              технологий или нажатия кнопки «Показать карту». При загрузке
+              Виджет карты загружается только после включения категории «Карты»
+              в настройках cookie или нажатия кнопки «Показать карту». При загрузке
               Яндекс может получить IP-адрес, User-Agent и технические сведения
               о запросе. Прямая ссылка на карту открывается только по действию
               пользователя.
@@ -361,10 +351,9 @@
               оператора.
             </p>
             <p>
-              Дата текущей технической редакции: 26 августа 2026 года. После
-              заполнения оставшихся сведений укажите дату утверждения и
-              обеспечьте доступ к актуальной версии документа на всех страницах
-              сбора данных.
+              Документ не утверждён: до указания фактической даты утверждения
+              нельзя включать сбор заявок или рекламный трафик. Актуальная версия
+              Политики размещается на всех страницах сбора данных.
             </p>
           </section>
         </div>
@@ -376,7 +365,7 @@
       <div class="frame">
         <div class="footer-grid">
           <div class="footer-brand">
-            <img src="img/logo-figma.png" alt="Твоё Авто Сибирь" />
+            <img loading="lazy" decoding="async" src="img/logo-figma.webp" alt="Твоё Авто Сибирь" />
             <p>
               Рассрочка, аренда с выкупом, Trade-in и бесплатный автоподбор по
               Сибири.
@@ -395,16 +384,15 @@
             <a href="news.html">Новости и выдачи</a
             ><a href="reviews.html">Отзывы</a
             ><a href="faq.html">Вопросы и ответы</a
-            ><a href="contact.html">Контакты</a
-            ><a href="privacy.html" aria-current="page"
+            ><a href="contact.html">Контакты</a>
+          </div>
+          <div class="footer-coverage footer-legal">
+            <h3>Документы</h3>
+            <a href="privacy.html" aria-current="page"
               >Политика обработки персональных данных</a
             ><a href="personal-data-consent.html"
               >Согласие на обработку персональных данных</a
             ><a href="#privacy-settings" data-privacy-settings>Настройки cookie</a>
-          </div>
-          <div class="footer-coverage">
-            <h3>География</h3>
-            <p>Работаем по Сибири</p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -415,13 +403,13 @@
           </p>
           <div class="footer-credit">
             <span><a href="https://xo-webstudio.ru/" target="_blank" rel="noopener noreferrer">Разработано маркетинговым агентством XO-STUDIO</a></span>
-            <img src="img/xo.svg" alt="" />
+            <img loading="lazy" decoding="async" src="img/xo.svg" alt="" />
           </div>
         </div>
       </div>
     </footer>
-    <script src="js/menu.js"></script>
-    <script src="js/contact-widget.js"></script>
-    <script src="js/metrika.js?v=20260826-6"></script>
+    <script src="js/menu.js?v=3"></script>
+    <script src="js/contact-widget.js?v=2"></script>
+    <script src="js/metrika.js?v=20260911"></script>
   </body>
 </html>
